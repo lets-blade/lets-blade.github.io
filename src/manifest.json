@@ -1,0 +1,14 @@
+{
+	"name": "Blade",
+	"short_name": "Blade",
+	"theme_color": "#b8372f",
+	"background_color": "#F9F9F9",
+	"display": "standalone",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "/assets/app-icon-192.png",
+			"sizes": "192x192"
+		}
+	]
+}

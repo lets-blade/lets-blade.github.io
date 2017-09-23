@@ -1,0 +1,108 @@
+{
+  "title": "Blade: 轻量级、高性能的MVC框架",
+  "name": "Blade",
+  "languages": {
+	"zh": "简体中文"
+  },
+  "nav": [
+	{
+	  "path": "/",
+	  "name": "Blade",
+	  "title": "Home",
+	  "class": "home",
+	  "flair": "logo",
+	  "content": "index"
+	},
+	{
+	  "name": "使用指南",
+	  "content": "guide",
+	  "routes": [
+		{
+		  "path": "/guide/getting-started",
+		  "name": "开始使用"
+		},
+		{
+		  "path": "/guide/differences-to-react",
+		  "name": "什么是Blade?"
+		},
+		{
+		  "path": "/guide/switching-to-preact",
+		  "name": "路由注册"
+		},
+		{
+		  "path": "/guide/types-of-components",
+		  "name": "请求响应"
+		},
+		{
+		  "path": "/guide/api-reference",
+		  "name": "上下文管理"
+		},
+		{
+		  "path": "/guide/forms",
+		  "name": "配置文件"
+		},
+		{
+		  "path": "/guide/linked-state",
+		  "name": "Linked State"
+		},
+		{
+		  "path": "/guide/external-dom-mutations",
+		  "name": "External DOM Mutations"
+		},
+		{
+		  "path": "/guide/extending-component",
+		  "name": "Extending Component"
+		},
+		{
+		  "path": "/guide/unit-testing-with-enzyme",
+		  "name": "Unit Testing with Enzyme"
+		},
+		{
+		  "path": "/guide/progressive-web-apps",
+		  "name": "Progressive Web Apps"
+		}
+	  ]
+	},
+	{
+	  "name": "API文档",
+	  "content": "api",
+	  "path": "/assets/apidocs"
+	},
+	{
+	  "name": "视频教程",
+	  "content": "video",
+	  "path": ""
+	},
+	{
+	  "name": "捐赠项目",
+	  "content": "donate",
+	  "path": ""
+	},
+	{
+	  "name": "关于",
+	  "content": "about",
+	  "routes": [
+		{
+		  "path": "/about/we-are-using",
+		  "name": "发布日志"
+		},
+		{
+		  "path": "/about/libraries-addons",
+		  "name": "参与开源"
+		},
+		{
+		  "path": "/about/demos-examples",
+		  "name": "谁在使用"
+		},
+		{
+		  "path": "/about/demos-examples",
+		  "name": "联系我们"
+		}
+	  ]
+	},
+	{
+	  "name": "Github",
+	  "path": "https://github.com/biezhi/blade"
+	}
+  ]
+}
