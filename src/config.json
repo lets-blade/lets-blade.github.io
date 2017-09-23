@@ -7,7 +7,7 @@
   "nav": [
 	{
 	  "path": "/",
-	  "name": "Blade",
+	  "name": "首页",
 	  "title": "Home",
 	  "class": "home",
 	  "flair": "logo",
@@ -20,46 +20,6 @@
 		{
 		  "path": "/guide/getting-started",
 		  "name": "开始使用"
-		},
-		{
-		  "path": "/guide/differences-to-react",
-		  "name": "什么是Blade?"
-		},
-		{
-		  "path": "/guide/switching-to-preact",
-		  "name": "路由注册"
-		},
-		{
-		  "path": "/guide/types-of-components",
-		  "name": "请求响应"
-		},
-		{
-		  "path": "/guide/api-reference",
-		  "name": "上下文管理"
-		},
-		{
-		  "path": "/guide/forms",
-		  "name": "配置文件"
-		},
-		{
-		  "path": "/guide/linked-state",
-		  "name": "Linked State"
-		},
-		{
-		  "path": "/guide/external-dom-mutations",
-		  "name": "External DOM Mutations"
-		},
-		{
-		  "path": "/guide/extending-component",
-		  "name": "Extending Component"
-		},
-		{
-		  "path": "/guide/unit-testing-with-enzyme",
-		  "name": "Unit Testing with Enzyme"
-		},
-		{
-		  "path": "/guide/progressive-web-apps",
-		  "name": "Progressive Web Apps"
 		}
 	  ]
 	},
