@@ -12,7 +12,7 @@ export default class Footer extends Component {
 	render({ lang, url = location.pathname }) {
 		let path = url.replace(/\/$/,'') || '/index';
 		if (lang) path = `/lang/${lang}${path}`;
-		let editUrl = `https://github.com/biezhi/blade/tree/master/content${path}.md`;
+		let editUrl = `https://github.com/lets-blade/lets-blade.github.io/tree/master/content${path}.md`;
 		return (
 			<footer class={style.footer}>
 				<div class={style.inner}>
