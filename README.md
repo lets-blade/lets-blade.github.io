@@ -1,8 +1,8 @@
 # Lets-Blade Documentation Website
 
-Based on [preact-boilerplate](https://github.com/developit/preact-boilerplate)
+![https://img.shields.io/travis/lets-blade/lets-blade.github.io.svg](https://travis-ci.org/lets-blade/lets-blade.github.io)
 
-> :rocket: `master` is automatically deployed to [preactjs.com](https://preactjs.com)
+> :rocket: `master` is automatically deployed to [lets-blade.com](https://lets-blade.com)
 
 ---
 
