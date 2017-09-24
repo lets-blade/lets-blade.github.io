@@ -23,7 +23,6 @@ export default ({ children, ...props }) => {
 		return (
 			<pre class={cx('highlight', `highlight-${hLang}`, props.class)}>
 				<code class={`hljs lang-${hLang}`} dangerouslySetInnerHTML={{ __html:highlighted.value }} />
-				{ repl && <Link class="repl-link" href={`/repl?code=${encodeURIComponent(text)}`}>Run in REPL</Link> }
 			</pre>
 		);
 	}
