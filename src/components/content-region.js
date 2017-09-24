@@ -1,6 +1,6 @@
-import { h, Component } from 'preact';
-import { connect } from '../lib/store';
-import { memoize } from 'decko';
+import {h, Component} from 'preact';
+import {connect} from '../lib/store';
+import {memoize} from 'decko';
 import yaml from 'yaml';
 import Markdown from 'markdown';
 import Markup from 'preact-markup';
@@ -12,7 +12,7 @@ const COMPONENTS = {
 	a(props) {
 		if (!props.target && props.href.match(/:\/\//)) {
 			props.target = '_blank';
-			props.rel = 'noopener noreferrer';
+			props.rel    = 'noopener noreferrer';
 		}
 		return <a {...props} />;
 	}
@@ -32,40 +32,43 @@ const FRONT_MATTER_REG = /^\s*\-\-\-\n\s*([\s\S]*?)\s*\n\-\-\-\n/i;
 const TITLE_REG = /^\s*#\s+(.+)\n+/;
 
 // only memoize in prod
-const memoizeProd = process.env.NODE_ENV==='production' ? memoize : f=>f;
+const memoizeProd = process.env.NODE_ENV === 'production' ? memoize : f => f;
 
 
 // fetch and parse a markdown document
-const getContent = memoizeProd( ([lang, name]) => {
-	let path = lang ? `/content/lang/${lang}` : '/content',
-		url = `${path}/${name.replace(/^\//,'')}`,
-		[,ext] = url.match(/\.([a-z]+)$/i) || [];
+const getContent = memoizeProd(([lang, name]) => {
+	name = (name === '/' ? '/index' : name);
+
+	let path    = lang ? `/content/lang/${lang}` : '/content',
+		url     = `${path}/${name.replace(/^\//, '')}`,
+		[, ext] = url.match(/\.([a-z]+)$/i) || [];
+
 	if (!ext) url += '.md';
 	// attempt to use prefetched request
-	let fetchPromise = process.env.NODE_ENV==='production' && typeof window!=='undefined' && window['_boostrap_'+url] || fetch(url);
+	let fetchPromise = process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && window['_boostrap_' + url] || fetch(url);
 	return fetchPromise
-		.then( r => {
+		.then(r => {
 			if (!r.ok) {
 				// @TODO: allow falling back to english? (404 crashes dev server)
 				// if (lang) return fetch(url.replace(/lang\/[^/]+\//,''));
 				ext = 'md';
-				r = fetch(`${path}/${r.status}.md`);
+				r   = fetch(`${path}/${r.status}.md`);
 			}
 			return r;
 		})
-		.then( r => r.text() )
-		.then( r => parseContent(r, ext) );
+		.then(r => r.text())
+		.then(r => parseContent(r, ext));
 });
 
 
 function parseContent(text, ext) {
-	let [,frontMatter] = text.match(FRONT_MATTER_REG) || [],
-		meta = frontMatter && yaml.eval('---\n'+frontMatter.replace(/^/gm,'  ')+'\n') || {},
-		content = text.replace(FRONT_MATTER_REG, '');
+	let [, frontMatter] = text.match(FRONT_MATTER_REG) || [],
+		meta            = frontMatter && yaml.eval('---\n' + frontMatter.replace(/^/gm, '  ') + '\n') || {},
+		content         = text.replace(FRONT_MATTER_REG, '');
 	if (!meta.title) {
-		let [,title] = content.match(TITLE_REG) || [];
+		let [, title] = content.match(TITLE_REG) || [];
 		if (title) {
-			content = content.replace(TITLE_REG, '');
+			content    = content.replace(TITLE_REG, '');
 			meta.title = title;
 		}
 	}
@@ -78,20 +81,18 @@ function parseContent(text, ext) {
 }
 
 
-const getAllPaths = memoizeProd( () => {
-	let config = require('../config'),
-		reducer = (acc, route) => acc.concat(route.path || [], route.routes ? route.routes.reduce(reducer,[]) : []);
+const getAllPaths = memoizeProd(() => {
+	let config  = require('../config'),
+		reducer = (acc, route) => acc.concat(route.path || [], route.routes ? route.routes.reduce(reducer, []) : []);
 	return config.nav.reduce(reducer, []);
 });
 
 
-
-
-@connect( ({ lang }) => ({ lang }) )
+@connect(({lang}) => ({lang}))
 export default class ContentRegion extends Component {
 	fetch() {
-		let { name, lang, onLoad } = this.props;
-		getContent([lang, name]).then( s => {
+		let {name, lang, onLoad} = this.props;
+		getContent([lang, name]).then(s => {
 			this.setState(s);
 			this.applyEmoji();
 			if (onLoad) onLoad(s);
@@ -99,26 +100,26 @@ export default class ContentRegion extends Component {
 	}
 
 	applyEmoji() {
-		let { content } = this.state;
+		let {content} = this.state;
 		if (!content.match(/([^\\]):[a-z0-9_]+:/gi)) return;
 
 		if (!this.emoji) {
-			require(['../lib/gh-emoji'], ({ replace }) => {
+			require(['../lib/gh-emoji'], ({replace}) => {
 				this.emoji = replace || EMPTY;
 				this.applyEmoji();
 			});
 		}
-		else if (typeof this.emoji==='function') {
-			this.setState({ content: this.emoji(content) });
+		else if (typeof this.emoji === 'function') {
+			this.setState({content: this.emoji(content)});
 		}
 	}
 
 	updateToc() {
 		let headings = this.base.querySelectorAll('[id]'),
-			{ onToc } = this.props,
-			toc = this.toc = [];
-		for (let i=0; i<headings.length; i++) {
-			let [,level] = String(headings[i].nodeName).match(/^h(\d)$/i) || [];
+			{onToc}  = this.props,
+			toc      = this.toc = [];
+		for (let i = 0; i < headings.length; i++) {
+			let [, level] = String(headings[i].nodeName).match(/^h(\d)$/i) || [];
 			if (level) {
 				toc.push({
 					text: headings[i].textContent,
@@ -127,33 +128,33 @@ export default class ContentRegion extends Component {
 				});
 			}
 		}
-		if (onToc) onToc({ toc });
+		if (onToc) onToc({toc});
 	}
 
 	componentDidMount() {
 		this.fetch();
 	}
 
-	componentDidUpdate({ name, lang }, { content }) {
-		if (name!==this.props.name || lang!==this.props.lang) this.fetch();
-		if (content!==this.state.content) this.updateToc();
+	componentDidUpdate({name, lang}, {content}) {
+		if (name !== this.props.name || lang !== this.props.lang) this.fetch();
+		if (content !== this.state.content) this.updateToc();
 	}
 
-	render({ store, name, children, onLoad, onToc, ...props }, { type, content }) {
+	render({store, name, children, onLoad, onToc, ...props}, {type, content}) {
 		return (
 			<content-region loading={!content} {...props}>
-				{ content && (
-					<Content type={type} content={content} components={COMPONENTS} />
-				) }
+				{content && (
+					<Content type={type} content={content} components={COMPONENTS}/>
+				)}
 			</content-region>
 		);
 	}
 }
 
-const Content = ({ type, content, ...props }) => (
-	type==='markdown' ? (
+const Content = ({type, content, ...props}) => (
+	type === 'markdown' ? (
 		<Markdown markdown={content} {...props} />
-	) : type==='markup' ? (
+	) : type === 'markup' ? (
 		<Markup markup={content} type="html" {...props} />
 	) : null
 );
