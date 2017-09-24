@@ -13,7 +13,7 @@
     "protect": "[ \"$NODE_ENV\" = \"production\" ] && snyk protect || exit 0",
     "lint": "eslint {src,test}",
     "predeploy": "npm run -s build",
-    "deploy": "cp build/index.html build/200.html && surge -d https://lets-blade.com build"
+    "deploy": "cp build/index.html build/200.html && scp ./build/* biezhi@hk:/data/webapps/lets-blade/"
   },
   "keywords": [
     "preact",

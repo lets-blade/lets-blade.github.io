@@ -30,8 +30,8 @@
 	},
 	{
 	  "name": "视频教程",
-	  "content": "video",
-	  "path": ""
+	  "content": "video-tutorial",
+	  "path": "video-tutorial"
 	},
 	{
 	  "name": "捐赠项目",
