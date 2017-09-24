@@ -18,7 +18,7 @@
 	  "content": "guide",
 	  "routes": [
 		{
-		  "path": "/guide/getting-started",
+		  "path": "/",
 		  "name": "开始使用"
 		}
 	  ]
@@ -26,7 +26,7 @@
 	{
 	  "name": "API文档",
 	  "content": "api",
-	  "path": "/assets/apidocs"
+	  "path": "/"
 	},
 	{
 	  "name": "视频教程",
@@ -43,19 +43,19 @@
 	  "content": "about",
 	  "routes": [
 		{
-		  "path": "/about/we-are-using",
+		  "path": "/",
 		  "name": "发布日志"
 		},
 		{
-		  "path": "/about/libraries-addons",
+		  "path": "/",
 		  "name": "参与开源"
 		},
 		{
-		  "path": "/about/demos-examples",
+		  "path": "/",
 		  "name": "谁在使用"
 		},
 		{
-		  "path": "/about/demos-examples",
+		  "path": "/",
 		  "name": "联系我们"
 		}
 	  ]
