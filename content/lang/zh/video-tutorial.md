@@ -27,5 +27,5 @@ Blade 入门教程是帮助开发者快速学习 Blade 的视频语音教程，�
 |第 7 课|配置文件|[腾讯视频](https://v.qq.com/x/page/y05507q8noy.html) / [Youtube](https://www.youtube.com/watch?v=SlbeaPiz9dM&list=PLK2w-tGRdrj5TV2lxHFj8hcg4mbmRmnWX&index=7)|
 |第 8 课|中间件和钩子|[腾讯视频](https://v.qq.com/x/page/e0550z2bnjg.html) / [Youtube](https://www.youtube.com/watch?v=0dO7i7X9JWg&list=PLK2w-tGRdrj5TV2lxHFj8hcg4mbmRmnWX&index=8)|
 |第 9 课|组件和事件|[腾讯视频](https://v.qq.com/x/page/q0550y12tgq.html) / [Youtube](https://www.youtube.com/watch?v=rke6nolDgi4&list=PLK2w-tGRdrj5TV2lxHFj8hcg4mbmRmnWX&index=9)|
-|第 10 课|数据库操作 - 正在进行|[腾讯视频](#) / [Youtube](#)|
+|第 10 课|数据库操作|[腾讯视频](https://v.qq.com/x/page/d0554v9vtu1.html) / [Youtube](https://www.youtube.com/watch?v=EH9WhjKThm0&list=PLK2w-tGRdrj5TV2lxHFj8hcg4mbmRmnWX&index=10)|
 
