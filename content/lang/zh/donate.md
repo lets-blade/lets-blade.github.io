@@ -21,9 +21,10 @@ Blade 是个人发起的开源项目，目的为更多开发者提供便捷，�
 
 <img src="/assets/donate/wechat_alipay.png" />
 
-## Paypal捐赠
+## 其他捐赠方式
 
-🔓 [点击链接捐赠](https://paypal.me/bladejava/10)
+- [通过PayPal一次性捐赠](https://paypal.me/bladejava/10)
+- [通过 OpenCollective 赞助](https://opencollective.com/blade) (加入一个基金会，通过透明的费用模型支持社区的工作和活动)
 
 ## 捐赠列表
 
