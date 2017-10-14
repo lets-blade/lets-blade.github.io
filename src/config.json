@@ -38,7 +38,7 @@
 		  "name": "请求响应"
 		},
 		{
-		  "path": "/guide/config",
+		  "path": "/guide/configuration",
 		  "name": "配置文件"
 		},
 		{
@@ -79,19 +79,19 @@
 	  "content": "about",
 	  "routes": [
 		{
-		  "path": "/change-logs",
+		  "path": "/about/change-logs",
 		  "name": "发布日志"
 		},
 		{
-		  "path": "/contribution",
-		  "name": "参与开源"
+		  "path": "/about/contribution",
+		  "name": "参与贡献"
 		},
 		{
-		  "path": "/who-used",
+		  "path": "/about/who-used",
 		  "name": "谁在使用"
 		},
 		{
-		  "path": "/contact",
+		  "path": "/about/contact",
 		  "name": "联系我们"
 		}
 	  ]

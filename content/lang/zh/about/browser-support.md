@@ -3,6 +3,16 @@ name: Browser Support
 permalink: '/about/browser-support'
 ---
 
-# 浏览器支持
+# Browser Support
 
-Preact 支持主流浏览器（Chrome, Firefox, Safari, Edge）和 IE9+，你也可以通过一些 polyfills（用于实现浏览器并不支持的原生 API 的代码）去支持 IE7 和 IE8。如果你想支持一些更老的浏览器，推荐使用 es5-shim 或其它相似的库。
+Preact supports modern browsers (Chrome, Firefox, Safari, Edge) and IE9+. It should work fine in IE7 and IE8, but requires some polyfills. If you intend to use it and support those older browsers, it is recommended to use a polyfill like [es5-shim] or [babel-polyfill].
+
+<center>
+    <a href="https://saucelabs.com/u/preact">
+        <img src="https://saucelabs.com/browser-matrix/preact.svg" alt="Browser List">
+    </a>
+</center>
+
+
+[es5-shim]: https://github.com/es-shims/es5-shim
+[babel-polyfill]: https://babeljs.io/docs/usage/polyfill/

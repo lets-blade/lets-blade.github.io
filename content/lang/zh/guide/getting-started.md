@@ -7,7 +7,7 @@ permalink: '/guide/getting-started'
 
 这个指引会带搭建一个简单的『Hello』程序。当然这只是开始，迈出这一步你将感受到 `Blade` 的强大 :strong:。
 
-> :information_desk_person: 使用 Blade 必须用 Maven 进行构建，要求JDK1.8，这是约定，至于用什么IDE看你个人爱好（我更习惯在IDEA下进行编程）
+> :information_desk_person: 使用 Blade 必须用 Maven 进行构建，JDK1.8，这是约定。至于用什么IDE看你个人爱好（我更习惯在IDEA下进行编程）
 
 ---
 
@@ -155,7 +155,7 @@ Blade.me()
 
 Blade 使用 `slf4j-api` 作为日志接口，默认提供一种简单的日志实现（修改自**simple-logger**），所以你在启动的时候可以看到有日志输出。
 
-> 为什么 Blade 不自己实现日志框架呢？大多数开发者会用到其他的库来帮助他完成应用开发，而绝大部分的 Java 库都会使用 `slf4j-api` 供开发者更好的扩展。
+> :star2: 为什么 Blade 不自己实现日志框架呢？大多数开发者会用到其他的库来帮助他完成应用开发，而绝大部分的 Java 库都会使用 `slf4j-api` 供开发者更好的扩展。
 > 这里我们也是这样，不至于让你在一个程序中使用两种日志服务。如何更换日志实现？只要排除掉 `blade-log` 这个依赖接入你熟悉的就可以了。
 
 **启动日志**
