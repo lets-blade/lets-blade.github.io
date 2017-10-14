@@ -5,192 +5,168 @@ permalink: '/guide/getting-started'
 
 # 如何开始
 
-这个指引会示范去搭建一个简单的『时钟』组件。每个主题下更详情的信息，可以在『指引』菜单下面对应的页面找到。
+这个指引会带搭建一个简单的『Hello』程序。当然这只是开始，迈出这一步你将感受到 `Blade` 的强大 :strong:。
 
-
-> :information_desk_person: 你 [使用 Preact 的时候，不必使用 ES2015](https://github.com/developit/preact-without-babel)... 但你最好使用。这个指引假定你已经使用过一些 ES2015 构建，基于 babel 和 / 或 webpack/browserify/gulp/grunt / 等等。如果你还没有，请从 [preact-boilerplate] 或一个 [CodePen Template](http://codepen.io/developit/pen/pgaROe?editors=0010)开始。
-
+> :information_desk_person: 使用 Blade 必须用 Maven 进行构建，要求JDK1.8，这是约定，至于用什么IDE看你个人爱好（我更习惯在IDEA下进行编程）
 
 ---
 
+## 创建一个 Maven 工程
 
-## Import 引用你所需要的
+创建一个 **普通** 的 `Maven` 工程，**再次提示** Blade 只需要你创建普通的工程！！！跟 Tomcat 什么的没有关系，请摆脱你只会J2EE那套。
 
-`preact` 模块提供命名导出以及默认导出，因此，你既可以在一个你选定的全名空间下 import 所有的模块，或者只 import 你所需要的模块，如下所示：
+创建好后我们需要引入 Blade 依赖，并且配置一下 JDK 编译版本，下面是一个 `pom.xml` 的示例:
 
-**命名引入：**
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>com.example</groupId>
+    <artifactId>hello</artifactId>
+    <version>0.0.1</version>
+    
+    <properties>
+        <blade-mvc.version>2.0.3-beta2</blade-mvc.version>
+    </properties>
+    
+    <dependencies>
+        <!-- mvc dependency -->
+        <dependency>
+            <groupId>com.bladejava</groupId>
+            <artifactId>blade-mvc</artifactId>
+            <version>${blade-mvc.version}</version>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <finalName>hello</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-```js
-import { h, render, Component } from 'preact';
-
-// 告诉 Babel 将 JSX 转化成 h() 的函数调用:
-/** @jsx h */
+</project>
 ```
 
-**默认引入：**
+> :warn: 修改这个 `pom.xml` 的同学注意了。请把 `groupId` 和 项目名改掉; 请注意使用较新版本的 `blade-mvc` 依赖 
 
-```js
-import preact from 'preact';
+## 项目结构
 
-// 告诉 Babel 将 JSX 转化成 preact.h() 的函数调用:
-/** @jsx preact.h */
+在此之前，我推荐搭建创建一个基础的 `package`，我们将程序所有的源文件放在 `包` 下面，Java是以 `package` 管理源码的。
+那么我的项目结构如下：
+
+```bash
+.
+├── pom.xml
+└── src
+  ├── main
+  │  ├── java
+  │  │   └── com
+  │  │   └─── example
+  │  │      ├── Application.java
+  │  │      ├── config
+  │  │      ├── controller
+  │  │      ├── hooks
+  │  │      ├── model
+  │  │      └── service
+  │  └── resources
+  │      ├── app.properties
+  │      ├── static
+  │      │   ├── css
+  │      │   │ └─ style.css
+  │      └── templates
+  │          └─ index.html
+  └── test
+      └── java
 ```
 
-> 定义好的引用，对于高度结构化的应用比较好；而默认引用，对于想使用库的各个模块来说，则更方便，而且不需要经常去改变。
+## 编写运行类
 
-### 全局 pragma
+编写**Application.java**
 
-与其直接在你的代码里去声明 `@jsx` pragma，不如在 `.babelrc` 中进去全局定义。
+```java
+package com.example;
 
-**命名引入：**
->**Babel 5 或更早的版本：**
->
-> ```json
-> { "jsxPragma": "h" }
-> ```
->
-> **Babel 6：**
->
-> ```json
-> {
->   "plugins": [
->     ["transform-react-jsx", { "pragma":"h" }]
->   ]
-> }
-> ```
+import com.blade.Blade;
 
-**默认引入：**
->**Babel 5 或更早的版本：**
->
-> ```json
-> { "jsxPragma": "preact.h" }
-> ```
->
-> **Babel 6：**
->
-> ```json
-> {
->   "plugins": [
->     ["transform-react-jsx", { "pragma":"preact.h" }]
->   ]
-> }
-> ```
-
----
-
-
-## 渲染 JSX
-
-创造性地，Preact 提供 一个 `h()` 函数去将你的 JSX 转化成 虚拟 DOM elements _([这篇文章阐述了原理](http://jasonformat.com/wtf-is-jsx))_。它也提供了一个 `render()` 函数，通过虚拟 DOM 去造创 DOM 树。
-
-去渲染一些 JSX，请引用这两个函数，并像如下一样使用：
-
-```js
-import { h, render } from 'preact';
-
-render((
-	<div id="foo">
-		<span>Hello, world!</span>
-		<button onClick={ e => alert("hi!") }>Click Me</button>
-	</div>
-), document.body);
-```
-
-如果你有使用 [hyperscript] 或者 它的一些[类似的库](https://github.com/developit/vhtml)，这个看起来会非常直观。
-
-尽管用虚拟 DOM 去渲染 hyperscript 并没意义。我们想去渲染组件及使他们在数据变化的时候进行更新，那正是虚拟 DOM 比较的闪光点。:star2:
-
-
----
-
-
-## 组件
-
-Preact 输出一个通用的 `Component` 类，它能使被继承，用于搭建被封装好的，自我可更新的用户界面片段。组件支持所有的 React [生命周期方法]， 像 `shouldComponentUpdate()` 和 `componentWillReceiveProps()`。提供特定的对这些方法的实现，是控制组件 _什么时候_ 和 _如何_ 更新的推荐办法。
-
-组件也有 `render()` 方法，但跟 React 不同的是，这个方法将 `(props, state)` 传入，作为参数。这个提供了更人性化的办法，去解构 `props` 和 `state` 参数成为 JSX 指定的局部变量。
-
-让我们来看这个非常简单的 `Clock` 组件，它显示了当前的时间。
-
-```js
-import { h, render, Component } from 'preact';
-
-class Clock extends Component {
-	render() {
-		let time = new Date().toLocaleTimeString();
-		return <span>{ time }</span>;
-	}
+public class Application {
+    public static void main(String[] args) {
+        Blade.me().start(Application.class, args);
+    }
 }
-
-// 将一个时钟渲染到 <body > 标签:
-render(<Clock />, document.body);
 ```
 
-太棒了，运行上面代码，会生成下面的 HTML DOM 结构：
+> 创建一个启动类，位于 package 根目录下，使用 Blade.me() 方法创建 Blade 对象并且启动它。
 
-```html
-<span>10:28:57 PM</span>
+当然，这个时候你启动它是没有意义的，因为我们还没有编写路由，编写路由最简单的方式就是使用 Blade 的内置方法，
+在后面的章节中我们会讲到其他的方式，这里为了简单起见，编写一个 `Hello World` 吧
+
+```java
+Blade.me()
+    .get('/', (req, res) -> res.text("Hello World!"))
+    .start(Application.class, args);
 ```
 
+此时你启动应用程序，在终端可以看到如下输出：
 
+```bash
 ---
+                                                                            ①
+2017-10-14 14:12:52:302 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: jdk.version    => 1.8.0_101
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: user.dir       => /Users/biezhi/workspace/projects/java/hello
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: java.io.tmpdir => /var/folders/y7/fdpr6jzx1rs6x0jmty2h6lvw0000gn/T/
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: user.timezone  => Asia/Shanghai
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: file.encoding  => UTF-8
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: classpath      => /Users/biezhi/workspace/projects/java/hello/target/classes
+                                    
+                                        ②
+							    __, _,   _, __, __,
+							    |_) |   /_\ | \ |_
+							    |_) | , | | |_/ |
+							    ~   ~~~ ~ ~ ~   ~~~
+							    :: Blade :: (v2.0.3-beta) 
 
-
-## 组件生命周期
-
-为了让时钟的每秒都更新，我们需要知道 `<Clock>` 什么时候渲染到 DOM 里面。如果你使用过 HTML5 自定义元素，这个就跟 `attachedCallback` 和 `detachedCallback` 生命周期类似。 Preact 会调起下面的生命周期方法，如果它们在一个组件中被定义：
-
-| 生命周期方法                  | 什么时候被调用                                    |
-|-----------------------------|--------------------------------------------------|
-| `componentWillMount`        | 在一个组件被渲染到 DOM 之前                         |
-| `componentDidMount`         | 在一个组件被渲染到 DOM 之后      					 |
-| `componentWillUnmount`      | 在一个组件在 DOM 中被清除之前                       |
-| `componentWillReceiveProps` | 在新的 props 被接受之前                              |
-| `shouldComponentUpdate`     | 在 `render()` 之前. 若返回 `false`，则跳过 render   |
-| `componentWillUpdate`       | 在 `render()` 之前                                |
-| `componentDidUpdate`        | 在 `render()` 之后                                |
-
-所以，我们需要一个秒级的计时器，在组件添加到 DOM 的时候，就马上开始，同时在它被清除的时候停止。我们会在 `componentDidMount` 中创造一个计时器，并存储一个引用。同时会在 `componentWillUnmount` 中停止这个计时器。在每次计时器计时的时候，我们会用新的值去更新组件的 `state` 对象。做这个数据更新的时候，框架会自动重新渲染组件。
-
-```js
-import { h, render, Component } from 'preact';
-
-class Clock extends Component {
-	constructor() {
-		super();
-		// 设置初始的时间
-		this.state.time = Date.now();
-	}
-
-	componentDidMount() {
-		// 每秒都更新一下时间
-		this.timer = setInterval(() => {
-			this.setState({ time: Date.now() });
-		}, 1000);
-	}
-
-	componentWillUnmount() {
-		// 当不再渲染，停止计时器
-		clearInterval(this.timer);
-	}
-
-	render(props, state) {
-		let time = new Date(state.time).toLocaleTimeString();
-		return <span>{ time }</span>;
-	}
-}
-
-// 将一个时钟对象渲染在 < body > 标签:
-render(<Clock />, document.body);
+                                                                            ③
+2017-10-14 14:12:52:390 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/
+                                                                            ④
+2017-10-14 14:12:53:258 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Use NioEventLoopGroup
+                                                                            ⑤
+2017-10-14 14:12:53:461 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ hello initialize successfully, Time elapsed: 176 ms
+                                                                            ⑥
+2017-10-14 14:12:53:462 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Blade start with 0.0.0.0:9000
+2017-10-14 14:12:53:462 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Open your web browser and navigate to http://127.0.0.1:9000 ⚡
 ```
 
+这时候你打开浏览器访问 http://127.0.0.1:9000 即可看到 `Hello World!` 的响应。
 
----
+## 启动都干了什么
 
+下面我们来简单的解释一下终端的这些日志吧，以便于你更熟悉框架的机制。
 
-现在，我们有了一个[时钟应用](http://jsfiddle.net/developit/u9m5x0L7/embedded/result,js/)！
+Blade 使用 `slf4j-api` 作为日志接口，默认提供一种简单的日志实现（修改自**simple-logger**），所以你在启动的时候可以看到有日志输出。
 
+> 为什么 Blade 不自己实现日志框架呢？大多数开发者会用到其他的库来帮助他完成应用开发，而绝大部分的 Java 库都会使用 `slf4j-api` 供开发者更好的扩展。
+> 这里我们也是这样，不至于让你在一个程序中使用两种日志服务。如何更换日志实现？只要排除掉 `blade-log` 这个依赖接入你熟悉的就可以了。
 
+**启动日志**
 
-[preact-boilerplate]: https://github.com/developit/preact-boilerplate
-[hyperscript]: https://github.com/dominictarr/hyperscript
+我们可以通过观察启动日志知道 Blade 都做了什么。我用数字标识的地方一一解释一下（可能比较小，`冷静分析.jpg`）
+
+1. 这部分日志打印一下你的程序所处环境，包括**JDK版本、程序所处目录、临时目录、时区、编码、classpath**
+2. 这里输出 `Blade` 的启动Banner和版本信息
+3. 这里输出你已经注册的路由
+4. 这里输出你当前的Netty `EventLoopGroup`，默认为`NioEventLoopGroup`，追求性能可以配置为`EpoolEventLoopGroup`
+5. 在这里项目已经初始化完毕，同时输出启动耗费了多少毫秒
+6. 输出 `Blade` 启动占用的 IP 和端口，默认为9000
+
+最后一行提示你打开浏览器访问的地址 :)

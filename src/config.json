@@ -18,15 +18,51 @@
 	  "content": "guide",
 	  "routes": [
 		{
-		  "path": "/",
-		  "name": "开始使用"
+		  "path": "/guide/architecture",
+		  "name": "架构介绍"
+		},
+		{
+		  "path": "/guide/getting-started",
+		  "name": "快速上手"
+		},
+		{
+		  "path": "/guide/components",
+		  "name": "组件托管"
+		},
+		{
+		  "path": "/guide/routes",
+		  "name": "路由注册"
+		},
+		{
+		  "path": "/guide/request-response",
+		  "name": "请求响应"
+		},
+		{
+		  "path": "/guide/config",
+		  "name": "配置文件"
+		},
+		{
+		  "path": "/guide/kit",
+		  "name": "Blade工具类"
+		},
+		{
+		  "path": "/guide/templates",
+		  "name": "模板引擎"
+		},
+		{
+		  "path": "/guide/database",
+		  "name": "数据库操作"
+		},
+		{
+		  "path": "/guide/deploy",
+		  "name": "打包部署"
 		}
 	  ]
 	},
 	{
 	  "name": "API文档",
 	  "content": "api",
-	  "path": "/"
+	  "path": "/api"
 	},
 	{
 	  "name": "视频教程",
@@ -43,19 +79,19 @@
 	  "content": "about",
 	  "routes": [
 		{
-		  "path": "/",
+		  "path": "/change-logs",
 		  "name": "发布日志"
 		},
 		{
-		  "path": "/",
+		  "path": "/contribution",
 		  "name": "参与开源"
 		},
 		{
-		  "path": "/",
+		  "path": "/who-used",
 		  "name": "谁在使用"
 		},
 		{
-		  "path": "/",
+		  "path": "/contact",
 		  "name": "联系我们"
 		}
 	  ]
