@@ -67,7 +67,7 @@
 	{
 	  "name": "视频教程",
 	  "content": "video-tutorial",
-	  "path": "video-tutorial"
+	  "path": "/video-tutorial"
 	},
 	{
 	  "name": "捐赠项目",
