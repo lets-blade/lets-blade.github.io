@@ -60,19 +60,53 @@ Blade 繁多的配置选项在初始状况下都有一个明智的默认值，�
 5. 向客户端发送响应
 6. 移除当前线程Request、Response
 
-## 路由概念(Route Concept)
+## 框架原理(Framework principle)
 
-在 Blade 路由是一个请求的最小单位，可以理解为 SpringMvc 中的 RequestMapping。
+这套框架非常简单，能够让你保持良好的代码风格。为了使用Blade完成功能，你需要了解几个概念。
 
-<!-- ## 组件概览 (Overview of the components) -->
+当开发Blade程序时，你作为开发者的责任，是写出能够迎合用户请求（比如：http://localhost:9000 ）的代码，
+并将与请求相对应的资源显示出来。（首页页面）
 
-<!-- | 生命周期方法                  | 什么时候被调用                                    | -->
-<!-- |-----------------------------|--------------------------------------------------| -->
-<!-- | `componentWillMount`        | 在一个组件被渲染到 DOM 之前                         | -->
-<!-- | `componentDidMount`         | 在一个组件被渲染到 DOM 之后      					 | -->
-<!-- | `componentWillUnmount`      | 在一个组件在 DOM 中被清除之前                       | -->
-<!-- | `componentWillReceiveProps` | 在新的 props 被接受之前                              | -->
-<!-- | `shouldComponentUpdate`     | 在 `render()` 之前. 若返回 `false`，则跳过 render   | -->
-<!-- | `componentWillUpdate`       | 在 `render()` 之前                                | -->
-<!-- | `componentDidUpdate`        | 在 `render()` 之后                                | -->
+用户请求所执行的代码，被定义于**控制器类**的方法之中。这些方法被称为**路由**（你也可以理解为SpringMvc中的RequestMapping），
+而类则称作controller（控制器，一般会用 `@Path` 注解标识）。
+用户请求和代码之间的映射关系使用像 `@GetRoute` 这样的注解关联。
+浏览器显示的内容一般是通过 `templates`（模板）来输出的。
+
+在下面章节中你将学习Blade控制器、路由、模板中的内部工作流的细节部分。
+
+### Controller 和 路由
+
+```java
+@Path
+public class IndexController {
+    
+    @GetRoute("/")
+    public String index(){
+        return "index.html";
+    }
+
+}
+```
+
+在Blade程序中，控制器通常是命名中包含`Controller`字样的Java类。
+
+控制器中的方法，被称为路由（Route），它们通常关联着程序中的某个URL，
+本例中，`Index`控制器只有一个路由名为`/`，其对应的方法是`index`。
+
+在路由中的代码通常很短，只有10-15行，因为他们只是调用程序的其他部分，
+来生成所需的信息，并且负责渲染模板，把结果显示给用户。
+
+在本例中只写了一行，将渲染 `index.html`，程序将在 `templates` 目录下寻找这个模板文件。
+
+**路由**
+
+Blade路由把每一个请求递交给对应的方法来执行，这是通过把程序中的配置好的路由路径，来与请求中的URL进行匹配来实现的。
+
+**模板**
+
+Blade内置了简单的Html模板，但一般不足以应付灵活的Web开发，笔者一般使用 [jetbrick-template](https://github.com/subchen/jetbrick-template-2x) 这款模板引擎作为支持。
+当然你可以扩展其他你喜欢的模板引擎。
+
+我们使用了 `return "index.html"` 告诉程序去寻找 `templates/index.html` 模板文件，
+你也可以使用 `Response` 对象的 `render` 方法渲染。
 
