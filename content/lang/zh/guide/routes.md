@@ -8,7 +8,7 @@ permalink: '/guide/routes'
 路由是 Blade 中的核心，路由是一个 Http 请求处理的最小的最小单元，我们需要在程序中创建好 URL 和路由的映射关系。
 在Blade中注册一个路由有2种方式，在下面我们详细讲解。
 
-## 路由规则
+## 路由规则 (Rules)
 
 在 Blade 的路由规则不是特别复杂，我们追求简洁与优雅，不希望把事情做的更麻烦。
 所以路由规则分为这么几种：
@@ -26,7 +26,7 @@ permalink: '/guide/routes'
 > 当我们注册一个 `/users/:uid` 这样的路由规则的时候它是一个 `Restful` 风格的URL，会匹配到相应的路由实现，
 > 当然你可以使用多个参数。
 
-## Blade对象注册
+## Blade对象注册 (Blade object register)
 
 ```java
 Blade.me().get("/", (req, res) -> res.text("Hello World"));
@@ -43,7 +43,7 @@ Blade.me().delete("/", (req, res) -> res.text("Hello World"));
 我们来看看 `Blade.get` 这个方法，它接收2个参数，第一个是路由匹配的 `URL`，
 第二个参数用于处理请求（`RouteHandler`接口），因为我们使用Java8所以写法看起来比较简洁。
 
-## 控制器注册
+## 控制器注册 (Controller register)
 
 大部分时候我们会使用 `类` 来封装一些相同功能的路由，我们将它称之为控制器。
 Blade 在启动的时候会扫描控制器中的路由。
