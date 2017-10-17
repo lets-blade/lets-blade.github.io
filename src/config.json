@@ -60,6 +60,10 @@
 	  ]
 	},
 	{
+	  "name": "电子书",
+	  "path": "https://book.lets-blade.com"
+	},
+	{
 	  "name": "API文档",
 	  "content": "api",
 	  "path": "/api"
