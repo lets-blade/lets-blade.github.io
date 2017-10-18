@@ -65,8 +65,7 @@
 	},
 	{
 	  "name": "API文档",
-	  "content": "api",
-	  "path": "/api"
+	  "path": "http://www.javadoc.io/doc/com.bladejava/blade-mvc/2.0.3"
 	},
 	{
 	  "name": "视频教程",
