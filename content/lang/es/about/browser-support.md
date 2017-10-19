@@ -3,9 +3,9 @@ name: Browser Support
 permalink: '/about/browser-support'
 ---
 
-# Navegadores soportados
+# Browser Support
 
-Preact ofrece soporte para navegadores modernos (Chrome, Firefox, Safari, Edge) e IE9+. De todos modos, funciona en IE7 e IE8, pero para ello es necesario incluir polyfills. En caso de que quieras utilizarlo y soportar estos navegadores antiguos, se recomienda agregar [es5-shim] o [babel-polyfill].
+Preact supports modern browsers (Chrome, Firefox, Safari, Edge) and IE9+. It should work fine in IE7 and IE8, but requires some polyfills. If you intend to use it and support those older browsers, it is recommended to use a polyfill like [es5-shim] or [babel-polyfill].
 
 <center>
     <a href="https://saucelabs.com/u/preact">

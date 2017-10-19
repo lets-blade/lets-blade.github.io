@@ -3,197 +3,170 @@ name: Getting Started
 permalink: '/guide/getting-started'
 ---
 
-# Primeros pasos
+# 如何开始
 
-En esta guía vamos a ver cómo crear un simple componente de "Reloj". Puedes encontrar información más detallada para cada tema dentro del menú de Guía.
+这个指引会带搭建一个简单的『Hello』程序。当然这只是开始，迈出这一步你将感受到 `Blade` 的强大 :strong:。
 
-> :information_desk_person: [No es necesario utilizar ES2015 para poder usar Preact](https://github.com/developit/preact-without-babel)... pero deberías hacerlo. Esta guía asume que cuentas con algún tipo de configuración compatible con ES2015 usando Babel y/o webpack/browserify/gulp/grunt/etc. Si no la tienes, comienza con [preact-boilerplate] o un [Template de CodePen](http://codepen.io/developit/pen/pgaROe?editors=0010).
-
----
-
-
-## Importa lo que necesitas
-
-El módulo de `preact` provee tanto `named` como `default` exports, por lo que puedes importar todo bajo un namespace o sólo lo que necesitas como variables locales:
-
-**Named:**
-
-```js
-import { h, render, Component } from 'preact';
-
-// Indica a Babel tranforme las llamadas de la función h() a JSX:
-/** @jsx h */
-```
-
-**Default:**
-
-```js
-import preact from 'preact';
-
-// Indica a Babel tranforme las llamadas de la función preact.h() a JSX:
-/** @jsx preact.h */
-```
-
-> Los `named imports` funcionan bien en aplicaciones fuertemente estructuradas, mientras que el default export es más veloz y nunca necesita ser actualizado al utilizar diferentes partes de la librería.
-
-### Global pragma
-
-En lugar de declarar el `@jsx` pragma en tu código, es mejor configurarlo globalmente en un archivo `.babelrc`.
-
-**Named:**
->**Para Babel 5 y versiones anteriores:**
->
-> ```json
-> { "jsxPragma": "h" }
-> ```
->
-> **Para Babel 6:**
->
-> ```json
-> {
->   "plugins": [
->     ["transform-react-jsx", { "pragma":"h" }]
->   ]
-> }
-> ```
-
-**Default:**
->**Para Babel 5 y versiones anteriores:**
->
-> ```json
-> { "jsxPragma": "preact.h" }
-> ```
->
-> **Para Babel 6:**
->
-> ```json
-> {
->   "plugins": [
->     ["transform-react-jsx", { "pragma":"preact.h" }]
->   ]
-> }
-> ```
+> :information_desk_person: 使用 Blade 必须用 Maven 进行构建，JDK1.8，这是约定。至于用什么IDE看你个人爱好（我更习惯在IDEA下进行编程）
 
 ---
 
+## 创建一个 Maven 工程
 
-## Renderizado de JSX
+创建一个 **普通** 的 `Maven` 工程，**再次提示** Blade 只需要你创建普通的工程！！！跟 Tomcat 什么的没有关系，请摆脱你只会J2EE那套。
 
-Por defecto, Preact provee una función `h()` que convierte tu JSX a elementos de Virtual DOM _([así es como lo hace](http://jasonformat.com/wtf-is-jsx))_. También provee una función `render()` que crea un DOM tree a partir de ese Virtual DOM.
+创建好后我们需要引入 Blade 依赖，并且配置一下 JDK 编译版本，下面是一个 `pom.xml` 的示例:
 
-Para renderizar JSX solo basta con importar esas dos funciones y utilizarlas de la siguiente manera:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>com.example</groupId>
+    <artifactId>hello</artifactId>
+    <version>0.0.1</version>
+    
+    <properties>
+        <blade-mvc.version>2.0.3</blade-mvc.version>
+    </properties>
+    
+    <dependencies>
+        <!-- mvc dependency -->
+        <dependency>
+            <groupId>com.bladejava</groupId>
+            <artifactId>blade-mvc</artifactId>
+            <version>${blade-mvc.version}</version>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <finalName>hello</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-```js
-import { h, render } from 'preact';
-
-render((
-	<div id="foo">
-		<span>Hello, world!</span>
-		<button onClick={ e => alert("Hola!") }>Presioname</button>
-	</div>
-), document.body);
+</project>
 ```
 
+> :warn: 修改这个 `pom.xml` 的同学注意了。请把 `groupId` 和 项目名改掉; 请注意使用较新版本的 `blade-mvc` 依赖 
 
-Esto debería parecerte bastante sencillo si has utilizado [hyperscript] o alguno de sus [muchos amigos](https://github.com/developit/vhtml).
+## 项目结构
 
-Sin embargo, renderizar hyperscript con un Virtual DOM no tiene sentido. Queremos renderizar componentes y actualizarlos cuando los datos sean modificados - es ahí donde el poder del diffing de Virtual DOM brilla. :star2:
+在此之前，我推荐搭建创建一个基础的 `package`，我们将程序所有的源文件放在 `包` 下面，Java是以 `package` 管理源码的。
+那么我的项目结构如下：
 
+```bash
+.
+├── pom.xml
+└── src
+  ├── main
+  │  ├── java
+  │  │   └── com
+  │  │   └─── example
+  │  │      ├── Application.java
+  │  │      ├── config
+  │  │      ├── controller
+  │  │      ├── hooks
+  │  │      ├── model
+  │  │      └── service
+  │  └── resources
+  │      ├── app.properties
+  │      ├── static
+  │      │   ├── css
+  │      │   │ └─ style.css
+  │      └── templates
+  │          └─ index.html
+  └── test
+      └── java
+```
 
----
+## 编写运行类
 
+编写**Application.java**
 
-## Componentes
+```java
+package com.example;
 
-Preact exporta una clase generica `Component`, la cual puede ser extendida para construir piezas de una Interfaz de Usuario encapsuladas y auto-actualizables. Estos Componentes soportan todos los [lifecycle methods] de React, como por ejemplo `shouldComponentUpdate()` y `componentWillReceiveProps()`. Proporcionar implementaciones especificas de estos métodos es el mecanismo preferido para controlar _cómo_ y _cuándo_ los componentes son actualizados.
+import com.blade.Blade;
 
-Los componentes también tienen un método `render()`, pero a diferencia de React este método recibe `(props, state)` como argumentos. Esto provee una manera ergonómica de desestructurar `props`y `state` en variables locales para ser referenciadas por JSX.
-
-Hechemos un vistazo a un simple componente de `Reloj`, el cual muestra la hora actual.
-
-```js
-import { h, render, Component } from 'preact';
-
-class Reloj extends Component {
-	render() {
-		let time = new Date().toLocaleTimeString();
-		return <span>{ time }</span>;
-	}
+public class Application {
+    public static void main(String[] args) {
+        Blade.me().start(Application.class, args);
+    }
 }
-
-// renderiza una instancia de Reloj en el <body>:
-render(<Reloj />, document.body);
 ```
 
+> 创建一个启动类，位于 package 根目录下，使用 Blade.me() 方法创建 Blade 对象并且启动它。
 
-Genial! Correr esto produce la siguiente estructura de HTML:
+当然，这个时候你启动它是没有意义的，因为我们还没有编写路由，编写路由最简单的方式就是使用 Blade 的内置方法，
+在后面的章节中我们会讲到其他的方式，这里为了简单起见，编写一个 `Hello World` 吧
 
-```html
-<span>10:28:57 PM</span>
+```java
+Blade.me()
+    .get('/', (req, res) -> res.text("Hello World!"))
+    .start(Application.class, args);
 ```
 
+此时你启动应用程序，在终端可以看到如下输出：
 
+```bash
 ---
+                                                                            ①
+2017-10-14 14:12:52:302 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: jdk.version    => 1.8.0_101
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: user.dir       => /Users/biezhi/workspace/projects/java/hello
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: java.io.tmpdir => /var/folders/y7/fdpr6jzx1rs6x0jmty2h6lvw0000gn/T/
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: user.timezone  => Asia/Shanghai
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: file.encoding  => UTF-8
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: classpath      => /Users/biezhi/workspace/projects/java/hello/target/classes
+                                    
+                                        ②
+							    __, _,   _, __, __,
+							    |_) |   /_\ | \ |_
+							    |_) | , | | |_/ |
+							    ~   ~~~ ~ ~ ~   ~~~
+							    :: Blade :: (v2.0.3) 
 
-
-## Ciclo de vida de los Componentes
-
-Para lograr que el tiempo de reloj sea actualizado cada segundo, necesitamos saber cuándo `<Reloj>` es montado en el DOM. _Si ya has utilizado HTML5 Custom Elements, esto es similar a los métodos de ciclo de vida `attachedCallback` y `detachedCallback`._ Preact invoca a los siguientes métodos de ciclo de vida cuando son definidos para un Componente.
-
-
-| Lifecycle method            | Cuándo son llamados                                          |
-|-----------------------------|--------------------------------------------------------------|
-| `componentWillMount`        | previo a que el componente sea montado en el DOM             |
-| `componentDidMount`         | luego de que el componente es montado en el DOM              |
-| `componentWillUnmount`      | previo a la eliminación del componente del DOM               |
-| `componentWillReceiveProps` | previo a que nuevas props sean aceptadas                     |
-| `shouldComponentUpdate`     | previo a `render()`. Devuelve `false` para evitar el render  |
-| `componentWillUpdate`       | previo a `render()`                                          |
-| `componentDidUpdate`        | luego de `render()`                                          |
-
-
-
-Entonces, queremos tener un temporizador de 1 segundo que comienza cuando el Componente es agregado al DOM, y finaliza si es removido. Crearemos el temporizador y almacenaremos una referencia a él en `componentDidMount`, y finalizaremos el temporizador en `componentWillUnmount`. Para cada tic del temporizador, actualizaremos el `state` del objeto del componente con un nuevo tiempo. Al hacer esto, el componente será re-renderizado de forma automática.
-
-```js
-import { h, render, Component } from 'preact';
-
-class Reloj extends Component {
-	constructor() {
-		super();
-		// configuramos tiempo inicial:
-		this.state.tiempo = Date.now();
-	}
-
-	componentDidMount() {
-		// actualizar el tiempo cada un segundo
-		this.temporizador = setInterval(() => {
-			this.setState({ tiempo: Date.now() });
-		}, 1000);
-	}
-
-	componentWillUnmount() {
-		// finalizar cuando no es renderizable
-		clearInterval(this.temporizador);
-	}
-
-	render(props, state) {
-		let tiempo = new Date(state.tiempo).toLocaleTimeString();
-		return <span>{ tiempo }</span>;
-	}
-}
-
-// renderizamos una instancia de Reloj en <body>:
-render(<Reloj />, document.body);
+                                                                            ③
+2017-10-14 14:12:52:390 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/
+                                                                            ④
+2017-10-14 14:12:53:258 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Use NioEventLoopGroup
+                                                                            ⑤
+2017-10-14 14:12:53:461 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ hello initialize successfully, Time elapsed: 176 ms
+                                                                            ⑥
+2017-10-14 14:12:53:462 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Blade start with 0.0.0.0:9000
+2017-10-14 14:12:53:462 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Open your web browser and navigate to http://127.0.0.1:9000 ⚡
 ```
 
+这时候你打开浏览器访问 http://127.0.0.1:9000 即可看到 `Hello World!` 的响应。
 
----
+## 启动都干了什么
 
+下面我们来简单的解释一下终端的这些日志吧，以便于你更熟悉框架的机制。
 
-Ahora sí: tenemos [un reloj](http://jsfiddle.net/developit/u9m5x0L7/embedded/result,js/)!
+Blade 使用 `slf4j-api` 作为日志接口，默认提供一种简单的日志实现（修改自**simple-logger**），所以你在启动的时候可以看到有日志输出。
 
+> :star2: 为什么 Blade 不自己实现日志框架呢？大多数开发者会用到其他的库来帮助他完成应用开发，而绝大部分的 Java 库都会使用 `slf4j-api` 供开发者更好的扩展。
+> 这里我们也是这样，不至于让你在一个程序中使用两种日志服务。如何更换日志实现？只要排除掉 `blade-log` 这个依赖接入你熟悉的就可以了。
 
+**启动日志**
 
-[preact-boilerplate]: https://github.com/developit/preact-boilerplate
-[hyperscript]: https://github.com/dominictarr/hyperscript
+我们可以通过观察启动日志知道 Blade 都做了什么。我用数字标识的地方一一解释一下（可能比较小，`冷静分析.jpg`）
+
+1. 这部分日志打印一下你的程序所处环境，包括**JDK版本、程序所处目录、临时目录、时区、编码、classpath**
+2. 这里输出 `Blade` 的启动Banner和版本信息
+3. 这里输出你已经注册的路由
+4. 这里输出你当前的Netty `EventLoopGroup`，默认为`NioEventLoopGroup`，追求性能可以配置为`EpoolEventLoopGroup`
+5. 在这里项目已经初始化完毕，同时输出启动耗费了多少毫秒
+6. 输出 `Blade` 启动占用的 IP 和端口，默认为9000
+
+最后一行提示你打开浏览器访问的地址 :)

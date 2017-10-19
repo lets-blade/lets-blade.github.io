@@ -3,26 +3,25 @@ name: Project Goals
 permalink: '/about/project-goals'
 ---
 
-# Metas del proyecto
+# Preact's Goals
 
-## Metas
+## Goals
 
-Preact tiene como objetivo cumplir con los siguientes puntos:
+Preact aims to deliver on a few key goals:
 
-- **Performante:** Renderizar rápido y eficientemente
-- **Tamaño:** Tamaño pequeño y liviano _(aproximadamente 3.5kb)_
-- **Eficiencia:** Uso eficiente de la memoria
-- **Comprensibilidad:** Entender el código fuente debería llevar muy poco tiempo, a penas unas horas
-- **Compatibilidad:** Preact apunta ser _compatible en gran medida_ con la API React. [preact-compat] intenta lograr la mayor compatibilidad posible con React.
+- **Performance:** Render quickly & efficiently
+- **Size:** Small size, lightweight _(approximately 3.5kb)_
+- **Efficiency:** Effective memory usage _(recycling, avoiding GC thrash)_
+- **Understandability:** Understanding the codebase should take no more than a few hours
+- **Compatibility:** Preact aims to be _largely compatible_ with the React API. [preact-compat] attempts to achieve as much compatibility with React as possible.
 
-## Funcionalidades excluidas
+## Non-Goals
 
-Algunas funcionalidades de React son omitidas intencionalmente en Preact, ya que no cumplen con los puntos mencionados anteriormente, o bien, porque no encajan dentro del alcance del conjunto básico de funciones de Preact.
+Some React features are intentionally omitted from Preact, either because they are not achievable while meeting the primary project goals listed above or because they don't fit within the scope of Preact's core set of functionality.
 
-- Los ítems excluidos se pueden encontrar en la sección [¿Qué falta?]:
-    - PropTypes, ya que se pueden utilizar como una librería separada
-    - Children, ya que Preact siempre empaqueta los children como un Array
-    - Synthetic Events, ya que Preact no tiene soporte para navegadores antiguos como IE8
+- The intentional items under [What's Missing?](/guide/differences-to-react#whats-missing):
+    - PropTypes, which are easily used as a separate library
+    - Children, since Preact always boxes children as an Array
+    - Synthetic Events, since Preact does not attempt to patch issues in older browsers like IE8
 
 [preact-compat]: https://github.com/developit/preact-compat/
-[¿Qué falta?]: /guide/differences-to-react#whats-missing

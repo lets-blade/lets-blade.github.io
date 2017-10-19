@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Preact
+title: Blade
 show_title: false
 toc: false
 ---
@@ -8,39 +8,40 @@ toc: false
 
 <jumbotron>
     <h1>
-        <logo height="1.5em" title="Preact" text>Preact</logo>
+        <img src="/assets/logo.svg" alt="blade"/>
     </h1>
-
-    <p>Una alternativa veloz a React en 3kB con la misma API de ES6.</p>
-
+   <h1 style="font-size: 35px">轻量级、高性能、简洁优雅的Web框架</h1>
+    
     <p>
-        <a href="/guide/getting-started" class="home-button">Primeros pasos</a>
-        <span class="home-button-sep">&nbsp; • &nbsp;</span>
-        <a href="/guide/switching-to-preact" class="home-button">Cambiar a Preact</a>
+        <a href="/guide/getting-started" class="home-button">如何开始</a>
+        <!-- <span class="home-button-sep">&nbsp; • &nbsp;</span> -->
+        <!-- <a href="/guide/switching-to-preact" class="home-button">切换到 preact</a> -->
     </p>
     <p>
-        <github-stars user="developit" repo="preact">5,000+</github-stars>
+        <github-stars user="biezhi" repo="blade">5,000+</github-stars>
+        <github-forks user="biezhi" repo="blade">5,000+</github-forks>
     </p>
 </jumbotron>
 
 
 <section class="home-top">
-    <h1>Una librería distinta.</h1>
+    <h1>简洁优雅的库</h1>
 </section>
 
 
 <section class="home-section">
     <img src="/assets/home/metal.svg">
 
-    <h2>Más cerca del metal</h2>
+    <h2>更高效的开发速度</h2>
 
     <p>
-        Preact provee la abstracción más pequeña del Virtual DOM sobre el DOM.
-        La web es una plataforma estable, es tiempo de dejar de reimplementarla en nombre de la seguridad.
+		Blade 基于 Java8 开发，为个人开发者打造的轻量级 MVC 框架，
+		你只需要创建普通的 Maven 工程即可完成一个简单的应用。
     </p>
 
     <p>
-        Preact también es un ciudadano de primera clase de la plataforma web. Compara el Virtual DOM contra el DOM, registra manejadores de eventos reales y se comporta bien con otras librerías.
+		Blade 内部帮你做了很多事，你在使用的时候会感到非常轻便。
+		结合官网录制的视频课程学习起来更快，良好的社区支持让你不会困惑。
     </p>
 </section>
 
@@ -48,15 +49,15 @@ toc: false
 <section class="home-section">
     <img src="/assets/home/size.svg">
 
-    <h2>Tamaño reducido</h2>
+    <h2>超小体积</h2>
 
     <p>
-        La mayoría de los frameworks de UI son suficientemente largos como para ser la mayor parte del tamaño del JavaScript de una app.
-        Preact es distinto: Es suficientemente pequeño como para que <em>tu código</em> sea la parte más pesada de tu aplicación.
+		大多数 Java Web 框架是相当庞大的，让你从下手那一步有点摸不着头脑。<br/>
+		Blade 不同：它的源代码不到 <code>500kb</code>，<em > 你的代码</em > 是你的应用程序最大的部分。
     </p>
 
     <p>
-        Esto significa menos JavaScript para descargar, interpretar y ejecutar - dejando más tiempo para tu código, para que puedas construir una experiencia que tú definas sin tener que pelear para mantener el framework bajo control.
+		这将意味可以下载更少的 Java 代码，解析和执行 - 为您的代码节省更多的时间，所以你可以构建一个你定义的体验，而不需要受一个框架的控制.
     </p>
 </section>
 
@@ -64,14 +65,14 @@ toc: false
 <section class="home-section">
     <img src="/assets/home/performance.svg">
 
-    <h2>Gran Performance</h2>
+    <h2>高性能</h2>
 
     <p>
-        Preact es rápido, y no solo por su peso. Es una de las librerías de Virtual DOM más rápidas que vas a encontrar, gracias a su implementación de diffing simple y predecible.
+		Blade 是快速的，不仅是因为他的体积，内部Web容器是基于 <code>Netty4</code> 实现的，使它在100并发下tps可以达到 <code>6w/s</code>。
     </p>
 
     <p>
-        También incluye agregados extra de performance como actualizaciones customizables en batch, async rendering opcional, reciclado del DOM y manejo de eventos optimizado via [Estado Asociado](/guide/linked-state).
+        很多时候我们并不关心性能问题，但 Blade 为什么不做到这点呢？
     </p>
 </section>
 
@@ -79,14 +80,15 @@ toc: false
 <section class="home-section">
     <img src="/assets/home/portable.svg">
 
-    <h2>Portable y embebible</h2>
+    <h2>轻量 &amp; 可扩展</h2>
 
     <p>
-        La pequeña huella que deja Preact significa que puedes tomar el poderoso paradigma del Componente de Virtual DOM a nuevos lugares donde de otra manera no podría entrar.
+        Blade 遵循『<b>约定优于配置</b>』，按照一套统一的约定进行应用开发，采用这种方式可以减少开发者的学习成本，开发者不再是『钉子』，可以流动起来。
     </p>
 
     <p>
-        Usa Preact para crear partes de una aplicación sin integración compleja. Embebe Preact en un widget y usa las mismas herramientas y técnicas que usarías para crear una app completa.
+        Blade 为开发者提供了诸如 <code>WebHook</code>、<code>BeanProccessor</code> 这样的扩展接口，
+        你可以根据自己的需求开发自己的中间件。
     </p>
 </section>
 
@@ -94,142 +96,124 @@ toc: false
 <section class="home-section">
     <img src="/assets/home/productive.svg">
 
-    <h2>Productividad instantánea</h2>
+    <h2>灵活的路由</h2>
 
     <p>
-        La liviandad es mucho más divertida cuando no tienes que sacrificar productividad para llegar a ella.
-        Preact habilita tu productividad desde el comienzo. De hecho tiene algunos bonus:
+        在 Blade 中接收客户端请求的就是路由，你可以定义不同的路由来满足各种开发需求。
     </p>
-
-    <ul>
-        <li>`props`, `state` y `context` son pasados a `render()`</li>
-        <li>Usa atributos HTML standard como `class` y `for`</li>
-        <li>Compatible con las herramientas de desarrollo de React</li>
-    </ul>
+    
+    <p>
+        Blade 支持硬编码编写一个路由，同时也支持像 SpringMvc 那样以注解驱动。
+    </p>
+    
 </section>
 
 
 <section class="home-section">
     <img src="/assets/home/compatible.svg">
 
-    <h2>Ecosistema compatible</h2>
+    <h2>更方便部署</h2>
 
     <p>
-        Los Componentes de Virtual DOM hacen simple compartir elementos reusables - desde botones hasta proveedores de data.
-        El diseño de Preact significa también que tienes miles de Componentes disponibles desde el ecosistema de React.
+        由于 Blade 内置了 WebServer，意味着你不需要在服务器搭建一个 Web 服务器了。
+        因为使用 Maven 构建项目，那么就可以将工程打成 Jar 包直接运行。
     </p>
-
-    <p>
-        Agregando un simple alias a
-        <a href="/guide/switching-to-preact#how-to-alias-preact-compat">preact-compat</a> en tu bundler provee una capa de compatibilidad que habilita incluso los componentes de React más complejos para ser usados en tu aplicación.
-    </p>
+    
 </section>
 
 
 <section class="home-top">
-    <h1>Míralo en acción.</h1>
+    <h1>『码』上见分晓</h1>
 </section>
-
 
 <section class="home-split">
     <div>
-        <h2>Componente de Todo List</h2>
-        <pre><code class="lang-js">
-export default class TodoList extends Component {
-    state = { todos: [], text: '' };
-    setText = e =&gt; {
-        this.setState({ text: e.target.value });
-    };
-    addTodo = () =&gt; {
-        let { todos, text } = this.state;
-        todos = todos.concat({ text });
-        this.setState({ todos, text: '' });
-    };
-    render({ }, { todos, text }) {
-        return (
-            &lt;form onSubmit={this.addTodo} action="javascript:"&gt;
-                &lt;input value={text} onInput={this.setText} /&gt;
-                &lt;button type="submit"&gt;Add&lt;/button&gt;
-                &lt;ul&gt;
-                    { todos.map( todo =&gt; (
-                        &lt;li&gt;{todo.text}&lt;/li&gt;
-                    )) }
-                &lt;/ul&gt;
-            &lt;/form&gt;
-        );
-    }
+        <h2>第一个程序：Hello World</h2>
+        <pre><code class="lang-java">
+public static void main(String[] args) {
+    Blade.me().get("/", (req, res) -> {
+        res.text("Hello Blade");
+    }).start();
 }
+
         </code></pre>
     </div>
-
+    
     <div>
-        <h2>Ejemplo corriendo</h2>
-        <pre repl="false"><code class="lang-js">
-import TodoList from './todo-list';
-
-render(&lt;TodoList /&gt;, document.body);
+        <h2>注册路由</h2>
+        <pre repl="false"><code class="lang-java">
+public static void main(String[] args) {
+    Blade.me()
+        .get("/user/21", getting)
+        .post("/save", posting)
+        .delete("/remove", deleting)
+        .put("/putValue", putting)
+        .start();
+}
         </code></pre>
-        <div class="home-demo">
-            <todo-list></todo-list>
-        </div>
     </div>
 </section>
 
 
 <section class="home-split">
     <div>
-        <h2>Buscando las estrellas de Github</h2>
-        <pre><code class="lang-js">
-export default class Stars extends Component {
-    async componentDidMount() {
-        let stars = await githubStars(this.props.repo);
-        this.setState({ stars });
-    }
-    render({ repo }, { stars=0 }) {
-        let url = \`//github.com/${repo}\`;
-        return (
-            &lt;a href={url} class="stars"&gt;
-                ⭐️ {stars} Stars
-            &lt;/a&gt;
-        );
-    }
+        <h2>获取 Rest Url 参数</h2>
+        <pre><code class="lang-java">
+public static void main(String[] args) {
+    Blade blade = Blade.me();
+    // Create a route: /user/:uid
+    blade.get("/user/:uid", (request, response) -> {
+		Integer uid = request.pathInt("uid");
+		response.text("uid : " + uid);
+	});
+	
+    // Create two parameters route
+    blade.get("/users/:uid/post/:pid", (request, response) -> {
+		Integer uid = request.pathInt("uid");
+		Integer pid = request.pathInt("pid");
+		String msg = "uid = " + uid + ", pid = " + pid;
+		response.text(msg);
+	});
+	
+    // Start blade
+    blade.start();
 }
         </code></pre>
     </div>
-
+    
     <div>
-        <h2>Ejemplo corriendo</h2>
-
-        <pre repl="false"><code class="lang-js">
-import Stars from './stars';
-
-render(
-    &lt;Stars repo="developit/preact" /&gt;,
-    document.body
-);
+        <h2>上传文件</h2>
+        <pre repl="false"><code class="lang-java">
+public void upload(@MultipartParam FileItem fileItem){
+    byte[] data = fileItem.getData();
+    // Save the temporary file to the specified path
+    Files.write(Paths.get(filePath), data);
+}
         </code></pre>
-
-        <div class="home-demo">
-            <github-stars simple user="developit" repo="preact"></github-stars>
-        </div>
+        <p>或者</p>
+        <pre repl="false"><code class="lang-java">
+        public void upload(Request request){
+            request.fileItem("img").ifPresent(fileItem -> {
+                byte[] data = fileItem.getData();
+                // Save the temporary file to the specified path
+                Files.write(Paths.get(filePath), data);              
+            });
+        }
+                </code></pre>
     </div>
 </section>
 
-
 <section class="home-top">
-    <h1>¿Preparada/o para meterte de lleno?</h1>
+    <h1>准备入坑了？</h1>
 </section>
-
 
 <section style="text-align:center;">
     <p>
-        Tenemos guías separadas basadas en tus conocimientos de React.
-        <br>
-        ¡Elige la guía que funciona mejor para ti!
+        快和小伙伴们一起玩这个小巧的框架吧 :_)
     </p>
     <p>
-        <a href="/guide/getting-started" class="home-button">Primeros pasos</a>
-        <span class="home-button-sep">&nbsp; • &nbsp;</span>
-        <a href="/guide/switching-to-preact" class="home-button">Cambiando a Preact</a>
+        <a href="/guide/getting-started" class="home-button">如何开始</a>
+        <!-- <span class="home-button-sep">&nbsp; • &nbsp;</span> -->
+        <!-- <a href="/guide/switching-to-preact" class="home-button">切换到 Preact</a> -->
     </p>
 </section>
