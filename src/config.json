@@ -60,6 +60,32 @@
 	  ]
 	},
 	{
+	  "name": "Blade进阶",
+	  "content": "advanced",
+	  "routes": [
+		{
+		  "path": "/advanced/custom-exception",
+		  "name": "自定义异常处理"
+		},
+		{
+		  "path": "/advanced/custom-error-page",
+		  "name": "自定义错误页面"
+		},
+		{
+		  "path": "/advanced/custom-middleware",
+		  "name": "自定义中间件"
+		},
+		{
+		  "path": "/advanced/custom-session",
+		  "name": "Session配置和扩展"
+		},
+		{
+		  "path": "/advanced/command-line",
+		  "name": "命令行参数"
+		}
+	  ]
+	},
+	{
 	  "name": "电子书",
 	  "path": "https://book.lets-blade.com"
 	},

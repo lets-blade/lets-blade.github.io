@@ -41,6 +41,14 @@ Blade.me()
     });
 ```
 
+**路由执行时获取**
+
+```java
+public void someRoute(){
+    String version = WebContext.blade().environment().get("app.version", "0.0.1");
+}
+```
+
 上面的写法比较粗暴，有时候我们更习惯在加载模板引擎配置或者数据库配置的时候来做，
 下面举个例子，我将数据库配置和模板配置一起加载，编写一个实现了 `BeanProcessor` 接口的配置类。
 
