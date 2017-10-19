@@ -4,7 +4,7 @@ permalink: '/guide/architecture'
 ---
 
 # 架构介绍
-
+n
 Blade是无意间起的一个名字，始于 2015 年 9 月，目的为个人开发者提供一个除 Spring 系列框架的一个选择。
 
 学习 Blade 搭建 Web 程序，只需要 1 小时，如果你是一个Web开发的老手，也许`20`分钟就够了。

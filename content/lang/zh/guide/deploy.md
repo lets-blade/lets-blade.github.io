@@ -108,8 +108,10 @@ permalink: '/guide/deploy'
 我们的配置就已经Ok了，现在执行打包命令：
 
 ```bash
-mvn clean package
+mvn clean package -DskipTests
 ```
+
+> 如果你想简单点搞定配置，可以将 [这个项目](https://github.com/lets-blade/blade-demos/tree/master/blade-package) 中的配置Copy一份修改。
 
 此时你的终端应该会输出类似如下信息：
 
