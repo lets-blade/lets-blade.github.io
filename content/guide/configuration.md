@@ -81,7 +81,6 @@ public class LoadConfig implements BeanProcessor {
         blade.templateEngine(templateEngine);
     }
 }
-
 ```
 
 > 这里数据库使用了 `druid` 连接池，模板引擎使用 `blade-template-jetbrick`
