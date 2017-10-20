@@ -8,7 +8,7 @@ toc: false
 
 <jumbotron>
     <h1>
-        <img src="/assets/logo.svg" alt="blade"/>
+        <img src="/assets/logo.png" alt="blade" width="610"/>
     </h1>
    <h1 style="font-size: 35px">轻量级、高性能、简洁优雅的Web框架</h1>
     
