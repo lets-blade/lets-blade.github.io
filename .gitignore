@@ -6,3 +6,4 @@ npm-debug.log
 db.json
 public
 .deploy_git
+push.sh
