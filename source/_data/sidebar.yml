@@ -1,0 +1,18 @@
+docs:
+  - index.html
+  - quick-start.html
+  - components.html
+  - routes.html
+  - request-response.html
+  - configuration.html
+  - bladekit.html
+  - templates.html
+  - database.html
+  - deploy.html
+# advance:
+#   - index.html
+#   - exception.html
+#   - error-page.html
+#   - middleware.html
+#   - session-ext.html
+#   - terminal.html

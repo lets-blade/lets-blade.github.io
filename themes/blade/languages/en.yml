@@ -1,0 +1,20 @@
+menu:
+  docs: Docs
+  advance: Advance
+  api: API
+  video: Video
+  donate: Donate
+  we-used: WeUsed
+  update-log: Updatelog
+
+index:
+  get_started: Docs
+  source: Source
+
+page:
+  contents: Contents
+  back_to_top: Back to Top
+  improve: Improve this doc
+  prev: Prev
+  next: Next
+  last_updated: "Last updated: %s"

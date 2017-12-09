@@ -1,0 +1,32 @@
+language: node_js
+sudo: false
+node_js:
+  - "6"
+cache:
+  directories:
+    - node_modules
+# env:
+#  global:
+#    - CXX: g++-4.8
+install:
+  - npm install
+# addons:
+#   apt:
+#     sources:
+#       - ubuntu-toolchain-r-test
+#     packages:
+#       - g++-4.8
+#   ssh_known_hosts: github.com
+script:
+  - npm run build
+branches:
+  only:
+  - master
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "biezhi"
+  - git config user.email "biezhi.me@gmail.com"
+  - git add .
+  - git commit -m "[CI] update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@github.com/lets-blade/lets-blade.github.io.git" master:gh-pages
