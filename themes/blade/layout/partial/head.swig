@@ -42,9 +42,9 @@
     fb_admins: config.fb_admins,
     twitter_site: config.twitter
   }) }}
-  <meta name="baidu-site-verification" content="dqxB7mXZGE" />
   <!-- Google Analytics -->
   {{ partial('google_analytics') }}
   <!-- Github Button -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <meta name="baidu-site-verification" content="dqxB7mXZGE" />
 </head>
