@@ -42,6 +42,7 @@
     fb_admins: config.fb_admins,
     twitter_site: config.twitter
   }) }}
+  <meta name="baidu-site-verification" content="dqxB7mXZGE" />
   <!-- Google Analytics -->
   {{ partial('google_analytics') }}
   <!-- Github Button -->
