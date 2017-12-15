@@ -26,7 +26,7 @@ comments: false
     <version>0.0.1</version>
 
     <properties>
-        <blade-mvc.version>2.0.5-BETA1</blade-mvc.version>
+        <blade-mvc.version>2.0.5-RELEASE</blade-mvc.version>
     </properties>
 
     <dependencies>
