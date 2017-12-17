@@ -5,7 +5,7 @@ var _ = require('lodash');
 var cheerio = require('cheerio');
 var lunr = require('lunr');
 
-var localizedPath = ['docs', 'advance', 'video', 'donate', 'we-used', 'update-log'];
+var localizedPath = ['docs', 'advance', 'video', 'donate', 'update-log'];
 
 function startsWith(str, start) {
     return str.substring(0, start.length) === start;
@@ -125,7 +125,7 @@ hexo.extend.helper.register('doc_sidebar', function (className) {
         b = pathFn.basename(b.path);
         return sidebar.docs.indexOf(a) - sidebar.docs.indexOf(b);
     });
-    
+
     pages.forEach(function (page) {
 
         result += `<li>`;
