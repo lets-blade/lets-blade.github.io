@@ -9,8 +9,5 @@
       {% if config.twitter %}<a href="https://twitter.com/{{ config.twitter }}" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>{% endif %}
       {% if config.github %}<a href="https://github.com/{{ config.github }}" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>{% endif %}
     </div>
-    <div>
-      Hosted by <a href="https://pages.coding.me/" target="_blank">Coding Pages</a>
-    </div>
   </div>
 </footer>
