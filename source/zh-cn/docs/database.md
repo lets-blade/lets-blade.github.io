@@ -6,7 +6,7 @@ comments: false
 
 
 当你需要存储或读取数据的时候很可能就需要用到数据库了，Blade不限制你使用什么数据库框架，
-为了让开发更高效，Blade提供了一款简单的类 `ActiveRecord` 框架 [blade-jdbc](https://github.com/lets-blade/blade-jdbc) 
+为了让开发更高效，Blade提供了一款简单的类 `ActiveRecord` 框架 [blade-jdbc](https://github.com/lets-blade/blade-jdbc)
 用于操作关系型数据库，目前只在 `MySQL` 尝试过。如果你有更熟悉的数据库框架也可以自行取决。
 
 ## 数据库表脚本
@@ -44,7 +44,7 @@ VALUES
 <dependency>
     <groupId>com.bladejava</groupId>
     <artifactId>blade-jdbc</artifactId>
-    <version>0.2.2-beta</version>
+    <version>0.2.2-RELEASE</version>
 </dependency>
 ```
 
@@ -53,7 +53,7 @@ VALUES
 ```java
 @Bean
 public class LoadConfig implements BeanProcessor {
-    
+
     @Override
     public void processor(Blade blade) {
         Base.open("jdbc:mysql://127.0.0.1:3306/app", "root", "123456");
@@ -72,7 +72,7 @@ public class User extends ActiveRecord {
     private String  password;
     private Integer age;
     private String  realName;
-    
+
     // getter and setter
 }
 ```
