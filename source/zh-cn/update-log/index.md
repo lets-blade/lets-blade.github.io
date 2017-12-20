@@ -4,6 +4,14 @@ categories: update-log
 comments: false
 ---
 
+## v2.0.6
+
+1. 修复自定义 404 页面 `message` 变量为空
+2. 修复路由方法上的对象参数为 NULL
+3. 修复JSON反序列化Date类型为 NULL
+4. 修复启动 Banner 配置文件不换行
+4. 添加 `WebHook` 配置 `@UrlPattern` 注解指定拦截部分 URL
+
 ## v2.0.5
 
 1. 支持 `WebSocket`

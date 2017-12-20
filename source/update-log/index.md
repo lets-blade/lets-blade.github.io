@@ -4,6 +4,14 @@ categories: update-log
 comments: false
 ---
 
+## v2.0.6
+
+1. Fix custom 404 page message variable is NULL
+2. Fix the routing method on the object parameter is NULL
+3. Fixed JSON deserialization Date type is NULL
+4. Repair banner configuration file does not wrap
+4. Add `WebHook` configuration` @UrlPattern` annotations specify the interception part of the URL
+
 ## v2.0.5
 
 1. Support `WebSocket`
