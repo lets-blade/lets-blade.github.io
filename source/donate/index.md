@@ -21,12 +21,4 @@ Donations will be used for server maintenance, online / offline open source acti
 - [One-time donation via PayPal](https://paypal.me/bladejava/10)
 - [Sponsored by OpenCollective](https://opencollective.com/blade) (Join a foundation that supports community work and activities through a transparent cost model)
 
-## Sponsor
-
-[![千铭儿网络科技](/images/donate/chanmir.png)](https://www.chanmir.com/?u=9FE88B)
-
-[千铭儿网络科技有限公司](https://www.chanmir.com/?u=9FE88B)
-
-> Note: Sponsor an 8-core 8G 10M bandwidth physical server for one year
-
 ## Donation list

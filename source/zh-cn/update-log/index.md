@@ -11,6 +11,7 @@ comments: false
 3. 修复JSON反序列化Date类型为 NULL
 4. 修复启动 Banner 配置文件不换行
 4. 添加 `WebHook` 配置 `@UrlPattern` 注解指定拦截部分 URL
+5. 添加Web服务线程模型配置
 
 ## v2.0.5
 
