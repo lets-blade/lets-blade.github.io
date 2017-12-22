@@ -26,6 +26,14 @@ Blade 是个人发起的开源项目，目的为更多开发者提供便捷，�
 - [通过PayPal一次性捐赠](https://paypal.me/bladejava/10)
 - [通过 OpenCollective 赞助](https://opencollective.com/blade) (加入一个基金会，通过透明的费用模型支持社区的工作和活动)
 
+## 赞助商
+
+[![千铭儿网络科技](/images/donate/chanmir.png)](https://www.chanmir.com/?u=9FE88B)
+
+[千铭儿网络科技有限公司](https://www.chanmir.com/?u=9FE88B)
+
+> 备注: 赞助8核CPU、10M带宽物理服务器一年
+
 ## 捐赠列表
 
 | 姓名 | 金额（元） | 方式 | 时间 | 留言 |
