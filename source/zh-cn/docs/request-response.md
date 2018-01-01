@@ -8,7 +8,7 @@ comments: false
 请求和响应是 `Blade` 中的核心概念，在几乎所有的Web框架中都有这个概念，
 我们使用 `Request` 对象接收请求，使用 `Response` 对象向客户端发送响应。
 
-从 Blade 的 `README` 中已经演示了绝大部分的使用场景，那些使用方法是你在开发中频次最高的一些操作，
+从 Blade 的 [README](https://github.com/lets-blade/blade) 中已经演示了绝大部分的使用场景，那些使用方法是你在开发中频次最高的一些操作，
 本章节也会列出所有的 API 供你参考。
 
 ## Request 方法概览
