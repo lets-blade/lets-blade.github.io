@@ -164,7 +164,7 @@ We can know what Blade has done by looking at the startup log. I use the number 
 1. This part of the log print your program environment, including ** JDK version of the program directory, temporary directory, time zone, encoding, classpath **
 2. This is where the banner and version information for Blade is printed
 3. Here you have to register the routing output
-4. Here to export your current Netty `EventLoopGroup`, the default is` NioEventLoopGroup`, the pursuit of performance can be configured as `EpoolEventLoopGroup`
+4. Here to export your current Netty `EventLoopGroup`, the default is` NioEventLoopGroup`, the pursuit of performance can be configured as `EpollEventLoopGroup`
 5. Here the project has been initialized, at the same time the output start up how many milliseconds
 6. Output IP and port occupied by `Blade` startup, the default is 9000
 
