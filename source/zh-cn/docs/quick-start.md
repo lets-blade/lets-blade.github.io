@@ -162,7 +162,7 @@ Blade 使用 `slf4j-api` 作为日志接口，默认提供一种简单的日志�
 1. 这部分日志打印一下你的程序所处环境，包括**JDK版本、程序所处目录、临时目录、时区、编码、classpath**
 2. 这里输出 `Blade` 的启动Banner和版本信息
 3. 这里输出你已经注册的路由
-4. 这里输出你当前的Netty `EventLoopGroup`，默认为`NioEventLoopGroup`，追求性能可以配置为`EpoolEventLoopGroup`
+4. 这里输出你当前的Netty `EventLoopGroup`，默认为`NioEventLoopGroup`，追求性能可以配置为`EpollEventLoopGroup`
 5. 在这里项目已经初始化完毕，同时输出启动耗费了多少毫秒
 6. 输出 `Blade` 启动占用的 IP 和端口，默认为9000
 
