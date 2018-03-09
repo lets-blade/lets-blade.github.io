@@ -31,7 +31,7 @@ google_analytics: UA-107006919-1
 
 twitter: biezhii
 # weibo: planeart
-github: biezhi/blade
+github: lets-blade/blade
 
 skip_render:
   - push.sh

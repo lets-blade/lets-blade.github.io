@@ -1,3 +1,3 @@
 # lets-blade.github.io
 
-blade site docs
+lets-blade.com site source
