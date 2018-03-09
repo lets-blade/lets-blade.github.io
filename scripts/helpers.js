@@ -50,9 +50,11 @@ hexo.extend.helper.register('doc_sidebar', function (className) {
 
         if (!cheerio) cheerio = require('cheerio');
 
+        console.log(page.path);
+
         var $ = cheerio.load(page.content);
         var headingsMaxDepth = options.hasOwnProperty('max_depth') ? options.max_depth : 6;
-        var headingsSelector = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].slice(0, headingsMaxDepth).join(',');
+        var headingsSelector = ['h1', 'h2'].slice(0, headingsMaxDepth).join(',');
         var headings = $(headingsSelector);
 
         if (!headings.length) return '';
@@ -66,6 +68,7 @@ hexo.extend.helper.register('doc_sidebar', function (className) {
         var i = 0;
 
         headings.each(function () {
+
             var level = +this.name[1];
             var id = $(this).attr('id');
             var text = $(this).text();
