@@ -118,7 +118,7 @@ public class LoadConfig implements BeanProcessor {
 | http.gzip.enable | 是否开启gzip压缩 | false |
 | http.cors.enable | 是否开启cors | false |
 | http.session.key | session在cookie中的id | SESSION |
-| http.session.timeout | session超时时长，单位分钟 | 1800 |
+| http.session.timeout | session超时时长，单位/秒 | 1800 |
 | http.auth.username | basic认证用户名，当开启Basic认证时需要 | 无 |
 | http.auth.password | basic认证密码，当开启Basic认证时需要 | 无 |
 
