@@ -76,7 +76,10 @@ Here are a few key points to explain briefly:
 
 **2. Set Profile**
 
-
+This is a bit of pitfalls, because the IDE sometimes does not recognize our maven directory structure, so it needs to be explicitly specified in the configuration and which directories belong to the resource directory.
+In the following configuration, the `dev` environment specifies `src/main/java`, `src/main/resources`, `src/main/test`, `src/test/resources`
+The contents of these 4 folders are the directories where the source code and resource files are stored. However, when packaging, you do not need to pack the resource file. You only need to package the class, so we use
+  `prod` This environment resets what is `resource`. Here only the `java` source file is packaged. Of course, you need to append the `-P prod` parameter to the package.
 
 ```xml
 <profiles>

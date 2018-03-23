@@ -76,10 +76,10 @@ Add the following plugins under `build` to specify the packaged executable jar p
 
 **2. 设置环境**
 
-This is a bit of pitfalls, because the IDE sometimes does not recognize our maven directory structure, so it needs to be explicitly specified in the configuration and which directories belong to the resource directory.
-In the following configuration, the `dev` environment specifies `src/main/java`, `src/main/resources`, `src/main/test`, `src/test/resources`
-The contents of these 4 folders are the directories where the source code and resource files are stored. However, when packaging, you do not need to pack the resource file. You only need to package the class, so we use
-  `prod` This environment resets what is `resource`. Here only the `java` source file is packaged. Of course, you need to append the `-P prod` parameter to the package.
+这是比较坑爹的一点，因为 IDE 在有些时候无法识别我们的 maven 目录结构，所以需要在配置中明确指定，哪些目录属于资源目录。
+下面的配置中，`dev` 这个环境就指定了 `src/main/java`、`src/main/resources`、`src/main/test`、`src/test/resources`
+这4个文件夹下的内容都是源码、资源文件存储的目录。但是在打包的时候并不需要将资源文件打包，只需要打包 class 即可，所以我们用
+ `prod` 这个环境来重新设置了什么是 `resource`，这里就只打包 `java` 源文件了，当然你需要在打包的时候追加 `-P prod` 参数。
 
 ```xml
 <profiles>

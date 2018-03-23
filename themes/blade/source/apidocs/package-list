@@ -7,6 +7,7 @@ com.blade.ioc.bean
 com.blade.ioc.reader
 com.blade.kit
 com.blade.kit.json
+com.blade.kit.reload
 com.blade.mvc
 com.blade.mvc.annotation
 com.blade.mvc.handler
@@ -23,3 +24,4 @@ com.blade.security.web.csrf
 com.blade.security.web.filter
 com.blade.server
 com.blade.server.netty
+com.blade.watcher

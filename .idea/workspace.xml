@@ -2,9 +2,417 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c16a000a-a7bc-4dd6-8fc9-78633472bbdd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/source/docs/deploy.md" afterPath="$PROJECT_DIR$/source/docs/deploy.md" />
-      <change beforePath="$PROJECT_DIR$/source/zh-cn/docs/deploy.md" afterPath="$PROJECT_DIR$/source/zh-cn/docs/deploy.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/Value.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/ValueInjector.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/ValueInjector.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/CollectionKit.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/I18nUtils.ResourceHolder.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/I18nUtils.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/Tuple2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/CollectionKit.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/I18nUtils.ResourceHolder.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/I18nUtils.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/Tuple2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/DefaultJsonSupport.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/JsonSupport.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/JsonSupport.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/SampleJsonSerializer.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/reload/FileChangeDetector.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/reload/class-use/FileChangeDetector.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/reload/package-frame.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/reload/package-summary.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/reload/package-tree.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/reload/package-use.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/UrlPattern.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/UrlPattern.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/PathBuilderMeta.PathBuilder.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/PathBuilderMeta.PathTypeEnum.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/PathBuilderMeta.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/PathRegexBuilder.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/class-use/PathBuilderMeta.PathBuilder.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/class-use/PathBuilderMeta.PathTypeEnum.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/class-use/PathBuilderMeta.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/class-use/PathRegexBuilder.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/watcher/EnvironmentWatcher.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/watcher/class-use/EnvironmentWatcher.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/watcher/package-frame.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/watcher/package-summary.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/watcher/package-tree.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/watcher/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/allclasses-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/allclasses-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/allclasses-noframe.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/allclasses-noframe.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/Blade.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/Blade.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/Environment.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/Environment.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/class-use/Blade.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/class-use/Blade.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/class-use/Environment.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/class-use/Environment.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/BeanProcessor.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/BeanProcessor.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/Event.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/Event.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/EventListener.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/EventListener.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/EventManager.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/EventManager.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/EventType.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/EventType.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/class-use/BeanProcessor.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/class-use/BeanProcessor.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/class-use/Event.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/class-use/Event.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/class-use/EventListener.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/class-use/EventListener.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/class-use/EventManager.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/class-use/EventManager.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/class-use/EventType.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/class-use/EventType.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/event/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/BadRequestException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/BadRequestException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/BladeException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/BladeException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/ForbiddenException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/ForbiddenException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/InternalErrorException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/InternalErrorException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/NotFoundException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/NotFoundException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/TemplateException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/TemplateException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/class-use/BadRequestException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/class-use/BadRequestException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/class-use/BladeException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/class-use/BladeException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/class-use/ForbiddenException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/class-use/ForbiddenException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/class-use/InternalErrorException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/class-use/InternalErrorException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/class-use/NotFoundException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/class-use/NotFoundException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/class-use/TemplateException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/class-use/TemplateException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/exception/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/ClassReader.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/ClassReader.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/DynamicContext.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/DynamicContext.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/Injector.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/Injector.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/Ioc.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/Ioc.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/SimpleIoc.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/SimpleIoc.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/Bean.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/Bean.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/Inject.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/Inject.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/InjectWith.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/InjectWith.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/Order.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/Order.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/class-use/Bean.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/class-use/Bean.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/class-use/Inject.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/class-use/Inject.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/class-use/InjectWith.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/class-use/InjectWith.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/class-use/Order.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/class-use/Order.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/BeanDefine.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/BeanDefine.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/ClassDefine.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/ClassDefine.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/ClassInfo.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/ClassInfo.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/FieldInjector.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/FieldInjector.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/OrderComparator.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/OrderComparator.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/Scanner.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/Scanner.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/BeanDefine.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/BeanDefine.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/ClassDefine.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/ClassDefine.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/ClassInfo.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/ClassInfo.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/FieldInjector.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/FieldInjector.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/OrderComparator.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/OrderComparator.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/Scanner.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/Scanner.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/class-use/ClassReader.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/class-use/ClassReader.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/class-use/DynamicContext.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/class-use/DynamicContext.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/class-use/Injector.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/class-use/Injector.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/class-use/Ioc.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/class-use/Ioc.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/class-use/SimpleIoc.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/class-use/SimpleIoc.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/AbstractClassReader.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/AbstractClassReader.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/ClassPathClassReader.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/ClassPathClassReader.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/JarReaderImpl.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/JarReaderImpl.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/class-use/AbstractClassReader.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/class-use/AbstractClassReader.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/class-use/ClassPathClassReader.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/class-use/ClassPathClassReader.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/class-use/JarReaderImpl.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/class-use/JarReaderImpl.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/reader/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/AsmKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/AsmKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/Assert.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/Assert.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/BladeKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/BladeKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/ConvertKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/ConvertKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/DateKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/DateKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/EncryptKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/EncryptKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/Hashids.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/Hashids.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/IOKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/IOKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/JsonKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/JsonKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/MemoryConst.Unit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/MemoryConst.Unit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/MemoryConst.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/MemoryConst.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/NamedThreadFactory.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/NamedThreadFactory.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/PathKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/PathKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/PatternKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/PatternKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/ReflectKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/ReflectKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/StringKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/StringKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/UUID.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/UUID.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/WebKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/WebKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/AsmKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/AsmKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/Assert.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/Assert.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/BladeKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/BladeKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/ConvertKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/ConvertKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/DateKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/DateKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/EncryptKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/EncryptKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/Hashids.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/Hashids.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/IOKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/IOKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/JsonKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/JsonKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/MemoryConst.Unit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/MemoryConst.Unit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/MemoryConst.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/MemoryConst.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/NamedThreadFactory.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/NamedThreadFactory.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/PathKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/PathKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/PatternKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/PatternKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/ReflectKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/ReflectKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/StringKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/StringKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/UUID.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/UUID.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/WebKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/class-use/WebKit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/Ason.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/Ason.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/BeanSerializer.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/BeanSerializer.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/JsonFormat.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/JsonFormat.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/JsonIgnore.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/JsonIgnore.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/JsonProperty.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/JsonProperty.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/JsonSerializer.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/JsonSerializer.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/SampleJsonSerializer.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/MappingType.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/MappingType.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/ParseException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/ParseException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/SerializeMapping.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/SerializeMapping.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/Ason.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/Ason.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/BeanSerializer.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/BeanSerializer.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/JsonFormat.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/JsonFormat.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/JsonIgnore.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/JsonIgnore.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/JsonProperty.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/JsonProperty.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/JsonSerializer.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/JsonSerializer.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/DefaultJsonSupport.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/MappingType.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/MappingType.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/ParseException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/ParseException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/SerializeMapping.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/class-use/SerializeMapping.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/json/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/kit/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/Const.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/Const.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/SessionManager.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/SessionManager.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/WebContext.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/WebContext.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/BodyParam.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/BodyParam.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/CookieParam.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/CookieParam.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/DeleteRoute.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/DeleteRoute.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/GetRoute.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/GetRoute.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/HeaderParam.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/HeaderParam.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/JSON.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/JSON.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/MultipartParam.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/MultipartParam.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/Param.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/Param.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/Path.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/Path.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/PathParam.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/PathParam.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/PostRoute.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/PostRoute.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/PutRoute.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/PutRoute.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/Route.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/Route.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/BodyParam.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/BodyParam.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/CookieParam.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/CookieParam.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/DeleteRoute.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/DeleteRoute.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/GetRoute.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/GetRoute.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/HeaderParam.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/HeaderParam.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/JSON.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/JSON.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/MultipartParam.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/MultipartParam.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/Param.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/Param.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/Path.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/Path.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/PathParam.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/PathParam.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/PostRoute.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/PostRoute.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/PutRoute.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/PutRoute.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/Route.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/class-use/Route.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/annotation/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/class-use/Const.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/class-use/Const.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/class-use/SessionManager.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/class-use/SessionManager.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/class-use/WebContext.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/class-use/WebContext.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/DefaultExceptionHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/DefaultExceptionHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/ExceptionHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/ExceptionHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/ParamStrut.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/ParamStrut.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/RequestInvoker.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/RequestInvoker.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/RequestExecution.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/RouteHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/RouteHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/WebSocketHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/WebSocketHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/DefaultExceptionHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/DefaultExceptionHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/ExceptionHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/ExceptionHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/MethodArgument.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/MethodArgument.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/ParamStrut.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/ParamStrut.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/RequestInvoker.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/RequestInvoker.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/RequestExecution.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/RouteHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/RouteHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/WebSocketHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/class-use/WebSocketHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/Signature.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/Signature.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/WebHook.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/WebHook.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/class-use/Signature.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/class-use/Signature.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/class-use/WebHook.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/class-use/WebHook.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/hook/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/Cookie.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/Cookie.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/HttpMethod.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/HttpMethod.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/HttpRequest.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/HttpRequest.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/HttpResponse.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/HttpResponse.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/HttpSession.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/HttpSession.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/Request.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/Request.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/Response.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/Response.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/Session.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/Session.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/Cookie.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/Cookie.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/HttpMethod.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/HttpMethod.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/HttpRequest.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/HttpRequest.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/HttpResponse.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/HttpResponse.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/HttpSession.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/HttpSession.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/Request.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/Request.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/Response.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/Response.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/Session.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/class-use/Session.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/http/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/FileItem.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/FileItem.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/MimeType.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/MimeType.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/class-use/FileItem.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/class-use/FileItem.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/class-use/MimeType.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/class-use/MimeType.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/multipart/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/Route.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/Route.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/RouteBuilder.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/RouteBuilder.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/RouteMatcher.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/RouteMatcher.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/RouteStruct.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/RouteStruct.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/class-use/Route.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/class-use/Route.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/class-use/RouteBuilder.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/class-use/RouteBuilder.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/class-use/RouteMatcher.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/class-use/RouteMatcher.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/class-use/RouteStruct.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/class-use/RouteStruct.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/route/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/HtmlCreator.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/HtmlCreator.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/ModelAndView.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/ModelAndView.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/RestResponse.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/RestResponse.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/class-use/HtmlCreator.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/class-use/HtmlCreator.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/class-use/ModelAndView.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/class-use/ModelAndView.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/class-use/RestResponse.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/class-use/RestResponse.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/BladeTemplate.State.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/BladeTemplate.State.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/BladeTemplate.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/BladeTemplate.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/DefaultEngine.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/DefaultEngine.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/TemplateEngine.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/TemplateEngine.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/UncheckedTemplateException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/UncheckedTemplateException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/class-use/BladeTemplate.State.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/class-use/BladeTemplate.State.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/class-use/BladeTemplate.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/class-use/BladeTemplate.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/class-use/DefaultEngine.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/class-use/DefaultEngine.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/class-use/TemplateEngine.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/class-use/TemplateEngine.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/class-use/UncheckedTemplateException.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/class-use/UncheckedTemplateException.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/ui/template/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/WebSocketContext.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/WebSocketContext.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/WebSocketSession.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/WebSocketSession.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/class-use/WebSocketContext.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/class-use/WebSocketContext.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/class-use/WebSocketSession.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/class-use/WebSocketSession.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/websocket/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/wrapper/OutputStreamWrapper.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/wrapper/OutputStreamWrapper.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/wrapper/class-use/OutputStreamWrapper.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/wrapper/class-use/OutputStreamWrapper.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/wrapper/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/wrapper/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/wrapper/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/wrapper/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/wrapper/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/wrapper/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/wrapper/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/wrapper/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/auth/BasicAuthMiddleware.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/auth/BasicAuthMiddleware.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/auth/class-use/BasicAuthMiddleware.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/auth/class-use/BasicAuthMiddleware.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/auth/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/auth/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/auth/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/auth/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/auth/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/auth/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/auth/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/auth/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/CsrfConfig.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/CsrfConfig.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/CsrfMiddleware.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/CsrfMiddleware.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/CsrfToken.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/CsrfToken.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/class-use/CsrfConfig.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/class-use/CsrfConfig.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/class-use/CsrfMiddleware.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/class-use/CsrfMiddleware.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/class-use/CsrfToken.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/class-use/CsrfToken.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/csrf/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/HTMLFilter.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/HTMLFilter.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/InputFilter.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/class-use/HTMLFilter.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/class-use/HTMLFilter.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/class-use/InputFilter.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/security/web/filter/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/Server.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/Server.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/class-use/Server.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/class-use/Server.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/EpoolKit.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/EpoolKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/mvc/handler/MethodArgument.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/HttpConst.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/HttpConst.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/HttpServerHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/HttpServerHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/HttpServerInitializer.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/HttpServerInitializer.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/IoMultiplexer.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/IoMultiplexer.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/NettyServer.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/NettyServer.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/NettyServerGroup.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/NettyServerGroup.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/ProgressiveFutureListener.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/ProgressiveFutureListener.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/RequestHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/RequestHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/SessionHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/SessionHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/StaticFileHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/StaticFileHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/WebSockerHandler.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/WebSockerHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/WebSocketHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/EpoolKit.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/EpoolKit.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/annotation/class-use/Value.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/HttpConst.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/HttpConst.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/HttpServerHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/HttpServerHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/HttpServerInitializer.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/HttpServerInitializer.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/IoMultiplexer.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/IoMultiplexer.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/NettyServer.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/NettyServer.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/NettyServerGroup.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/NettyServerGroup.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/ProgressiveFutureListener.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/ProgressiveFutureListener.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/RequestHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/RequestHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/SessionHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/SessionHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/StaticFileHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/StaticFileHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/WebSockerHandler.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/WebSockerHandler.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/class-use/WebSocketHandler.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/netty/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/package-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/package-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/package-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/package-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/package-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/package-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/package-use.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/server/package-use.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/constant-values.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/constant-values.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/deprecated-list.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/deprecated-list.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/help-doc.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/help-doc.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/index-all.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/index-all.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/index.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/index.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/overview-frame.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/overview-frame.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/overview-summary.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/overview-summary.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/overview-tree.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/overview-tree.html" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/package-list" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/package-list" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/packages" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/blade/source/apidocs/serialized-form.html" afterPath="$PROJECT_DIR$/themes/blade/source/apidocs/serialized-form.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,38 +425,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="deploy.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/zh-cn/docs/deploy.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="426">
-                <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="37" />
-                <folding />
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deploy.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/docs/deploy.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="521">
-                <caret line="180" column="43" lean-forward="true" selection-start-line="180" selection-start-column="43" selection-end-line="180" selection-end-column="43" />
-                <folding />
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -117,6 +494,29 @@
               <item name="lets-blade-docs" type="b2602c69:ProjectViewProjectNode" />
               <item name="lets-blade-docs" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="lets-blade-docs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lets-blade-docs" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lets-blade-docs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lets-blade-docs" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lets-blade-docs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lets-blade-docs" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="blade" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lets-blade-docs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lets-blade-docs" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="blade" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -131,6 +531,11 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/themes/blade/source" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -160,7 +565,7 @@
       <workItem from="1515550726781" duration="141000" />
       <workItem from="1520576551166" duration="459000" />
       <workItem from="1520693801657" duration="363000" />
-      <workItem from="1521775073517" duration="1050000" />
+      <workItem from="1521775073517" duration="1236000" />
     </task>
     <task id="LOCAL-00001" summary=":memo: update blade version">
       <created>1520576642919</created>
@@ -183,18 +588,24 @@
       <option name="project" value="LOCAL" />
       <updated>1521775555788</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=":memo: update docs">
+      <created>1521776508344</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1521776508344</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2013000" />
+    <option name="totallyTimeSpent" value="2199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="90" y="40" width="1500" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494929" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494929" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -202,7 +613,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -367,6 +778,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/docs/deploy.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="351">
+            <caret line="170" column="11" lean-forward="true" selection-start-line="170" selection-start-column="11" selection-end-line="170" selection-end-column="11" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/zh-cn/docs/deploy.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -380,16 +804,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/docs/deploy.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="521">
-            <caret line="180" column="43" lean-forward="true" selection-start-line="180" selection-start-column="43" selection-end-line="180" selection-end-column="43" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
+    <entry file="file://$PROJECT_DIR$/themes/blade/source/apidocs/com/blade/ioc/bean/class-use/Scanner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
