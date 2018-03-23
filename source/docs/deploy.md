@@ -17,15 +17,6 @@ Add the following 2 plugins under `build -> plugins`.
 ```xml
 <build>
     <finalName>hello</finalName>
-    <resources>
-        <resource>
-            <directory>src/main/java</directory>
-            <filtering>false</filtering>
-            <excludes>
-                <exclude>**/*.java</exclude>
-            </excludes>
-        </resource>
-    </resources>
     <plugins>
         <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -77,14 +68,69 @@ Add the following 2 plugins under `build -> plugins`.
 
 Here are a few key points to explain briefly:
 
-- `resources`：packaged files under `src/main/java`, not packaged `.java` source files
 - `${project.build.directory}/dist/`：After the specified package is complete, the result is output in `target/dist` directory
 - `<descriptor>package.xml</descriptor>`：Use `package.xml` to determine the packaging structure, located in the project root directory
 - `<phase>package</phase>`：Intercept `package` this life cycle
 - `mainClass`：Specified to start the `main` function of the class name, usually only one
 - `<Class-Path>resources/</Class-Path>`：Package all the configuration files in the resources directory
 
-**Add in project root directory `package.xml`**
+**2. Set Profile**
+
+
+
+```xml
+<profiles>
+    <profile>
+        <id>dev</id>
+        <properties>
+            <profiles.active>dev</profiles.active>
+        </properties>
+        <activation>
+            <!-- Set to activate this configuration by default -->
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <build>
+            <resources>
+                <resource>
+                    <directory>src/main/java</directory>
+                    <filtering>false</filtering>
+                </resource>
+                <resource>
+                    <directory>src/main/resources</directory>
+                    <filtering>false</filtering>
+                </resource>
+                <resource>
+                    <directory>src/main/test</directory>
+                    <filtering>false</filtering>
+                </resource>
+                <resource>
+                    <directory>src/test/resources</directory>
+                    <filtering>false</filtering>
+                </resource>
+            </resources>
+        </build>
+    </profile>
+    <profile>
+        <id>prod</id>
+        <properties>
+            <profiles.active>prod</profiles.active>
+        </properties>
+        <build>
+            <resources>
+                <resource>
+                    <directory>src/main/java</directory>
+                    <filtering>false</filtering>
+                    <excludes>
+                        <exclude>**/*.java</exclude>
+                    </excludes>
+                </resource>
+            </resources>
+        </build>
+    </profile>
+</profiles>
+```
+
+**3. Add in project root directory `package.xml`**
 
 ```xml
 <assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
@@ -129,7 +175,7 @@ This configuration generally do not change, you are very familiar with this plug
 Our configuration is already Ok, and now execute the package command:
 
 ```bash
-mvn clean package -DskipTests
+mvn clean package -DskipTests -P prod
 ```
 
 > If you want to get the configuration simple, you can change the configuration Copy in [This Project](https://github.com/lets-blade/blade-demos/tree/master/blade-package).

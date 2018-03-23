@@ -17,15 +17,6 @@ Add the following plugins under `build` to specify the packaged executable jar p
 ```xml
 <build>
     <finalName>hello</finalName>
-    <resources>
-        <resource>
-            <directory>src/main/java</directory>
-            <filtering>false</filtering>
-            <excludes>
-                <exclude>**/*.java</exclude>
-            </excludes>
-        </resource>
-    </resources>
     <plugins>
         <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -77,14 +68,72 @@ Add the following plugins under `build` to specify the packaged executable jar p
 
 这里简单解释一下几个关键点：
 
-- `resources`：打包时打 `src/main/java` 下的文件，不打包 `.java` 源文件
 - `${project.build.directory}/dist/`：这个配置指定我们打包完成后将结果输出在 `target/dist` 目录下
 - `<descriptor>package.xml</descriptor>`：使用 `package.xml` 决定打包结构，位于项目根目录
 - `<phase>package</phase>`：是指插件拦截 `package` 这个生命周期
 - `mainClass`：指定启动的 `main` 函数所在类全名称，一般只有一个
 - `<Class-Path>resources/</Class-Path>`：将所有的配置文件打包在 `resources` 目录下
 
-**在项目根目录添加 `package.xml`**
+**2. 设置环境**
+
+This is a bit of pitfalls, because the IDE sometimes does not recognize our maven directory structure, so it needs to be explicitly specified in the configuration and which directories belong to the resource directory.
+In the following configuration, the `dev` environment specifies `src/main/java`, `src/main/resources`, `src/main/test`, `src/test/resources`
+The contents of these 4 folders are the directories where the source code and resource files are stored. However, when packaging, you do not need to pack the resource file. You only need to package the class, so we use
+  `prod` This environment resets what is `resource`. Here only the `java` source file is packaged. Of course, you need to append the `-P prod` parameter to the package.
+
+```xml
+<profiles>
+    <profile>
+        <id>dev</id>
+        <properties>
+            <profiles.active>dev</profiles.active>
+        </properties>
+        <activation>
+            <!-- Set to activate this configuration by default -->
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <build>
+            <resources>
+                <resource>
+                    <directory>src/main/java</directory>
+                    <filtering>false</filtering>
+                </resource>
+                <resource>
+                    <directory>src/main/resources</directory>
+                    <filtering>false</filtering>
+                </resource>
+                <resource>
+                    <directory>src/main/test</directory>
+                    <filtering>false</filtering>
+                </resource>
+                <resource>
+                    <directory>src/test/resources</directory>
+                    <filtering>false</filtering>
+                </resource>
+            </resources>
+        </build>
+    </profile>
+    <profile>
+        <id>prod</id>
+        <properties>
+            <profiles.active>prod</profiles.active>
+        </properties>
+        <build>
+            <resources>
+                <resource>
+                    <directory>src/main/java</directory>
+                    <filtering>false</filtering>
+                    <excludes>
+                        <exclude>**/*.java</exclude>
+                    </excludes>
+                </resource>
+            </resources>
+        </build>
+    </profile>
+</profiles>
+```
+
+**3. 在项目根目录添加 `package.xml`**
 
 ```xml
 
@@ -130,7 +179,7 @@ Add the following plugins under `build` to specify the packaged executable jar p
 我们的配置就已经Ok了，现在执行打包命令：
 
 ```bash
-mvn clean package -DskipTests
+mvn clean package -DskipTests -P prod
 ```
 
 > 如果你想简单点搞定配置，可以将 [这个项目](https://github.com/lets-blade/blade-demos/tree/master/blade-package) 中的配置Copy一份修改。
