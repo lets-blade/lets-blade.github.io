@@ -12,49 +12,72 @@ comments: false
 
 **1. 添加插件**
 
-在 `build -> plugins` 下添加如下2个插件
+Add the following plugins under `build` to specify the packaged executable jar package
 
 ```xml
-<plugin>
-    <artifactId>maven-assembly-plugin</artifactId>
-    <configuration>
-        <appendAssemblyId>false</appendAssemblyId>
-        <descriptors>
-            <descriptor>package.xml</descriptor>
-        </descriptors>
-        <outputDirectory>${project.build.directory}/dist/</outputDirectory>
-    </configuration>
-    <executions>
-        <execution>
-            <id>make-assembly</id>
-            <phase>package</phase>
-            <goals>
-                <goal>single</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-jar-plugin</artifactId>
-    <version>2.4</version>
-    <configuration>
-        <archive>
-            <manifest>
-                <mainClass>com.example.Application</mainClass>
-                <classpathPrefix>lib/</classpathPrefix>
-                <addClasspath>true</addClasspath>
-            </manifest>
-            <manifestEntries>
-                <Class-Path>resources/</Class-Path>
-            </manifestEntries>
-        </archive>
-    </configuration>
-</plugin>
+<build>
+    <finalName>hello</finalName>
+    <resources>
+        <resource>
+            <directory>src/main/java</directory>
+            <filtering>false</filtering>
+            <excludes>
+                <exclude>**/*.java</exclude>
+            </excludes>
+        </resource>
+    </resources>
+    <plugins>
+        <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+                <encoding>UTF-8</encoding>
+            </configuration>
+        </plugin>
+        <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <configuration>
+                <appendAssemblyId>false</appendAssemblyId>
+                <descriptors>
+                    <descriptor>package.xml</descriptor>
+                </descriptors>
+                <outputDirectory>${project.build.directory}/dist/</outputDirectory>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>make-assembly</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>single</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>2.4</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>com.example.Application</mainClass>
+                        <classpathPrefix>lib/</classpathPrefix>
+                        <addClasspath>true</addClasspath>
+                    </manifest>
+                    <manifestEntries>
+                        <Class-Path>resources/</Class-Path>
+                    </manifestEntries>
+                </archive>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 ```
 
 这里简单解释一下几个关键点：
 
+- `resources`：打包时打 `src/main/java` 下的文件，不打包 `.java` 源文件
 - `${project.build.directory}/dist/`：这个配置指定我们打包完成后将结果输出在 `target/dist` 目录下
 - `<descriptor>package.xml</descriptor>`：使用 `package.xml` 决定打包结构，位于项目根目录
 - `<phase>package</phase>`：是指插件拦截 `package` 这个生命周期

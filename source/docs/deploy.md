@@ -15,46 +15,69 @@ Of course, never used it does not matter, you only need to follow the configurat
 Add the following 2 plugins under `build -> plugins`.
 
 ```xml
-<plugin>
-    <artifactId>maven-assembly-plugin</artifactId>
-    <configuration>
-        <appendAssemblyId>false</appendAssemblyId>
-        <descriptors>
-            <descriptor>package.xml</descriptor>
-        </descriptors>
-        <outputDirectory>${project.build.directory}/dist/</outputDirectory>
-    </configuration>
-    <executions>
-        <execution>
-            <id>make-assembly</id>
-            <phase>package</phase>
-            <goals>
-                <goal>single</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-jar-plugin</artifactId>
-    <version>2.4</version>
-    <configuration>
-        <archive>
-            <manifest>
-                <mainClass>com.example.Application</mainClass>
-                <classpathPrefix>lib/</classpathPrefix>
-                <addClasspath>true</addClasspath>
-            </manifest>
-            <manifestEntries>
-                <Class-Path>resources/</Class-Path>
-            </manifestEntries>
-        </archive>
-    </configuration>
-</plugin>
+<build>
+    <finalName>hello</finalName>
+    <resources>
+        <resource>
+            <directory>src/main/java</directory>
+            <filtering>false</filtering>
+            <excludes>
+                <exclude>**/*.java</exclude>
+            </excludes>
+        </resource>
+    </resources>
+    <plugins>
+        <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+                <encoding>UTF-8</encoding>
+            </configuration>
+        </plugin>
+        <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <configuration>
+                <appendAssemblyId>false</appendAssemblyId>
+                <descriptors>
+                    <descriptor>package.xml</descriptor>
+                </descriptors>
+                <outputDirectory>${project.build.directory}/dist/</outputDirectory>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>make-assembly</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>single</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>2.4</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>com.example.Application</mainClass>
+                        <classpathPrefix>lib/</classpathPrefix>
+                        <addClasspath>true</addClasspath>
+                    </manifest>
+                    <manifestEntries>
+                        <Class-Path>resources/</Class-Path>
+                    </manifestEntries>
+                </archive>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 ```
 
 Here are a few key points to explain briefly:
 
+- `resources`：packaged files under `src/main/java`, not packaged `.java` source files
 - `${project.build.directory}/dist/`：After the specified package is complete, the result is output in `target/dist` directory
 - `<descriptor>package.xml</descriptor>`：Use `package.xml` to determine the packaging structure, located in the project root directory
 - `<phase>package</phase>`：Intercept `package` this life cycle
