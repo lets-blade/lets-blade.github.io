@@ -136,7 +136,6 @@ Add the following plugins under `build` to specify the packaged executable jar p
 **3. 在项目根目录添加 `package.xml`**
 
 ```xml
-
 <assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
