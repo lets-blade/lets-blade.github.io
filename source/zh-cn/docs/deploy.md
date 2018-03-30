@@ -10,16 +10,17 @@ comments: false
 
 ## 打包工程
 
-**1. 添加插件**
-
-Add the following plugins under `build` to specify the packaged executable jar package
+**添加插件**
 
 ```xml
 <build>
     <finalName>hello</finalName>
     <plugins>
+        <!-- Compile -->
         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version>
             <configuration>
                 <source>1.8</source>
                 <target>1.8</target>
@@ -29,11 +30,16 @@ Add the following plugins under `build` to specify the packaged executable jar p
         <plugin>
             <artifactId>maven-assembly-plugin</artifactId>
             <configuration>
-                <appendAssemblyId>false</appendAssemblyId>
-                <descriptors>
-                    <descriptor>package.xml</descriptor>
-                </descriptors>
-                <outputDirectory>${project.build.directory}/dist/</outputDirectory>
+                <finalName>${project.build.finalName}</finalName>  
+                <appendAssemblyId>false</appendAssemblyId>  
+                <archive>
+                    <manifest>
+                        <mainClass>com.example.Application</mainClass>
+                    </manifest>
+                </archive>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
             </configuration>
             <executions>
                 <execution>
@@ -45,143 +51,13 @@ Add the following plugins under `build` to specify the packaged executable jar p
                 </execution>
             </executions>
         </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>2.4</version>
-            <configuration>
-                <archive>
-                    <manifest>
-                        <mainClass>com.example.Application</mainClass>
-                        <classpathPrefix>lib/</classpathPrefix>
-                        <addClasspath>true</addClasspath>
-                    </manifest>
-                    <manifestEntries>
-                        <Class-Path>resources/</Class-Path>
-                    </manifestEntries>
-                </archive>
-            </configuration>
-        </plugin>
     </plugins>
 </build>
 ```
 
-这里简单解释一下几个关键点：
-
-- `${project.build.directory}/dist/`：这个配置指定我们打包完成后将结果输出在 `target/dist` 目录下
-- `<descriptor>package.xml</descriptor>`：使用 `package.xml` 决定打包结构，位于项目根目录
-- `<phase>package</phase>`：是指插件拦截 `package` 这个生命周期
-- `mainClass`：指定启动的 `main` 函数所在类全名称，一般只有一个
-- `<Class-Path>resources/</Class-Path>`：将所有的配置文件打包在 `resources` 目录下
-
-**2. 设置环境**
-
-这是比较坑爹的一点，因为 IDE 在有些时候无法识别我们的 maven 目录结构，所以需要在配置中明确指定，哪些目录属于资源目录。
-下面的配置中，`dev` 这个环境就指定了 `src/main/java`、`src/main/resources`、`src/main/test`、`src/test/resources`
-这4个文件夹下的内容都是源码、资源文件存储的目录。但是在打包的时候并不需要将资源文件打包，只需要打包 class 即可，所以我们用
- `prod` 这个环境来重新设置了什么是 `resource`，这里就只打包 `java` 源文件了，当然你需要在打包的时候追加 `-P prod` 参数。
-
-```xml
-<profiles>
-    <profile>
-        <id>dev</id>
-        <properties>
-            <profiles.active>dev</profiles.active>
-        </properties>
-        <activation>
-            <!-- Set to activate this configuration by default -->
-            <activeByDefault>true</activeByDefault>
-        </activation>
-        <build>
-            <resources>
-                <resource>
-                    <directory>src/main/java</directory>
-                    <filtering>false</filtering>
-                </resource>
-                <resource>
-                    <directory>src/main/resources</directory>
-                    <filtering>false</filtering>
-                </resource>
-                <resource>
-                    <directory>src/main/test</directory>
-                    <filtering>false</filtering>
-                </resource>
-                <resource>
-                    <directory>src/test/resources</directory>
-                    <filtering>false</filtering>
-                </resource>
-            </resources>
-        </build>
-    </profile>
-    <profile>
-        <id>prod</id>
-        <properties>
-            <profiles.active>prod</profiles.active>
-        </properties>
-        <build>
-            <resources>
-                <resource>
-                    <directory>src/main/java</directory>
-                    <filtering>false</filtering>
-                    <excludes>
-                        <exclude>**/*.java</exclude>
-                    </excludes>
-                </resource>
-            </resources>
-        </build>
-    </profile>
-</profiles>
-```
-
-**3. 在项目根目录添加 `package.xml`**
-
-```xml
-<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
-
-    <id>customAssembly</id>
-    <!-- dir -->
-    <formats>
-        <format>dir</format>
-    </formats>
-
-    <includeBaseDirectory>false</includeBaseDirectory>
-
-    <fileSets>
-        <fileSet>
-            <directory>src/main/resources/</directory>
-            <outputDirectory>/resources</outputDirectory>
-        </fileSet>
-    </fileSets>
-    
-    <dependencySets>
-        <dependencySet>
-            <outputDirectory>/lib</outputDirectory>
-            <scope>runtime</scope>
-            <excludes>
-                <exclude>${project.groupId}:${project.artifactId}</exclude>
-            </excludes>
-        </dependencySet>
-        <dependencySet>
-            <outputDirectory>/</outputDirectory>
-            <includes>
-                <include>${project.groupId}:${project.artifactId}</include>
-            </includes>
-        </dependencySet>
-    </dependencySets>
-
-</assembly>
-```
-
-这个配置一般也不用变动，你非常熟悉这款插件的时候可以详细研究下每个参数的意思，
-我们的配置就已经Ok了，现在执行打包命令：
-
 ```bash
-mvn clean package -DskipTests -P prod
+mvn clean package -DskipTests
 ```
-
-> 如果你想简单点搞定配置，可以将 [这个项目](https://github.com/lets-blade/blade-demos/tree/master/blade-package) 中的配置Copy一份修改。
 
 此时你的终端应该会输出类似如下信息：
 
@@ -224,9 +100,6 @@ mvn clean package -DskipTests -P prod
 [INFO] Building jar: /Users/biezhi/workspace/projects/blade/hello/target/hello.jar
 [INFO]
 [INFO] --- maven-assembly-plugin:2.2-beta-5:single (make-assembly) @ hello ---
-[INFO] Reading assembly descriptor: package.xml
-[INFO] Copying files to /Users/biezhi/workspace/projects/blade/hello/target/dist/hello
-[WARNING] Assembly file: /Users/biezhi/workspace/projects/blade/hello/target/dist/hello is not a regular file (it may be a directory). It cannot be attached to the project build for installation or deployment.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
@@ -236,35 +109,9 @@ mvn clean package -DskipTests -P prod
 [INFO] ------------------------------------------------------------------------
 ```
 
-证明打包成功，我们的包是一个目录，在 `target/dist` 文件夹下存储着你的项目目录，目录结构如下
+证明打包成功，我们的包是一个jar包，在 `target` 文件夹下存储
 
-```bash
-# biezhi in ~/workspace/projects/blade/hello/target/dist/hello
-» tree
-.
-├── hello-0.0.1.jar
-├── lib
-│   ├── blade-log-0.0.5.jar
-│   ├── blade-mvc-2.0.3-beta.jar
-│   ├── lombok-1.16.18.jar
-│   ├── netty-buffer-4.1.16.Final.jar
-│   ├── netty-codec-4.1.16.Final.jar
-│   ├── netty-codec-http-4.1.16.Final.jar
-│   ├── netty-common-4.1.16.Final.jar
-│   ├── netty-handler-4.1.16.Final.jar
-│   ├── netty-resolver-4.1.16.Final.jar
-│   ├── netty-transport-4.1.16.Final.jar
-│   └── slf4j-api-1.7.21.jar
-└── resources
-    ├── app.properties
-    ├── static
-    └── templates
-        └── index.html
-
-4 directories, 14 files
-```
-
-此时你执行 `java -jar hello-0.0.1.jar` 便可启动程序。
+此时你执行 `java -jar target/hello.jar` 便可启动程序。
 
 ## 部署到服务器
 

@@ -26,7 +26,7 @@ comments: false
     <version>0.0.1</version>
 
     <properties>
-        <blade-mvc.version>2.0.6-R1</blade-mvc.version>
+        <blade-mvc.version>2.0.7-R1</blade-mvc.version>
     </properties>
 
     <dependencies>
@@ -119,29 +119,29 @@ Blade.me()
 ```bash
 ---
                                                                             ①
-2017-10-14 14:12:52:302 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: jdk.version    => 1.8.0_101
-2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: user.dir       => /Users/biezhi/workspace/projects/java/hello
-2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: java.io.tmpdir => /var/folders/y7/fdpr6jzx1rs6x0jmty2h6lvw0000gn/T/
-2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: user.timezone  => Asia/Shanghai
-2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: file.encoding  => UTF-8
-2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: classpath      => /Users/biezhi/workspace/projects/java/hello/target/classes
+2017-10-14 14:12:52:302 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer  | environment.jdk.version    » 1.8.0_101
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer  | environment.user.dir       » /Users/biezhi/workspace/projects/java/hello
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer  | environment.java.io.tmpdir » /var/folders/y7/fdpr6jzx1rs6x0jmty2h6lvw0000gn/T/
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer  | environment.user.timezone  » Asia/Shanghai
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer  | environment.file.encoding  » UTF-8
+2017-10-14 14:12:52:306 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer  | environment.classpath      » /Users/biezhi/workspace/projects/java/hello/target/classes
 
                                         ②
 							    __, _,   _, __, __,
 							    |_) |   /_\ | \ |_
 							    |_) | , | | |_/ |
 							    ~   ~~~ ~ ~ ~   ~~~
-							    :: Blade :: (v2.0.6-R1)
+							  :: Blade :: (v2.0.7-R1)
 
                                                                             ③
-2017-10-14 14:12:52:390 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/
+2017-10-14 14:12:52:390 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route GET	/
                                                                             ④
 2017-10-14 14:12:53:258 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Use NioEventLoopGroup
                                                                             ⑤
 2017-10-14 14:12:53:461 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ hello initialize successfully, Time elapsed: 176 ms
                                                                             ⑥
 2017-10-14 14:12:53:462 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Blade start with 0.0.0.0:9000
-2017-10-14 14:12:53:462 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Open your web browser and navigate to http://127.0.0.1:9000 ⚡
+2017-10-14 14:12:53:462 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Open browser access http://127.0.0.1:9000 ⚡
 ```
 
 这时候你打开浏览器访问 http://127.0.0.1:9000 即可看到 `Hello World!` 的响应。
