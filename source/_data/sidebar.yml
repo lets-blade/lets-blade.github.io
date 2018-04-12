@@ -8,6 +8,7 @@ docs:
   - bladekit.html
   - templates.html
   - database.html
+  - task.html
   - deploy.html
 # advance:
 #   - index.html

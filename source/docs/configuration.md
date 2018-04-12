@@ -98,6 +98,8 @@ The `version` we will read in is stored in the template engine context object an
 | app.name | application name | `blade` |
 | app.thread-name | start Thread Name | `_ (: 3 "∠) _` |
 | app.banner-path | start banner path | `NULL` |
+| app.context-path | app context path | / |
+| app.task.thread-count | task execution thrad | CPU core * 2 + 1 |
 
 > Developer mode exception will be output on the page, and the production environment should be avoided
 
@@ -143,20 +145,20 @@ The maven coordinate name is `blade-log`, source [here](https://github.com/blade
 # Configure the log level
 # Log level options ("trace", "debug", "info", "warn", or "error").
 # If you do not configure the default is "info".
-# com.blade.logger.defaultLogLevel=info
+# com.blade.logger.rootLevel=info
 
 # Configure the log level of a package or class
 # com.blade.logger.xxxxx=
 # com.blade.logger.org.sql2o.Query=debug
 
 # Display date and time
-# com.blade.logger.showDateTime=false
+# com.blade.logger.showDate=false
 
 # Date formatting
-# com.blade.logger.dateTimeFormat=yyyy-MM-dd HH:mm:ss:SSS Z
+# com.blade.logger.datePattern=yyyy-MM-dd HH:mm:ss:SSS Z
 
 # Show thread name
-# com.blade.logger.showThreadName=true
+# com.blade.logger.showThread=true
 
 # Set to true if you want to include the Logger instance name in the output message.
 # Default is true
@@ -164,10 +166,13 @@ The maven coordinate name is `blade-log`, source [here](https://github.com/blade
 
 # Set to true if you want to include the last component of the name in the output message.
 # The default is true
-# com.blade.logger.showShortLogName=true
+# com.blade.logger.shortName=true
 
 # Set the log file path
-# com.blade.logger.logFile=./logs/app.log
+# com.blade.logger.dir=./logs
+
+# Set the log file name, default get app.name
+# com.blade.logger.name=sample
 ```
 
 ## Best Practices

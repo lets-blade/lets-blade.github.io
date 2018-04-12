@@ -98,6 +98,8 @@ public class LoadConfig implements BeanProcessor {
 | app.name | 应用名称 | blade |
 | app.thread-name | 启动线程名 | _(:3」∠)_ |
 | app.banner-path | 启动banner路径 | NULL |
+| app.context-path | 应用上下文路径 | / |
+| app.task.thread-count | 任务执行线程 | 当前 CPU 核心数 * 2 + 1 |
 
 > 开发者模式下异常会输出在网页上，而生产环境应避免
 
@@ -143,20 +145,20 @@ maven的坐标名为 `blade-log`，源码在[这里](https://github.com/bladejav
 # 配置日志级别
 # 日志级别选项 ("trace", "debug", "info", "warn", or "error").
 # 如果你没有配置默认是 "info".
-#com.blade.logger.defaultLogLevel=info
+#com.blade.logger.rootLevel=info
 
 # 配置某个包、类的日志级别
 #com.blade.logger.xxxxx=
 #com.blade.logger.org.sql2o.Query=debug
 
 # 显示日期时间
-#com.blade.logger.showDateTime=false
+#com.blade.logger.showDate=false
 
 # 日期格式化
-#com.blade.logger.dateTimeFormat=yyyy-MM-dd HH:mm:ss:SSS Z
+#com.blade.logger.datePattern=yyyy-MM-dd HH:mm:ss:SSS Z
 
 # 显示线程名
-#com.blade.logger.showThreadName=true
+#com.blade.logger.showThread=true
 
 # 如果要将Logger实例名称包含在输出消息中，请设置为true。
 # 默认为true
@@ -164,10 +166,13 @@ maven的坐标名为 `blade-log`，源码在[这里](https://github.com/bladejav
 
 # 如果要将名称的最后一个组件包含在输出消息中，请设置为true。
 # 默认为true
-#com.blade.logger.showShortLogName=true
+#com.blade.logger.shortName=true
 
 # 设置日志文件路径
-# com.blade.logger.logFile=./logs/app.log
+# com.blade.logger.dir=./logs
+
+# 设置日志文件名，默认取当前 app.name
+# com.blade.logger.name=sample
 ```
 
 ## 最佳实践
