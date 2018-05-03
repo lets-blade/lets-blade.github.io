@@ -1,0 +1,42 @@
+- name: introduction
+  items:
+    - name: why-blade
+      url: why-blade.html
+    - name: design
+      url: design.html
+- name: quick-start
+  items:
+    - name: create-application
+      url: create-application.html
+    - name: create-route
+      url: create-route.html
+    - name: add-static-file
+      url: add-static-file.html
+    - name: file-upload
+      url: file-upload.html
+- name: guide
+  items:
+    - name: installation
+      url: installation.html
+    - name: component
+      url: component.html
+    - name: route
+      url: route.html
+    - name: request
+      url: request.html
+    - name: response
+      url: response.html
+    - name: configuration
+      url: configuration.html
+    - name: template
+      url: template.html
+    - name: logging
+      url: logging.html
+    - name: package
+      url: package.html
+    - name: deploy
+      url: deploy.html
+- name: advance
+  items:
+    - name: exception
+      url: exception.html

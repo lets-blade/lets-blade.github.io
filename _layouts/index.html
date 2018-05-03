@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " zh-CN " }}">
+{% include head.html %}
+<body>
+    {% include navbar.html %}
+    <div class="navPusher">
+        <div>
+            <script src="/static/landing.js"></script>
+            <div class="homeContainer">
+                <div class="homeSplashFade">
+                    <div class="wrapper homeWrapper">
+                        <div class="inner">
+                            <img src="/static/images/blade.svg" width="40%">
+                            <h2 class="projectTitle">
+                                <small>{{ site.data.i18n[page.language].tag_line }}</small>
+                            </h2>
+                            <div class="section promoSection">
+                                <div class="promoRow">
+                                    <div class="pluginRowBlock">
+                                        <div class="pluginWrapper buttonWrapper">
+                                            <a class="button" href="/docs/zh-Hans/install.html" target="_self">
+                                                😛 {{ site.data.i18n[page.language].quick-start }}
+                                            </a>
+                                        </div>
+                                        <div class="pluginWrapper buttonWrapper">
+                                            <a class="button" href="https://github.com/lets-blade/blade" target="_self">
+                                               😎 {{ site.data.i18n[page.language].source-code }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainContainer">
+                <div class="tldrSection productShowcaseSection lightBackground">
+                    <div class="container">
+                        <div class="wrapper">
+                            <div style="display:flex;flex-flow:row wrap;justify-content:space-evenly;">
+                                <div style="display:flex;flex-direction:column;">
+                                    <h2>{{ site.data.i18n[page.language].what-is-blade }}</h2>
+                                    <ul style="flex:1;">
+                                        {% for item in site.data.home.left %}
+                                        <li>{{ site.data.i18n[page.language].home_left.[item] }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <div style="display:flex;flex-direction:column;">
+                                    <h2>{{ site.data.i18n[page.language].why-blade }}</h2>
+                                    <ul style="flex:1;">
+                                        {% for item in site.data.home.right %}
+                                        <li>{{ site.data.i18n[page.language].home_right.[item] }}</li>
+                                        {% endfor %}
+                                        <li>
+                                            <a href="/docs/zh-Hans/why-prettier.html">And more</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="editorSupportSection productShowcaseSection">
+                    <div class="container">
+                        <div class="wrapper">
+                            <h2>Editor Support</h2>
+                            <div style="display:flex;flex-flow:row wrap;justify-content:space-around;">
+                                <div class="editor">
+                                    <img class="editorImage" src="/static/images/editors/editor_atom.svg">
+                                    <div class="editorInfo">
+                                        <h3 style="margin-bottom:-16px;">Atom</h3>
+                                        <div>
+                                            <span>
+                                                <p>
+                                                    <a href="https://github.com/prettier/prettier-atom">
+                                                        <code>prettier-atom</code>
+                                                    </a>
+                                                    <br>
+                                                    <a href="https://github.com/t9md/atom-mprettier">
+                                                        <code>mprettier</code>
+                                                    </a>
+                                                </p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="editor">
+                                    <img class="editorImage" src="/static/images/editors/editor_emacs.svg">
+                                    <div class="editorInfo">
+                                        <h3 style="margin-bottom:-16px;">Emacs</h3>
+                                        <div>
+                                            <span>
+                                                <p>
+                                                    <a href="https://github.com/prettier/prettier-emacs">
+                                                        <code>prettier-emacs</code>
+                                                    </a>
+                                                </p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="editor">
+                                    <img class="editorImage" src="/static/images/editors/editor_espresso.svg">
+                                    <div class="editorInfo">
+                                        <h3 style="margin-bottom:-16px;">Espresso</h3>
+                                        <div>
+                                            <span>
+                                                <p>
+                                                    <a href="https://github.com/eablokker/espresso-prettier">
+                                                        <code>espresso-prettier</code>
+                                                    </a>
+                                                </p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="editor">
+                                    <img class="editorImage" src="/static/images/editors/editor_sublime.svg">
+                                    <div class="editorInfo">
+                                        <h3 style="margin-bottom:-16px;">Sublime Text</h3>
+                                        <div>
+                                            <span>
+                                                <p>
+                                                    <a href="https://packagecontrol.io/packages/JsPrettier">
+                                                        <code>JsPrettier</code>
+                                                    </a>
+                                                </p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="editor">
+                                    <img class="editorImage" src="/static/images/editors/editor_vim.svg">
+                                    <div class="editorInfo">
+                                        <h3 style="margin-bottom:-16px;">Vim</h3>
+                                        <div>
+                                            <span>
+                                                <p>
+                                                    <a href="https://github.com/sbdchd/neoformat">
+                                                        <code>neoformat</code>
+                                                    </a>
+                                                    <br>
+                                                    <a href="https://github.com/w0rp/ale">
+                                                        <code>ale</code>
+                                                    </a>
+                                                    <br>
+                                                    <a href="https://github.com/prettier/vim-prettier">
+                                                        <code>vim-prettier</code>
+                                                    </a>
+                                                </p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="editor">
+                                    <img class="editorImage" src="/static/images/editors/editor_vs.svg">
+                                    <div class="editorInfo">
+                                        <h3 style="margin-bottom:-16px;">Visual Studio</h3>
+                                        <div>
+                                            <span>
+                                                <p>
+                                                    <a href="https://github.com/madskristensen/JavaScriptPrettier">
+                                                        <code>JavaScriptPrettier</code>
+                                                    </a>
+                                                </p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="editor">
+                                    <img class="editorImage" src="/static/images/editors/editor_vscode.svg">
+                                    <div class="editorInfo">
+                                        <h3 style="margin-bottom:-16px;">VS Code</h3>
+                                        <div>
+                                            <span>
+                                                <p>
+                                                    <a href="https://github.com/prettier/prettier-vscode">
+                                                        <code>prettier-vscode</code>
+                                                    </a>
+                                                </p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="editor">
+                                    <img class="editorImage" src="/static/images/editors/editor_webstorm.svg">
+                                    <div class="editorInfo">
+                                        <h3 style="margin-bottom:-16px;">WebStorm</h3>
+                                        <div>
+                                            <span>
+                                                <p>
+                                                    <a href="https://plugins.jetbrains.com/plugin/10456-prettier">Built-in support</a>
+                                                </p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="float:right;">
+                        <span>Got more? </span>
+                        <a href="https://github.com/lets-blade/blade/pulls" class="button"> Send a PR </a>
+                    </div>
+                </div>
+                <div class="getStartedSection productShowcaseSection lightBackground">
+                    <div class="container">
+                        <div class="wrapper">
+                            <div class="getStartedFlexContainer" style="display:flex;flex-flow:row;align-items:baseline;justify-content:space-between;">
+                                <div class="getStartedSteps">
+                                    <h2>{{ site.data.i18n[page.language].get-started }}</h2>
+                                    <ol>
+                                        <li>{{ site.data.i18n[page.language].add-blade-to-project }}:
+                                            <div class="mavenOnly">
+                                                <div>
+                                                    <span>
+                                                        <pre><code class="hljs css xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.bladejava<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>blade-mvc<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>LEAST_VERSION<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></code></pre>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="gradleOnly">
+                                                <div>
+                                                    <span>
+                                                        <pre><code class="hljs css bash">compile <span class="hljs-string">'com.bladejava:blade-mvc:2.0.8-ALPHA2'</span>
+    </code></pre>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>{{ site.data.i18n[page.language].create-main-class }}:
+                                            <div class="mavenOnly">
+                                                <div>
+                                                    <span>
+                                                        <pre><code class="hljs css java"><span class="hljs-keyword">package</span> com.example;
+    
+<span class="hljs-keyword">import</span> com.blade.Blade;
+    
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Application</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Blade.me().start(Application.class, args);
+    }
+}</code></pre>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="gradleOnly">
+                                                <div>
+                                                    <span>
+                                                        <pre><code class="hljs css java"><span class="hljs-keyword">package</span> com.example;
+    
+<span class="hljs-keyword">import</span> com.blade.Blade;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Application</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Blade.me().start(Application.class, args);
+    }
+}</code></pre>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div style="display:flex;flex-direction:column;align-items:flex-end;flex-grow:1;margin-left:-75px;">
+                                    <div class="buttonGroup buttonWrapper">
+                                        <a class="button active showMavenButton" href="javascript:void(0)">maven</a>
+                                        <a class="button showGradleButton" href="javascript:void(0)">gradle</a>
+                                    </div>
+                                    <img class="decorativeRects" style="margin-top:32px;" src="/static/images/get_started_rects.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include footer.html %}
+    </div>
+</body>
+</html>

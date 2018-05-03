@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " zh-CN " }}">
+{% include head.html %}
+<body>
+    {% include navbar.html %}
+    <div class="navPusher">
+        <div class="docMainWrapper wrapper">
+            <div class="container mainContainer documentContainer postContainer">
+                <div class="wrapper">
+                    <div class="post">
+                        <header class="postHeader">
+                            <h2>{{ page.title }}</h2>
+                        </header>
+                        <p>
+                            {{ content }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include footer.html %}
+    </div>
+</body>
+</html>

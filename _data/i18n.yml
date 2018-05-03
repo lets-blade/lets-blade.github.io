@@ -1,0 +1,79 @@
+cn:
+  tag_line: 轻量级、高性能、简洁优雅的 Web 框架
+  docs: 文档
+  about: 关于
+  blog: 博客
+  apidocs: API Docs
+  video-tutorial: 视频教程
+  donate: 捐赠
+  quick-start: 快速入门
+  get-started: 开始使用
+  introduction: 介绍
+  source-code: 源码
+  what-is-blade: 什么是 Blade ?
+  why-blade: 为什么是 Blade ?
+  edit-page: 编辑该页
+  home_left:
+    left01: 简洁优雅高性能
+    left02: 注解驱动，更少配置
+    left03: 组件式开发
+    left04: 内置日志、任务、常用工具类
+  home_right:
+    right01: 你应该把时间花在设计产品上
+    right02: 你需要除了 Spring 之外的选择
+    right03: 一个 Web 服务只需要一个 JAR 包
+  add-blade-to-project: 添加 Blade 依赖
+  create-main-class: 创建一个主函数运行
+  create-application: 创建一个工程
+  create-route: 创建路由
+  add-static-file: 添加静态文件
+  file-upload: 上传文件
+  installation: 安装 Blade
+  design: 设计
+  component: 组件托管
+  route: 路由注册
+  request: HTTP 请求
+  response: HTTP 响应
+  configuration: 配置文件
+  template: 模板视图
+  logging: 日志输出
+  package: 项目打包
+  deploy: 部署上线
+  advance: 进阶
+  exception: 异常
+  guide: 指南
+en:
+  tag_line: Lightweight、high performance、concise and elegant
+  quick-start: Quick Start
+  get-started: Get Started
+  docs: Docs
+  apidocs: API Docs
+  about: About
+  blog: Blog
+  donate: Donate
+  video-tutorial: Video Tutorial
+  introduction: Introduction
+  source-code: Source Code
+  what-is-blade: What is Blade?
+  why-blade: Why Blade?
+  edit-page: Edit Page
+  add-blade-to-project: Add blade to your project
+  create-main-class: Create main class
+  create-application: Create A Application
+  create-route: Create A Route
+  add-static-file: Add Static File
+  file-upload: File Upload
+  design: Design
+  installation: Installation
+  component: Component
+  route: Route
+  request: HTTP Request
+  response: HTTP Response
+  configuration: Configuration
+  template: Template
+  logging: Logging
+  package: Package
+  deploy: Deploy
+  advance: Advance
+  exception: Exception
+  guide: Guide

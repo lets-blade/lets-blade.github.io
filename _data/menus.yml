@@ -1,0 +1,9 @@
+- name: docs
+  url: docs
+- name: apidocs
+  url: https://lets-blade.com/apidocs
+  target: _blank
+- name: video-tutorial
+  url: video-tutorial.html
+- name: donate
+  url: donate.html
