@@ -38,6 +38,7 @@ cn:
   route: 路由注册
   request: HTTP 请求
   response: HTTP 响应
+  webhook: WebHook
   configuration: 配置文件
   templates: 模板视图
   logging: 日志输出
@@ -47,6 +48,8 @@ cn:
   schedule: 定时任务
   error-page: 错误页面
   cli-args: 命令行参数
+  session-ext: Session 扩展
+  custom-middleware: 自定义中间件
   guide: 指南
 en:
   tag_line: Lightweight、high performance、concise and elegant
@@ -79,6 +82,7 @@ en:
   route: Route
   request: HTTP Request
   response: HTTP Response
+  webhook: WebHook
   configuration: Configuration
   templates: Template
   logging: Logging
@@ -87,5 +91,7 @@ en:
   exception: Exception
   schedule: Schedule Task
   error-page: Error Page
+  session-ext: Session Extension
+  custom-middleware: Custom Middleware
   cli-args: Terminal Params
   guide: Guide

@@ -26,6 +26,8 @@
       url: request.html
     - name: response
       url: response.html
+    - name: webhook
+      url: webhook.html
     - name: configuration
       url: configuration.html
     - name: templates
@@ -42,5 +44,9 @@
       url: schedule.html
     - name: error-page
       url: error-page.html
+    - name: session-ext
+      url: session-ext.html
+    - name: custom-middleware
+      url: custom-middleware.html
     - name: cli-args
       url: cli-args.html
