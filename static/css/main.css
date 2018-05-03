@@ -209,7 +209,7 @@ h2,
 h3,
 h4 {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color: #2b313c;
 }
 
@@ -518,7 +518,7 @@ header h2 {
 .mainContainer .wrapper .post h1,
 .mainContainer .wrapper .post h2,
 .mainContainer .wrapper .post h3 {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .mainContainer .wrapper .post h4,

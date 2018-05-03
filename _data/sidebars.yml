@@ -2,8 +2,8 @@
   items:
     - name: why-blade
       url: why-blade.html
-    - name: design
-      url: design.html
+    - name: blade-design
+      url: blade-design.html
 - name: quick-start
   items:
     - name: create-application
@@ -12,8 +12,8 @@
       url: create-route.html
     - name: add-static-file
       url: add-static-file.html
-    - name: file-upload
-      url: file-upload.html
+    - name: render-view
+      url: render-view.html
 - name: guide
   items:
     - name: installation
@@ -28,15 +28,19 @@
       url: response.html
     - name: configuration
       url: configuration.html
-    - name: template
-      url: template.html
+    - name: templates
+      url: templates.html
     - name: logging
       url: logging.html
-    - name: package
-      url: package.html
-    - name: deploy
-      url: deploy.html
+    - name: package-deploy
+      url: package-deploy.html
 - name: advance
   items:
     - name: exception
       url: exception.html
+    - name: schedule
+      url: schedule.html
+    - name: error-page
+      url: error-page.html
+    - name: cli-args
+      url: cli-args.html

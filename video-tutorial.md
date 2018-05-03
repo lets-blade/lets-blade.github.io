@@ -4,7 +4,6 @@ title: 视频教程
 language: cn
 ---
 
-
 ## Blade 入门教程
 
 Blade 入门教程是帮助开发者快速学习 Blade 的视频语音教程，每节课尽量控制在 10 分钟左右。

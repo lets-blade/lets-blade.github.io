@@ -13,6 +13,9 @@ cn:
   what-is-blade: 什么是 Blade ?
   why-blade: 为什么是 Blade ?
   edit-page: 编辑该页
+  user-showcase: 用户案例
+  other-component: 其他组件
+  community: 社区
   home_left:
     left01: 简洁优雅高性能
     left02: 注解驱动，更少配置
@@ -28,19 +31,22 @@ cn:
   create-route: 创建路由
   add-static-file: 添加静态文件
   file-upload: 上传文件
+  render-view: 渲染视图
   installation: 安装 Blade
-  design: 设计
+  blade-design: Blade 设计
   component: 组件托管
   route: 路由注册
   request: HTTP 请求
   response: HTTP 响应
   configuration: 配置文件
-  template: 模板视图
+  templates: 模板视图
   logging: 日志输出
-  package: 项目打包
-  deploy: 部署上线
+  package-deploy: 打包部署
   advance: 进阶
-  exception: 异常
+  exception: 异常处理
+  schedule: 定时任务
+  error-page: 错误页面
+  cli-args: 命令行参数
   guide: 指南
 en:
   tag_line: Lightweight、high performance、concise and elegant
@@ -51,6 +57,9 @@ en:
   about: About
   blog: Blog
   donate: Donate
+  community: Community
+  user-showcase: User Showcase
+  other-component: Other Component
   video-tutorial: Video Tutorial
   introduction: Introduction
   source-code: Source Code
@@ -63,17 +72,20 @@ en:
   create-route: Create A Route
   add-static-file: Add Static File
   file-upload: File Upload
-  design: Design
+  render-view: Render View
+  blade-design: Blade Design
   installation: Installation
   component: Component
   route: Route
   request: HTTP Request
   response: HTTP Response
   configuration: Configuration
-  template: Template
+  templates: Template
   logging: Logging
-  package: Package
-  deploy: Deploy
+  package-deploy: Package Deploy
   advance: Advance
   exception: Exception
+  schedule: Schedule Task
+  error-page: Error Page
+  cli-args: Terminal Params
   guide: Guide
