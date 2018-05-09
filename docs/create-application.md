@@ -27,7 +27,7 @@ title: 创建一个工程
     <version>0.0.1</version>
 
     <properties>
-        <blade-mvc.version>2.0.8-ALPHA1</blade-mvc.version>
+        <blade-mvc.version>2.0.8-BETA1</blade-mvc.version>
     </properties>
 
     <dependencies>
@@ -130,7 +130,7 @@ Blade.me()
 							    |_) |   /_\ | \ |_
 							    |_) | , | | |_/ |
 							    ~   ~~~ ~ ~ ~   ~~~
-							  :: Blade :: (v2.0.8-ALPHA1)
+							  :: Blade :: (v2.0.8-BETA1)
 
                                                                             ③
 2017-10-14 14:12:52:390 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route GET	/
