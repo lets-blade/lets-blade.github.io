@@ -47,6 +47,16 @@ public static void main(String[] args){
 
 ## Jetbrick Template
 
+**添加 Jetbrick Template 依赖**
+
+```xml
+<dependency>
+    <groupId>com.bladejava</groupId>
+    <artifactId>blade-template-jetbrick</artifactId>
+    <version>0.1.3</version>
+</dependency>
+```
+
 **配置模板引擎**
 
 ```java
