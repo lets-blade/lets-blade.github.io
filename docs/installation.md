@@ -29,4 +29,4 @@ title: 安装 Blade
 compile 'com.bladejava:blade-mvc:LEAST_VERSION'
 ```
 
-`LEAST_VERSION` 是最新版本，请在 Github 的 README 查看。
+`LEAST_VERSION` 是最新版本，请在 Github 的 [README](https://github.com/lets-blade/bladelets-blade.github.io/blob/master/CNAME) 查看。
