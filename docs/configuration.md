@@ -12,7 +12,7 @@ Blade中配置的概念更加简化，当然即便你不使用配置文件也可
 
 ## 创建配置文件
 
-我们约定在先，创建的配置文件名为 `app.properties`，位于 `classpath` 之下。
+我们约定在先，创建的配置文件名为 `application.properties`，位于 `classpath` 之下。
 
 ```bash
 app.name=我可爱的程序
@@ -20,7 +20,7 @@ app.version=0.0.1
 jdbc.url=jdbc:mysql://127.0.0.1:3306/app
 jdbc.username=root
 jdbc.password=123456
-com.blade.logger.logFile=./logs/app.log
+com.blade.logger.dir=./logs
 ```
 
 这是一份简单的，常见的配置，在这份配置文件中我们指定了程序的名称、版本，JDBC的配置，和日志文件的存储位置。
@@ -28,14 +28,14 @@ com.blade.logger.logFile=./logs/app.log
 ## 获取配置
 
 有些时候我们需要在程序中获取配置，比如我需要将 `app.version` 中的版本号展示在网页上，
-那么只需要在路由执行的时候或者启动的时候获取配置，然后存储在 `Request.attribute` 中即可。
+那么只需要在路由执行的时候或者启动的时候获取配置，然后存储在 `Request#attribute` 中即可。
 
 **启动时获取配置**
 
 ```java
-Blade.me()
+Blade.of()
     .onStarted(blade -> {
-        String version = blade.environment().get("app.version", "0.0.1");
+        String version = blade.env("app.version", "0.0.1");
         // 然后将 version 变量存储到一个常量字段中以便长期使用
     });
 ```
@@ -44,7 +44,7 @@ Blade.me()
 
 ```java
 public void someRoute(){
-    String version = WebContext.blade().environment().get("app.version", "0.0.1");
+    String version = WebContext.env("app.version", "0.0.1");
 }
 ```
 
@@ -53,11 +53,11 @@ public void someRoute(){
 
 ```java
 @Bean
-public class LoadConfig implements BeanProcessor {
+public class LoadConfig implements BladeLoader {
 
     @Override
-    public void processor(Blade blade) {
-        String version = blade.environment().get("app.version", "0.0.1");
+    public void load(Blade blade) {
+        String version = blade.env("app.version", "0.0.1");
 
         // 配置数据库
         DruidDataSource dataSource = new DruidDataSource();
@@ -72,7 +72,7 @@ public class LoadConfig implements BeanProcessor {
         dataSource.setMinIdle(2);
         dataSource.setMaxWait(6000);
 
-        Base.open(dataSource);
+        Anima.open(dataSource);
 
         // 配置模板引擎
         JetbrickTemplateEngine templateEngine = new JetbrickTemplateEngine();
@@ -152,15 +152,14 @@ public class LoadConfig implements BeanProcessor {
 
 ```java
 Environment environment = blade.environment();
-    Map<String, Object> map = environment.getPrefix("jdbc");
-    if (map.containsKey("database")) {
-        JdbcConfig jdbcConfig = JdbcConfig.builder()
-                .driver("com.mysql.jdbc.Driver")
-                .url(map.get("url").toString())
-                .username(map.get("username").toString())
-                .password(map.get("password").toString())
-                .build();
-    }
+Map<String, Object> map = environment.getPrefix("jdbc");
+if (map.containsKey("database")) {
+    JdbcConfig jdbcConfig = JdbcConfig.builder()
+            .driver("com.mysql.jdbc.Driver")
+            .url(map.get("url").toString())
+            .username(map.get("username").toString())
+            .password(map.get("password").toString())
+            .build();
 }
 ```
 
@@ -170,14 +169,14 @@ Java语言是一门面向对象的语言，很多时候我们会将数据转为�
 **配置环境区分**
 
 有些时候本地的环境配置和生产是有区别的，比如数据库配置，那么最笨的办法就是上线后修改一下生产环境的配置。
-为了解决这个问题 Blade 用环境配置的方式改善使用，我们认为 `app.properties` 是一份默认的配置文件，
+为了解决这个问题 Blade 用环境配置的方式改善使用，我们认为 `application.properties` 是一份默认的配置文件，
 用户可以扩展它，那么在启动的时候你的环境配置会覆盖默认配置。
 
 假设我的生产环境数据库配置和本地不同的，但其他是相同的，那么怎么做呢？
 
 _保留当前配置创建一份生产环境配置_
 
-命名为 `app-prod.properties`，和 `app.properties` 文件处于同目录。
+命名为 `application-prod.properties`，和 `application.properties` 文件处于同目录。
 
 ```bash
 jdbc.url=jdbc:mysql://10.33.**.44:3328/app
@@ -185,7 +184,7 @@ jdbc.username=username
 jdbc.password=passs**word
 ```
 
-只需要这样做就可以了，我们可以看到相同的地方还会使用 `app.properties` 文件内容，
+只需要这样做就可以了，我们可以看到相同的地方还会使用 `application.properties` 文件内容，
 而不同的在新的环境配置中体现，在启动的时候只要加环境参数就可以了。
 
 ```bash

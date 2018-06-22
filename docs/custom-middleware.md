@@ -17,17 +17,17 @@ public class BasicAuthMiddleware implements WebHook {
     private String password;
 
     @Override
-    public boolean before(Signature signature) {
+    public boolean before(RouteContext context) {
         if (null == username) {
-            this.username = WebContext.blade().environment().get(ENV_KEY_AUTH_USERNAME, "blade");
-            this.password = WebContext.blade().environment().get(ENV_KEY_AUTH_PASSWORD, "blade");
+            this.username = WebContext.environment().get(ENV_KEY_AUTH_USERNAME, "blade");
+            this.password = WebContext.environment().get(ENV_KEY_AUTH_PASSWORD, "blade");
         }
-        Request request   = signature.request();
-        Object  basicAuth = request.session().attribute("basic_auth");
+        Request request   = context.request();
+        Object  basicAuth = context.session().attribute("basic_auth");
         if (null != basicAuth) {
             return true;
         }
-        Response response = signature.response();
+        Response response = context.response();
         if (!checkHeaderAuth(request)) {
             response.unauthorized();
             response.header("Cache-Control", "no-store");
@@ -76,5 +76,5 @@ public class BasicAuthMiddleware implements WebHook {
 **应用这个中间件**
 
 ```java
-Blade.me().use(new BasicAuthMiddleware());
+Blade.of().use(new BasicAuthMiddleware());
 ```
