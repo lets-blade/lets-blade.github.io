@@ -1,0 +1,4 @@
+- name: faq
+  items:
+    - name: upgrade
+      url: upgrade.html

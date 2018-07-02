@@ -22,6 +22,8 @@
       url: component.html
     - name: route
       url: route.html
+    - name: routecontext
+      url: route-context.html
     - name: request
       url: request.html
     - name: response

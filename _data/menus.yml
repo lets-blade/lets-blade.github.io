@@ -1,5 +1,7 @@
 - name: docs
   url: docs
+- name: faq
+  url: faq
 - name: apidocs
   url: https://lets-blade.com/apidocs
   target: _blank

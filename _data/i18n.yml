@@ -1,6 +1,7 @@
 cn:
   tag_line: 轻量级、高性能、简洁优雅的 Web 框架
   docs: 文档
+  faq: 常见问题
   about: 关于
   blog: 博客
   apidocs: API Docs
@@ -36,6 +37,7 @@ cn:
   blade-design: Blade 设计
   component: 组件托管
   route: 路由注册
+  routecontext: 路由上下文
   request: HTTP 请求
   response: HTTP 响应
   webhook: WebHook
@@ -51,11 +53,13 @@ cn:
   session-ext: Session 扩展
   custom-middleware: 自定义中间件
   guide: 指南
+  upgrade: 升级 Blade
 en:
   tag_line: Lightweight、high performance、concise and elegant
   quick-start: Quick Start
   get-started: Get Started
   docs: Docs
+  faq: FAQ
   apidocs: API Docs
   about: About
   blog: Blog
@@ -80,6 +84,7 @@ en:
   installation: Installation
   component: Component
   route: Route
+  routecontext: Route Context
   request: HTTP Request
   response: HTTP Response
   webhook: WebHook
@@ -95,3 +100,4 @@ en:
   custom-middleware: Custom Middleware
   cli-args: Terminal Params
   guide: Guide
+  upgrade: Upgrade Blade
