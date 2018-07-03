@@ -46,6 +46,8 @@
       url: schedule.html
     - name: error-page
       url: error-page.html
+    - name: listen-event
+      url: listen-event.html
     - name: session-ext
       url: session-ext.html
     - name: custom-middleware

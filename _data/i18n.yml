@@ -49,6 +49,7 @@ cn:
   exception: 异常处理
   schedule: 定时任务
   error-page: 错误页面
+  listen-event: 监听事件
   cli-args: 命令行参数
   session-ext: Session 扩展
   custom-middleware: 自定义中间件
@@ -96,6 +97,7 @@ en:
   exception: Exception
   schedule: Schedule Task
   error-page: Error Page
+  listen-event: Listen Event
   session-ext: Session Extension
   custom-middleware: Custom Middleware
   cli-args: Terminal Params
