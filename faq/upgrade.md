@@ -4,7 +4,7 @@ language: cn
 title: 升级 Blade
 ---
 
-## 从 `2.0.8.RELEASE` 版本升级到更新版本
+## 从 `2.0.8.RELEASE` 版本升级到最新版本
 
 - `Signature` 类已过期，后续使用 `RouteContext` 代替该类职责
 - `BeanProcessor` 接口已过期，后续使用 `BladeLoader` 接口代替其职责
