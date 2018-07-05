@@ -23,7 +23,8 @@ Blade 是个人发起的开源项目，目的为更多开发者提供便捷，�
 ## 其他捐赠方式
 
 - [通过PayPal一次性捐赠](https://paypal.me/bladejava/10)
-- [通过 OpenCollective 赞助](https://opencollective.com/blade) (加入一个基金会，通过透明的费用模型支持社区的工作和活动)
+
+<a href='https://ko-fi.com/Y8Y5FX7E' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 ## 赞助商
 
