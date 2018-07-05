@@ -34,17 +34,17 @@ com.blade.logger.dir=./logs
 
 ```java
 Blade.of()
-    .onStarted(blade -> {
-        String version = blade.env("app.version", "0.0.1");
+     .on(EventType.SERVER_STARTED, e -> {
+        String version = WebContext.blade().env("app.version", "0.0.1");
         // 然后将 version 变量存储到一个常量字段中以便长期使用
-    });
+     });
 ```
 
 **路由执行时获取**
 
 ```java
 public void someRoute(){
-    String version = WebContext.env("app.version", "0.0.1");
+    String version = WebContext.blade().env("app.version", "0.0.1");
 }
 ```
 
@@ -188,5 +188,5 @@ jdbc.password=passs**word
 而不同的在新的环境配置中体现，在启动的时候只要加环境参数就可以了。
 
 ```bash
-java -jar app.jar --blade.env=prod
+java -jar app.jar -Dapp.env=prod
 ```
