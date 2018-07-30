@@ -14,6 +14,7 @@ com.blade.mvc.annotation
 com.blade.mvc.handler
 com.blade.mvc.hook
 com.blade.mvc.http
+com.blade.mvc.http.session
 com.blade.mvc.multipart
 com.blade.mvc.route
 com.blade.mvc.ui
@@ -21,6 +22,7 @@ com.blade.mvc.ui.template
 com.blade.mvc.websocket
 com.blade.mvc.wrapper
 com.blade.security.web.auth
+com.blade.security.web.cors
 com.blade.security.web.csrf
 com.blade.security.web.filter
 com.blade.security.web.xss
