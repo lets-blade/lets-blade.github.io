@@ -188,5 +188,5 @@ jdbc.password=passs**word
 而不同的在新的环境配置中体现，在启动的时候只要加环境参数就可以了。
 
 ```bash
-java -jar app.jar -Dapp.env=prod
+java -jar app.jar --app.env=prod
 ```
