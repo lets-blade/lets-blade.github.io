@@ -57,3 +57,24 @@ public class LogExample {
 # 设置日志文件名，默认取当前 app.name
 # com.blade.logger.name=sample
 ```
+
+## 和其他日志实现冲突
+
+在使用其他的一些组件的时候，可能会和 `blade-log` 产生冲突，因为它们都实现了 `slf4j-api`，
+在 maven 中你可以排除任意一个，像这样：
+
+```xml
+<dependency>
+    <groupId>com.bladejava</groupId>
+    <artifactId>blade-mvc</artifactId>
+    <version>${blade.version}</version>
+    <exclusions>
+        <exclusion>
+            <groupId>com.bladejava</groupId>
+            <artifactId>blade-log</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+```
+
+默认情况下 `blade-mvc` 已经内置了日志实现，需要替换一个实现也是这样的方式。
