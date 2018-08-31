@@ -28,10 +28,10 @@ title: 路由注册
 ## Blade 注册
 
 ```java
-Blade.me().get("/", (req, res) -> res.text("Hello World"));
-Blade.me().post("/", (req, res) -> res.text("Hello World"));
-Blade.me().put("/", (req, res) -> res.text("Hello World"));
-Blade.me().delete("/", (req, res) -> res.text("Hello World"));
+Blade.of().get("/", ctx -> ctx.text("Hello World"));
+Blade.of().post("/", ctx -> ctx.text("Hello World"));
+Blade.of().put("/", ctx -> ctx.text("Hello World"));
+Blade.of().delete("/", ctx -> ctx.text("Hello World"));
 ```
 
 你在刚认识 Blade 的时候这是你见到的一段代码，这看起来非常简单，
