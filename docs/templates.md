@@ -17,12 +17,12 @@ Blade支持扩展任意一款模板引擎，同时也有多个实现了，在 [�
 
 ```java
 public static void main(String[] args){
-    Blade.me()
-        .get("/", (req, res) -> {
-            req.attribute("name", "biezhi");
-            res.render("index.html");
+    Blade.of()
+        .get("/", ctx -> {
+            ctx.attribute("name", "biezhi");
+            ctx.render("index.html");
         })
-        .start();
+        .start(Application.class, args);
 }
 ```
 
@@ -61,10 +61,10 @@ public static void main(String[] args){
 
 ```java
 @Bean
-public class TemplateConfig implements BeanProcessor {
+public class TemplateConfig implements BladeLoader {
     
     @Override
-    public void processor(Blade blade) {
+    public void load(Blade blade) {
         blade.templateEngine(new JetbrickTemplateEngine());
     }
     
