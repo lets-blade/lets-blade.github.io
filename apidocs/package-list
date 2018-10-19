@@ -17,6 +17,7 @@ com.blade.mvc.http
 com.blade.mvc.http.session
 com.blade.mvc.multipart
 com.blade.mvc.route
+com.blade.mvc.route.mapping
 com.blade.mvc.ui
 com.blade.mvc.ui.template
 com.blade.mvc.websocket
