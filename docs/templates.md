@@ -47,7 +47,11 @@ public static void main(String[] args){
 
 ## Jetbrick Template
 
+上面的默认模板只针对非常简单的 HTML 渲染，在绝大部分情况下我们都需要一款强大、满足业务开发的模板引擎，这里 Blade 推荐使用 Jetbrick Template，它类似于 Velocity 但比它更强大，官方文档是 [jetbrick-template](http://subchen.github.io/jetbrick-template/2x/overview.html)。
+
 **添加 Jetbrick Template 依赖**
+
+使用 Jetbrick Template 你无须引入它自己的依赖，Blade 做了一个简单的封装，当然你也可以自己封装，只有一个类文件而已，源码在 [这里](https://github.com/lets-blade/blade-template-engines/blob/master/blade-template-jetbrick/src/main/java/com/blade/mvc/view/template/JetbrickTemplateEngine.java)。
 
 ```xml
 <dependency>
@@ -58,6 +62,8 @@ public static void main(String[] args){
 ```
 
 **配置模板引擎**
+
+添加好依赖之后我们需要做一项配置，告诉 Blade 应该使用 Jetbrick 模板引擎而不是默认的。
 
 ```java
 @Bean
@@ -71,7 +77,26 @@ public class TemplateConfig implements BladeLoader {
 }
 ```
 
-路由代码和之前的一样，这次我们稍微修改一下模板的展现
+上面的代码会在 Blade 启动的时候运行，你也可以在这里加载一些其他的东西（比如某些配置信息）。
+
+编写两个路由：
+
+```java
+@GetRoute("/hello")
+public String hello(){
+    return "hello.html";
+}
+
+@GetRoute("/users")
+public String users(Request request){
+    request.attribute("users", users);
+    return "users.html";
+}
+```
+
+下面对应 2 个模板文件，它们都位于 `resources/templates` 目录下。
+
+**`hello.html`**
 
 ```html
 <!DOCTYPE html>
@@ -81,20 +106,31 @@ public class TemplateConfig implements BladeLoader {
     <title>Hello Page</title>
 </head>
 <body>
-
-  <h1>Hello, ${user.username}</h1>
-  
-  #if(user.age > 18)
-    <p>Good Boy!</p>
-  #else
-    <p>Gooood Baby!</p>
-  #end
-  
+    <h1>Hello Blade!</h1>
 </body>
 </html>
 ```
 
-想要了解更多关于该模板的使用，点击 [Jetbrick文档](http://subchen.github.io/jetbrick-template/2x/syntax-expression.html) 查看。
+**`users.html`**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users Page</title>
+</head>
+<body>
+  <ul>
+    #for(item : users)
+    <li>${item.uid} - ${item.username}</li>
+    #end
+  </ul>
+</body>
+</html>
+```
+
+想要了解更多关于该模板的使用，可以点击 Jetbrick 的官网查看，在 Blade 的路由里只要把数据存储在 `attribute` 里就可以了。
 
 ## 自行扩展
 
