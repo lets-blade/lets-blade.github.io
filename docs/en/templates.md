@@ -1,19 +1,19 @@
 ---
 layout: doc
 language: en
-title: 模板视图
+title: Template View
 ---
 
-模板引擎适合于动态 `HTML` 页面输出或者代码生成，在Web开发中是常见的 **装备**。
-Blade内置了简单的模板引擎，为了应付网页渲染和简单的数据传输。在日常开发中，
-我们通常使用一些优秀的、高效的、功能较为完善的模板引擎，诸如 Velocity、Freemarker、JetbrickTemplate 等等。
-Blade支持扩展任意一款模板引擎，同时也有多个实现了，在 [这里](https://github.com/lets-blade/blade-template-engines)，也欢迎你贡献代码。
+The template engine is suitable for dynamic `HTML` page output or code generation, which is common in web development.
+Blade has a built-in simple template engine for web page rendering and simple data transfer. In daily development,
+We usually use some excellent, efficient, and full-featured template engines such as Velocity, Freemarker, JetbrickTemplate, and more.
+Blade supports the extension of any template engine, and there are multiple implementations. At [here](https://github.com/lets-blade/blade-template-engines), you are also welcome to contribute code.
 
-## 默认模板
+## Default tempalte
 
-默认的模板引擎是非常简单的，不到 `400` 行代码，当然功能也有限制。我们来试试，根据约定，所有的模板文件都存储在 `templates` 目录下。
+The default template engine is very simple, less than the `400` line of code, and of course the functionality is limited. Let's try it. According to the convention, all template files are stored in the `templates` directory.
 
-**创建路由**
+**create route**
 
 ```java
 public static void main(String[] args){
@@ -26,9 +26,9 @@ public static void main(String[] args){
 }
 ```
 
-**创建模板文件**
+**create template file**
 
-`templates/index.html`：位于 classpath 下 
+`templates/index.html`: located under the classpath.
 
 ```html
 <!DOCTYPE html>
@@ -47,11 +47,11 @@ public static void main(String[] args){
 
 ## Jetbrick Template
 
-上面的默认模板只针对非常简单的 HTML 渲染，在绝大部分情况下我们都需要一款强大、满足业务开发的模板引擎，这里 Blade 推荐使用 Jetbrick Template，它类似于 Velocity 但比它更强大，官方文档是 [jetbrick-template](http://subchen.github.io/jetbrick-template/2x/overview.html)。
+The default template above is only for very simple HTML rendering. In most cases we need a powerful template engine for business development. Here Blade recommends using Jetbrick Template, which is similar to Velocity but more powerful than it is official. The document is [jetbrick-template](http://subchen.github.io/jetbrick-template/2x/overview.html).
 
-**添加 Jetbrick Template 依赖**
+**Add Jetbrick Template Dependencies**
 
-使用 Jetbrick Template 你无须引入它自己的依赖，Blade 做了一个简单的封装，当然你也可以自己封装，只有一个类文件而已，源码在 [这里](https://github.com/lets-blade/blade-template-engines/blob/master/blade-template-jetbrick/src/main/java/com/blade/mvc/view/template/JetbrickTemplateEngine.java)。
+With Jetbrick Template you don't have to introduce its own dependencies. Blade does a simple wrapper. Of course, you can also package it yourself. There is only one class file. The source code is here [here](https://github.com/lets-blade/blade-template-engines/blob/master/blade-template-jetbrick/src/main/java/com/blade/mvc/view/template/JetbrickTemplateEngine.java)。
 
 ```xml
 <dependency>
@@ -61,9 +61,9 @@ public static void main(String[] args){
 </dependency>
 ```
 
-**配置模板引擎**
+**Configuring the template engine**
 
-添加好依赖之后我们需要做一项配置，告诉 Blade 应该使用 Jetbrick 模板引擎而不是默认的。
+After adding dependencies we need to make a configuration that tells Blade that it should use the Jetbrick template engine instead of the default one.
 
 ```java
 @Bean
@@ -77,9 +77,9 @@ public class TemplateConfig implements BladeLoader {
 }
 ```
 
-上面的代码会在 Blade 启动的时候运行，你也可以在这里加载一些其他的东西（比如某些配置信息）。
+The above code will run when the Blade starts, and you can load some other stuff here (such as some configuration information).
 
-编写两个路由：
+Write two routes:
 
 ```java
 @GetRoute("/hello")
@@ -94,7 +94,7 @@ public String users(Request request){
 }
 ```
 
-下面对应 2 个模板文件，它们都位于 `resources/templates` 目录下。
+The following two template files are located in the `resources/templates` directory.
 
 **`hello.html`**
 
@@ -130,14 +130,14 @@ public String users(Request request){
 </html>
 ```
 
-想要了解更多关于该模板的使用，可以点击 Jetbrick 的官网查看，在 Blade 的路由里只要把数据存储在 `attribute` 里就可以了。
+To learn more about the use of this template, you can click on Jetbrick's official website to view the data in the Blade routing as long as it is stored in `attribute`.
 
-## 自行扩展
+## Self-expanding
 
-只需要实现 `TemplateEngine` 接口，在启动的时候配置即可。
+Just implement the `TemplateEngine` interface and configure it at startup.
 
 ```java
 void render(ModelAndView modelAndView, Writer writer) throws TemplateException;
 ```
 
-这个方法提供2个参数，第一个是数据和视图位置，第二个是写入IO对象。
+This method provides two parameters, the first is the data and view position, and the second is the write IO object.

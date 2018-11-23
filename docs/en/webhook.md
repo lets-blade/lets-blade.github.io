@@ -4,11 +4,11 @@ language: en
 title: WebHook
 ---
 
-这里我们叫钩子，可能做java的人对这个词比较陌生，你可以理解为拦截器（其实都是一个意思）。之前的小节里已经介绍中间件，中间件的概念也是在钩子的基础之上做了简化，一个 webhook(钩子)会拦截 `路由逻辑` 执行 **前**, **后**，中间件总是在路由逻辑执行前做一些操作。
+Here we call the hook, people who may be java are relatively new to this word, you can understand it as an interceptor (in fact, it all means). The middleware has been introduced in the previous section. The concept of middleware is also simplified on the basis of the hook. A webhook (hook) will intercept the `routing logic` before executing **, ** after **, middleware Always do something before the routing logic executes.
 
-## 注册钩子
+## Registration hook
 
-你可以实现 `WebHook` 接口，并在实现类上加一个 `@Bean` 注解表示该类被 IOC 容器扫描。
+You can implement the `WebHook` interface and add a `@Bean` annotation to the implementation class to indicate that the class is being scanned by the IOC container.
 
 ```java
 @Bean
@@ -23,7 +23,7 @@ public class Hook1 implements WebHook {
 }
 ```
 
-我们来看看 WebHook 接口是如何定义的：
+Let's see how the `WebHook` interface is defined:
 
 ```java
 @FunctionalInterface
@@ -38,5 +38,5 @@ public interface WebHook {
 }
 ```
 
-这里用了 Java8 的函数式方法，并提供一个默认的 `after` 执行，如果重写 `after` 方法则在路由执行后调用。
-这里 WebHook 的返回值决定了本次请求是否继续向下调用，为 `true` 则放过，返回 `false` 则中断请求。
+This uses Java8's functional methods and provides a default `after` implementation, which is called after the route is executed if the `after` method is overridden.
+Here, the return value of WebHook determines whether this request continues to be called down. If it is `true`, it will be let go, and if `false` is returned, the request will be interrupted.
