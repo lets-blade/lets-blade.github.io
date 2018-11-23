@@ -13,6 +13,8 @@ cn:
   source-code: 源码
   what-is-blade: 什么是 Blade ?
   why-blade: 为什么是 Blade ?
+  blade-intro: Blade 基于 Java8 开发，为个人开发者打造的轻量级 MVC 框架， 你只需要创建普通的 Maven 工程即可完成一个简单的应用。
+  blade-performance: 在 Linux 8核CPU 1G内存，100个并发、100个连接下连续请求 60秒 吞吐可达每秒超 10w 请求
   edit-page: 编辑该页
   user-showcase: 用户案例
   other-component: 其他组件
@@ -26,6 +28,10 @@ cn:
     right01: 你应该把时间花在设计产品上
     right02: 你需要除了 Spring 之外的选择
     right03: 一个 Web 服务只需要一个 JAR 包
+  template-engine: 模板引擎
+  db-operation: 数据库操作库
+  verify-code-render: 验证码渲染
+  json-expansion: JSON 扩展
   add-blade-to-project: 添加 Blade 依赖
   create-main-class: 创建一个主函数运行
   create-application: 创建一个工程
@@ -73,11 +79,29 @@ en:
   source-code: Source Code
   what-is-blade: What is Blade?
   why-blade: Why Blade?
+  blade-intro: Blade is based on Java8 development, a lightweight MVC framework for individual developers, you only need to create a normal Maven project to complete a simple application.
+  blade-performance: In Linux 8 core CPU 1G memory, 100 concurrent, 100 consecutive requests for 60 seconds throughput up to 10W per second request
   edit-page: Edit Page
+  user-showcase: User Showcase
+  other-component: Components
+  community: Community
+  home_left:
+    left01: Simple, elegant and high performance
+    left02: Annotated driver, less configuration
+    left03: Component development
+    left04: Built-in logs, tasks, common tools
+  home_right:
+    right01: You should spend your time on designing products
+    right02: You need a choice other than Spring
+    right03: A web service only needs one JAR package
+  template-engine: Template Engine
+  db-operation: Database Operaion Libary
+  verify-code-render: Verify Code Render
+  json-expansion: JSON Expansion
   add-blade-to-project: Add blade to your project
   create-main-class: Create main class
-  create-application: Create A Application
-  create-route: Create A Route
+  create-application: Create Application
+  create-route: Create Route
   add-static-file: Add Static File
   file-upload: File Upload
   render-view: Render View

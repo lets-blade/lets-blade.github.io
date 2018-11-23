@@ -10,36 +10,28 @@
           <ul class="nav-site nav-site-internal">
             {% for menu in site.data.menus %}
             <li>
-              {% assign url = "/" | append: menu.url %} 
+              {% assign url = "/" | append: menu.url %}
               {% assign target = "_self" %}
 
-              {% if page.language == 'en' %} 
-                {% if menu.name == 'docs' %} 
-                  {% assign url = "/docs/en" %} 
-                {% endif %} 
-                {% if menu.name != 'docs' %} 
-                  {% assign url = "/en/" | append: menu.url %} 
-                {% endif %} 
-              {% endif %} 
-              
-              {% if menu.target == "_blank" %} 
-                {% assign target = menu.target %} 
-                {% assign url = menu.url %} 
+              {% if page.language == 'en' %}
+              {% if menu.name == 'docs' %}
+              {% assign url = "/docs/en" %}
+              {% endif %}
+              {% if menu.name != 'docs' %}
+              {% assign url = "/en/" | append: menu.url %}
+              {% endif %}
+              {% endif %}
+
+              {% if menu.target == "_blank" %}
+              {% assign target = menu.target %}
+              {% assign url = menu.url %}
               {% endif %}
               <a href="{{ url }}" target="{{ target }}">
                 {{ site.data.i18n[page.language].[menu.name] }}
               </a>
             </li>
             {% endfor %}
-            <!-- <li>
-              {% if page.language == 'en' %}
-              <a href="/" target="_self">
-                <img class="languages-icon" src="/static/img/language.svg">中文文档</a>
-              {% endif %} {% if page.language != 'en' %}
-              <a href="/en" target="_self">
-                <img class="languages-icon" src="/static/img/language.svg">English</a>
-              {% endif %}
-            </li> -->
+
             <!-- <li class="navSearchWrapper reactNavSearchWrapper">
               <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;">
                 <input type="text" id="search_input_react" placeholder="Search" class="aa-input" autocomplete="off" spellcheck="false" role="combobox"
@@ -53,6 +45,15 @@
             </li> -->
             <li>
               <a href="https://github.com/lets-blade/blade" target="_self">GitHub</a>
+            </li>
+            <li>
+              {% if page.language == 'en' %}
+              <a href="/" target="_self">
+                <img class="languages-icon" src="/static/img/language.svg">中文文档</a>
+              {% endif %} {% if page.language != 'en' %}
+              <a href="/en" target="_self">
+                <img class="languages-icon" src="/static/img/language.svg">English</a>
+              {% endif %}
             </li>
           </ul>
         </nav>

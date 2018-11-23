@@ -19,9 +19,16 @@
                                 <div class="promoRow">
                                     <div class="pluginRowBlock">
                                         <div class="pluginWrapper buttonWrapper">
+                                            {% if page.language != 'en' %}
                                             <a class="button" href="/docs/create-application.html" target="_self">
                                                 😛 {{ site.data.i18n[page.language].quick-start }}
                                             </a>
+                                            {% endif %}
+                                            {% if page.language == 'en' %}
+                                            <a class="button" href="/docs/en/create-application.html" target="_self">
+                                                😛 {{ site.data.i18n[page.language].quick-start }}
+                                            </a>
+                                            {% endif %}
                                         </div>
                                         <div class="pluginWrapper buttonWrapper">
                                             <a class="button" href="https://github.com/lets-blade/blade" target="_self">
@@ -43,7 +50,7 @@
                     </div>
                     <div style="max-width: 43%; text-align: center; margin: 0 auto; padding-top: 20px;">
                         <h4 style="color: #f7f7f1;">
-                            Blade 基于 Java8 开发，为个人开发者打造的轻量级 MVC 框架， 你只需要创建普通的 Maven 工程即可完成一个简单的应用。
+                            {{ site.data.i18n[page.language].blade-intro }}
                         </h4>
                     </div>
                 </div>
@@ -54,7 +61,7 @@
                     </div>
                     <div style="max-width: 43%; text-align: center; margin: 0 auto; padding-top: 20px;">
                         <h4 style="color: #f7f7f1;">
-                            在 Linux 8核CPU 1G内存，100个并发、100个连接下连续请求 60秒 吞吐可达每秒超 10w 请求
+                            {{ site.data.i18n[page.language].blade-performance }}
                         </h4>
                     </div>
                 </div>
@@ -98,7 +105,7 @@
                                             <span>
                                                 <p>
                                                     <a href="http://subchen.github.io/jetbrick-template/2x/overview.html">
-                                                        <code>模板引擎</code>
+                                                        <code>{{ site.data.i18n[page.language].template-engine }}</code>
                                                     </a>
                                                 </p>
                                             </span>
@@ -113,7 +120,7 @@
                                             <span>
                                                 <p>
                                                     <a href="https://github.com/biezhi/anima">
-                                                        <code>数据库操作库</code>
+                                                        <code>{{ site.data.i18n[page.language].db-operation }}</code>
                                                     </a>
                                                 </p>
                                             </span>
@@ -128,7 +135,7 @@
                                             <span>
                                                 <p>
                                                     <a href="https://github.com/lets-blade/blade-patchca">
-                                                        <code>验证码渲染</code>
+                                                        <code>{{ site.data.i18n[page.language].verify-code-render }}</code>
                                                     </a>
                                                 </p>
                                             </span>
@@ -143,7 +150,7 @@
                                             <span>
                                                 <p>
                                                     <a href="https://github.com/lets-blade/blade-json-support">
-                                                        <code>JSON扩展</code>
+                                                        <code>{{ site.data.i18n[page.language].json-expansion }}</code>
                                                     </a>
                                                 </p>
                                             </span>

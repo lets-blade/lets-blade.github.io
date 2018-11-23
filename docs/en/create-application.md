@@ -1,19 +1,18 @@
 ---
 layout: doc
-language: cn
-title: 创建一个工程
+language: en
+title: Create Application
 ---
 
+This guide will lead to a simple "Hello" program. Of course, this is just the beginning. Take this step and you will feel the power of `Blade` 💪.
 
-这个指引会带搭建一个简单的『Hello』程序。当然这只是开始，迈出这一步你将感受到 `Blade` 的强大 💪。
+> ⚠️ Using Blade must be built with Maven, JDK1.8, which is a convention. As for what IDE to use to see your personal hobbies (I am more used to programming under IDEA)
 
-> ⚠️ 使用 Blade 必须用 Maven 进行构建，JDK1.8，这是约定。至于用什么IDE看你个人爱好（我更习惯在IDEA下进行编程）
+## Create Maven project
 
-## 创建一个 Maven 工程
+Create a **normal** `Maven` project, **again prompt** Blade only needs you to create a normal project!!! It doesn't matter what Tomcat is, please get rid of the J2EE set.
 
-创建一个 **普通** 的 `Maven` 工程，**再次提示** Blade 只需要你创建普通的工程！！！跟 Tomcat 什么的没有关系，请摆脱你只会J2EE那套。
-
-创建好后我们需要引入 Blade 依赖，并且配置一下 JDK 编译版本，下面是一个 `pom.xml` 的示例:
+Once created, we need to introduce the Blade dependency and configure the JDK compiled version. Here is an example of `pom.xml`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -27,7 +26,7 @@ title: 创建一个工程
     <version>0.0.1</version>
 
     <properties>
-        <blade-mvc.version>2.0.8-BETA1</blade-mvc.version>
+        <blade-mvc.version>2.0.12-ALPHA</blade-mvc.version>
     </properties>
 
     <dependencies>
@@ -56,14 +55,14 @@ title: 创建一个工程
 </project>
 ```
 
-> ⚠️ 修改这个 `pom.xml` 的同学注意了。请把 `groupId` 和 项目名改掉; 请注意使用较新版本的 `blade-mvc` 依赖
+> ⚠️ The classmate who modified this `pom.xml` paid attention. Please change the `groupId` and project names; please note that using the newer version of `blade-mvc` depends
 
-## 项目结构
+## Project structure
 
-在此之前，我推荐搭建创建一个基础的 `package`，我们将程序所有的源文件放在 `包` 下面，Java是以 `package` 管理源码的。
-那么我的项目结构如下：
+Before that, I recommend building a basic `package`. We put all the source files of the program under `package`, and Java manages the source with `package`.
+Then my project structure is as follows:
 
-```bash
+```shell
 .
 ├── pom.xml
 └── src
@@ -88,9 +87,9 @@ title: 创建一个工程
       └── java
 ```
 
-## 编写运行类
+## Write a launch class
 
-编写**Application.java**
+Create **Application.java**
 
 ```java
 package com.example;
@@ -104,16 +103,17 @@ public class Application {
 }
 ```
 
-> 创建一个启动类，位于 package 根目录下，使用 Blade.of() 方法创建 Blade 对象并且启动它。
+> Create a startup class, located in the package root, and create a Blade object using the Blade.of() method and launch it.
 
-当然，这个时候你启动它是没有意义的，因为我们还没有编写路由，编写路由最简单的方式就是使用 Blade 的内置方法，
-在后面的章节中我们会讲到其他的方式，这里为了简单起见，编写一个 `Hello World` 吧
+Of course, it doesn't make sense to start it at this time, because we haven't written a route yet, and the easiest way to write a route is to use Blade's built-in methods.
+
+In the following chapters we will talk about other ways, here for the sake of simplicity, write a `Hello World`
 
 ```java
 Blade.of().get("/", ctx -> ctx.text("Hello World!")).start(Application.class, args);
 ```
 
-此时你启动应用程序，在终端可以看到如下输出：
+At this point you launch the application, you can see the following output in the terminal:
 
 ```bash
 2017-10-14 14:12:52:302 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer  | environment.jdk.version    » 1.8.0_101
@@ -141,4 +141,4 @@ Blade.of().get("/", ctx -> ctx.text("Hello World!")).start(Application.class, ar
 2017-10-14 14:12:53:462 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Open browser access http://127.0.0.1:9000 ⚡
 ```
 
-这时候你打开浏览器访问 http://127.0.0.1:9000 即可看到 `Hello World!` 的响应。
+At this time, you can see the response of `Hello World!` by opening a browser and accessing http://127.0.0.1:9000.
