@@ -21,15 +21,16 @@
               </div>
               <div class="navGroups">
 
-                  {% assign pagePath = page.name | replace: ".md" "" %}
+                {% assign pagePath = page.name | replace: ".md", "" %}
 
                 {% for item in site.data.sidebars %}
                 <div class="navGroup navGroupActive">
-                  <h3>{{ site.data.i18n[page.language].[item.name] }}</h3>
+                  <h3>{{ site.data.i18n[page.language][item.name] }}</h3>
                   <ul>
                     {% for bar in item.items %}
                     <li class="navListItem{% if bar.name == pagePath %} navItemActive{% endif %}">
-                      <a class="navItem{% if bar.name == pagePath %} navItemActive{% endif %}" href="{{ bar.url }}">{{ site.data.i18n[page.language].[bar.name] }}</a>
+                      <a class="navItem{% if bar.name == pagePath %} navItemActive{% endif %}" href="{{ bar.url }}">{{
+                        site.data.i18n[page.language][bar.name] }}</a>
                     </li>
                     {% endfor %}
                   </ul>
@@ -51,16 +52,17 @@
         <div class="wrapper">
           <div class="post">
             <header class="postHeader">
-              <a class="edit-page-link button" href="https://github.com/lets-blade/lets-blade.github.io/edit/master/{{ page.path }}" target="_blank">
+              <a class="edit-page-link button" href="https://github.com/lets-blade/lets-blade.github.io/edit/master/{{ page.path }}"
+                target="_blank">
                 {{ site.data.i18n[page.language].edit-page }}
               </a>
               <h1>{{ page.title }}</h1>
             </header>
             <article>
               <div>
-                  <p>
-                      {{ content }}
-                  </p>
+                <p>
+                  {{ content }}
+                </p>
               </div>
             </article>
           </div>
@@ -73,4 +75,5 @@
     {% include footer.html %}
   </div>
 </body>
+
 </html>

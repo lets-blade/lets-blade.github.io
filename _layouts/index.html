@@ -75,7 +75,7 @@
                                     <h2>{{ site.data.i18n[page.language].what-is-blade }}</h2>
                                     <ul style="flex:1;">
                                         {% for item in site.data.home.left %}
-                                        <li>{{ site.data.i18n[page.language].home_left.[item] }}</li>
+                                        <li>{{ site.data.i18n[page.language].home_left[item] }}</li>
                                         {% endfor %}
                                     </ul>
                                 </div>
@@ -83,7 +83,7 @@
                                     <h2>{{ site.data.i18n[page.language].why-blade }}</h2>
                                     <ul style="flex:1;">
                                         {% for item in site.data.home.right %}
-                                        <li>{{ site.data.i18n[page.language].home_right.[item] }}</li>
+                                        <li>{{ site.data.i18n[page.language].home_right[item] }}</li>
                                         {% endfor %}
                                     </ul>
                                 </div>
