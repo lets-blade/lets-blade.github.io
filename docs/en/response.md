@@ -1,14 +1,14 @@
 ---
 layout: doc
 language: en
-title: HTTP 响应
+title: HTTP Response
 ---
 
-Blade 中操作响应的对象是 `Response`
+The object of the operation response in Blade is `Response`
 
-## 发送文本
+## Send text
 
-`Response#text` 用于发送一个状态码为 200 的文本响应
+`Response#text` is used to send a text response with a status code of 200.
 
 ```java
 public void responseText(Response response){
@@ -16,9 +16,9 @@ public void responseText(Response response){
 }
 ```
 
-## 发送HTML
+## Send HTML
 
-`Response#html` 用于发送一个状态码为 200 的HTML响应
+`Response#html` is used to send a html response with a status code of 200.
 
 ```java
 public void responseHTML(Response response){
@@ -26,9 +26,9 @@ public void responseHTML(Response response){
 }
 ```
 
-## 发送XML
+## Send XML
 
-`Response#xml` 用于发送一个状态码为 200 的XML响应，只是修改了响应 `ContentType`
+`Response#xml` is used to send a xml response with a status code of 200, just modified the response `ContentType`.
 
 ```java
 public void responseXML(Response response){
@@ -36,9 +36,9 @@ public void responseXML(Response response){
 }
 ```
 
-## 发送JSON
+## Send JSON
 
-`Response#json` 用于发送一个状态码为 200 的JSON响应。
+`Response#json` is used to send a json response with a status code of 200.
 
 ```java
 public void responseJSON(Response response){
@@ -51,7 +51,7 @@ public void responseJSON(Response response){
 }
 ```
 
-## 发送文件
+## Download File
 
 ```java
 public void responseFile(Response response){
@@ -59,7 +59,7 @@ public void responseFile(Response response){
 }
 ```
 
-## 渲染模板
+## Render template
 
 ```java
 public void renderUsers(Response response){
@@ -67,17 +67,17 @@ public void renderUsers(Response response){
 }
 ```
 
-## 写入Cookie
+## Write Cookie
 
-Cookie 是我们web开发中常用的一个技术，通常用于 `记住我` 等操作。在 Blade 中向浏览器写入 Cookie 也是使用 Response 对象完成的。
+Cookies are a common technique used in our web development and are often used for operations such as `remember me` Writing a cookie to a browser in a Blade is also done using the Response object.
 
 ```java
 response.cookie("c1", "value1");
 ```
 
-这样就向当前域下写入了一个永不过期的 Cookie 数据，名称为 c1 数据为 value1。可以打开浏览器的开发者工具看到。
+This writes a cookie data that never expires under the current domain, with the name c1 data as value1. You can see it by opening the browser's developer tools.
 
-当然上面的写法是写最简单的 Cookie，但很多时候我们需要定制化，这时候可以看看 Response 对象里 Cookie 相关的API了。
+Of course, the above is to write the simplest cookie, but many times we need to customize, this time you can look at the cookie related API in the Response object.
 
 - `Response removeCookie(String name)`
 - `Response cookie(Cookie cookie)`
@@ -86,12 +86,12 @@ response.cookie("c1", "value1");
 - `Response cookie(String name, String value, int maxAge, boolean secured)`
 - `Response cookie(String path, String name, String value, int maxAge, boolean secured)`
 
-还挺多的吗，一个比一个长。。是的，看到这些API大概都清楚怎么使用了。
-第一个是移除一个 Cookie 的，后面都是写入一个 Cookie 的方法。具体解释都可以在源码注释中看到。
+Quite a lot, one is longer than one. . Yes, seeing these APIs is probably clear how to use them.
+The first is to remove a cookie, followed by a method of writing a cookie. Specific explanations can be seen in the source comments.
 
-## 重定向
+## Redirect
 
-有时候我们会希望做完某个操作后重定向到另一个页面，在HTTP中其实就是 302 状态码干的。比如登录后后台直接跳转到登录成功的页面。
+Sometimes we will want to redirect to another page after doing an operation. In HTTP, the 302 status code is actually dry. For example, after logging in, the background directly jumps to the page where the login is successful.
 
 ```java
 @PostRoute("login")
@@ -100,7 +100,7 @@ public void doLogin(Response response) {
 }
 ```
 
-也可以重定向到外部站点
+Can also be redirected to an external site
 
 ```java
 @GetRoute("github")
@@ -109,9 +109,9 @@ public void showGithub(Response response) {
 }
 ```
 
-## 其他操作
+## Other
 
-在 Response 中还有一些其他不常用的操作，我们来看看它的 API
+There are some other less common operations in Response, let's take a look at its API.
 
 - `Response status(int status)`
 - `Response notFound()`
@@ -121,4 +121,4 @@ public void showGithub(Response response) {
 - `Map<String, String> cookies()`
 - `void body(@NonNull byte[] data)`
 
-更多的信息可以在 `Response` 接口中查看。
+More information can be viewed in the `Response` interface.

@@ -1,14 +1,14 @@
 ---
 layout: doc
 language: en
-title: HTTP 请求
+title: HTTP Request
 ---
 
-Blade 支持注解的方式或者使用 `Request` 对象获取请求信息。
+The Blade supports annotations or uses the `Request` object to get the request information.
+ 
+## Form parameters
 
-## 表单参数
-
-先看看 `Request` 提供的操作表单参数的API
+First look at the API for the action form parameters provided by `Request`
 
 - `Optional<String> query(String name)`
 - `Optional<Integer> queryInt(String name)`
@@ -19,9 +19,9 @@ Blade 支持注解的方式或者使用 `Request` 对象获取请求信息。
 - `long queryLong(String name, long defaultValue)`
 - `double queryDouble(String name, double defaultValue)`
 
-这几组API非常的清晰明了，因为使用了 Java8，有一组里面用了 `Optional` 的写法，为了让大家拿不到值的时候进行判断或其他处理，其实和带 `defaultValue` 的API是差不多的，因为 `Optional` 提供一个 `orElse` 方法让你设置默认值。怎么用呢？其实只要API设计的到位大家十有八九都可以猜到怎么用的，我能告诉你的是这组 API 获取的是 `Form` 表单的参数。
+These sets of APIs are very clear and clear. Because Java8 is used, there is a set of `Optional` written in it. In order to make judgments or other processing when you can't get the value, it is similar to the API with `defaultValue`. Because `Optional` provides an `orElse` method that lets you set default values. How to use it? In fact, as long as the API design is in place, you can guess how to use it. What I can tell you is that this set of APIs gets the parameters of the `Form` form.
 
-```bash
+```shell
 curl \
   -X POST \
   http://localhost:9000/save \
@@ -38,17 +38,17 @@ public void formParams(@Param String username){
 ```java
 @PostRoute("/save")
 public void formParams(Request request){
-    String username = request.query("username", "默认值");
+    String username = request.query("username", "default value");
 }
 ```
 
-- 获取 `Integer` 数据: `request.queryInt("xxx")`
-- 获取 `Long` 数据: `request.queryLong("xxx")`
-- 获取 `Double` 数据: `request.queryDouble("xxx")`
+- Get `Integer` data: `request.queryInt("xxx")`
+- Get `Long` data: `request.queryLong("xxx")`
+- Get `Double` data: `request.queryDouble("xxx")`
 
-## JSON数据
+## JSON data
 
-```bash
+```shell
 curl \
   -X POST \
   http://localhost:9000/users \
@@ -76,11 +76,11 @@ public void bodyParams(Request request){
 }
 ```
 
-## Restful 参数
+## Path parameter
 
-我们经常也会用到 REST 接口，一般它的URL形如：http://www.exmaple.com/users/128
+We also often use the REST interface, generally its URL is like: http://www.exmaple.com/users/128
 
-这时候我们在 Blade 中定义的路由 Path 是 `/users/:id`，如何获取这个 id 呢，下面的API可以帮到你
+At this time, the route Path we defined in Blade is `/users/:id`. How to get this id? The following API can help you.
 
 - `String pathString(String name)`
 - `String pathInt(String name)`
@@ -90,9 +90,9 @@ public void bodyParams(Request request){
 Integer userId = request.pathInt("id");
 ```
 
-这样就可以获取到 `userId`，其他变量的获取方式相应你闭着眼睛都可以猜到。
+This way you can get `userId`, and other variables can be obtained by closing your eyes.
 
-也可以使用注解的方式
+You can also use annotations
 
 ```java
 @GetRoute("/user/:uid")
@@ -101,15 +101,15 @@ public void user(@PathParam Integer uid){
 }
 ```
 
-## 数据绑定
-
-Blade 支持将参数绑定到某个模型对象上，你可以像这样使用
+## Parameter binding
+ 
+Blade supports binding parameters to a model object, you can use it like this
 
 ```java
 public class User {
     private String name;
     private String email;
-    // getter setter 省略
+    // getter setter omit
 }
 
 @PostRoute("/users")
@@ -118,12 +118,12 @@ public void bodyParams(User user){
 }
 ```
 
-此时接收的表单参数或者 `Request Body` 的 `JSON` 参数会被自动映射为一个 `User` 对象。
+The form parameters received at this time or the `JSON` parameter of `Request Body` will be automatically mapped to a `User` object.
 
-## 自定义绑定
+## Custom binding
 
-如果你想自定义的绑定数据，比如像 `ruby` 那样在 `input` 文本框中指定某类名称才被匹配，
-可以像这样：
+If you want to customize the binding data, such as `ruby`, specify a class name in the `input` text box to be matched,
+Can be like this:
 
 ```html
 <!DOCTYPE html>
@@ -150,9 +150,9 @@ public void customBind(@Param("user") User user){
 }
 ```
 
-## 读取头信息
+## Read header
 
-依然看API，虽然我一直在重复看 API，因为框架编写的 API 就是为了给用户提供便捷。
+Still looking at the API, although I have been repeating the API, because the API written by the framework is to provide convenience to users.
 
 - `Map<String, String> headers()`
 - `String header(String name)`
@@ -162,44 +162,44 @@ public void customBind(@Param("user") User user){
 - `String contentType()`
 - `String userAgent()`
 
-上面的 API 除了给出获取 `header` 的方法，也提供了常用的几个附件方法，用于获取是否是IE浏览器、是否是Ajax请求、ContentType 以及 UserAgent。
+In addition to the method of getting `header`, the API above also provides several commonly used attachment methods for getting IE browser, Ajax request, ContentType and UserAgent.
 
-## 读取 Cookie
+## Read Cookie
 
 - `Map<String, String> cookies()`
 - `Optional<Cookie> cookieRaw(String name)`
 - `String cookie(String name, String defaultValue)`
 
-这里的几个方法介绍一下，第一个是获取所有的 Cookie，map 的 key 是 cookie名，value 是 cookie值；第二个方法根据名称获取 cookie，这里可以获取到 cookie 的详细信息，包括 path、有效期等；最后一个方法根据名称获取 cookie，获取不到则设置一个默认值。
+Here are a few methods to introduce, the first is to get all the cookies, the map key is the cookie name, the value is the cookie value; the second method gets the cookie according to the name, here you can get the details of the cookie, including path, Validity period, etc.; the last method gets the cookie by name, and if it doesn't, it sets a default value.
 
-## 设置数据
+## Setting data
 
-很多时候我们都会用模板引擎，即便你没用过至少也知道JSP，我们会在 Request 作用域中设置一些数据，然后在模板中获取。在 Blade 中也是如此，API也很简单。
+Many times we will use the template engine, even if you have not used at least know JSP, we will set some data in the Request scope, and then get it in the template. The same is true in Blade, and the API is simple.
 
 - `attribute(String name, Object value)`
 - `T attribute(String name)`
 
-这里第一个方法是像 Request 域设置一个数据，第二个方法从 Request 域获取一个数据，至于这里设置的数据在前端如何使用取决于你的模板引擎是哪个，根据其语法而来，比如默认的模板引擎非常简单，我们举个例子：
+The first method here is to set a data like the Request field, the second method to get a data from the Request field, as to how the data set here is used in the front end depends on which template engine you use, according to its syntax, such as the default The template engine is very simple, let's take an example:
 
 ```java
 request.attribute("name", "blade2.0");
 ```
 
-在我们的模板中(存储在 `/resources/templates` 之下的视图文件)
+In template (view files stored under `/resources/templates`)
 
 ```html
-<h1>这是 ${name}</h1>
+<h1>This is ${name}</h1>
 ```
 
-## 操作 Session
+## Session
 
 - `request.session()`
 
 ```java
 Session session = request.session();
-// 写入 session
+// write to session
 session.attribute("LOGIN_USER", user);
 
-// 读取 session
+// read from session
 String hello = session.attribute("hello");
 ```

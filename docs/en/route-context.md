@@ -1,12 +1,12 @@
 ---
 layout: doc
 language: en
-title: 路由上下文
+title: Route Context
 ---
 
-在 Blade 2.0.9 版本后加入了 `RouteContext` 这个类，作为路由的上下文操作。其本质是封装了 `Request` 和 `Response`，所以使用起来和它们的 API 是相同的，下面列举一下包含的方法列表。
+The `RouteContext` class was added after the Blade 2.0.9 release as a contextual operation for routing. The essence is to encapsulate `Request` and `Response`, so they are the same as their APIs. Let's take a look at the list of methods included.
 
-## 请求相关
+## Request related
 
 - [#request()](https://lets-blade.com/apidocs/com/blade/mvc/RouteContext.html#request--)
 - [#method()](https://lets-blade.com/apidocs/com/blade/mvc/RouteContext.html#method--)
@@ -38,7 +38,7 @@ title: 路由上下文
 - [#routeAction()](https://lets-blade.com/apidocs/com/blade/mvc/RouteContext.html#routeAction--)
 - [#routeParameters()](https://lets-blade.com/apidocs/com/blade/mvc/RouteContext.html#routeParameters--)
 
-## 响应相关
+## Response related
 
 - [#response()](https://lets-blade.com/apidocs/com/blade/mvc/RouteContext.html#response--)
 - [#contentType(String contentType)](https://lets-blade.com/apidocs/com/blade/mvc/RouteContext.html#contentType-java.lang.String-)
@@ -56,6 +56,6 @@ title: 路由上下文
 - [#cookie(String name, String value, int maxAge)](https://lets-blade.com/apidocs/com/blade/mvc/RouteContext.html#cookie-java.lang.String-java.lang.String-int-)
 - [#redirect(String url)](https://lets-blade.com/apidocs/com/blade/mvc/RouteContext.html#redirect-java.lang.String-)
 
-## 参考
+## Reference
 
-该类的源文件在 [RouteContext.java](https://github.com/lets-blade/blade/blob/master/src/main/java/com/blade/mvc/RouteContext.java#L41) ，同时可以参考 [Request](https://lets-blade.com/docs/request.html) 和 [Response](https://lets-blade.com/docs/response.html) 的使用。
+The source files for this class are [RouteContext.java](https://github.com/lets-blade/blade/blob/master/src/main/java/com/blade/mvc/RouteContext.java#L41), Also can refer to [Request](https://lets-blade.com/docs/request.html) and [Response](https://lets-blade.com/docs/response.html).
