@@ -1,14 +1,14 @@
 ---
 layout: doc
 language: en
-title: Session 扩展
+title: Session Expansion
 ---
 
-默认情况下 Blade 使用内置的 `Session` 实现，会话数据是存储在 `内存` 中的，如果你想使用 Redis 或者其他存储容器来
-保存也是可以的，只需要重新实现一个 Session 就好了。
+By default, Blade uses the built-in `Session` implementation, and session data is stored in `memory` if you want to use Redis or other storage containers.
+Saving is also possible, just reimplementing a Session is fine.
 
-下面是 `Session` 接口的定义：
-
+The following is the definition of the `Session` interface:
+ 
 ```java
 public class HttpSession implements Session {
 
@@ -86,4 +86,6 @@ public class HttpSession implements Session {
 }
 ```
 
-所以你只要实现这个类，然后告诉 Blade 我需要使用自定义的 Session 实现就可以了，如何配置呢？
+So you only need to implement this class, then tell Blade that I need to use a custom Session implementation, how to configure it?
+
+# TODO

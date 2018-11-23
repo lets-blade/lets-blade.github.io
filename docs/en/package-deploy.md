@@ -1,16 +1,16 @@
 ---
 layout: doc
 language: en
-title: 打包部署
+title: Package And Deploy
 ---
 
-看完前面的文档，你会发现使用 Blade 开发Web应用是简单的、快速的，当然也功归于约定。
-我们使用 Maven 构建项目，打包同时也可以用它，如果你对 Maven 插件熟悉的话可能也用过了，
-当然没用过也没关系，你只需要按照下面的操作配置一下即可。
+After reading the previous documentation, you will find that developing web applications using Blade is simple, fast, and of course due to convention.
+We use Maven to build the project, and it can be used for packaging as well. If you are familiar with the Maven plugin, you may have used it.
+Of course, it doesn't matter if you haven't used it. You just need to configure it as follows.
 
-## 打包工程
+## Packing project
 
-**添加插件**
+**add plugin**
 
 ```xml
 <build>
@@ -59,7 +59,7 @@ title: 打包部署
 mvn clean package -DskipTests
 ```
 
-此时你的终端应该会输出类似如下信息：
+At this point your terminal should output something like the following:
 
 ```bash
 [INFO] Scanning for projects...
@@ -109,13 +109,13 @@ mvn clean package -DskipTests
 [INFO] ------------------------------------------------------------------------
 ```
 
-证明打包成功，我们的包是一个jar包，在 `target` 文件夹下存储
+Prove that the package is successful, our package is a jar package, stored in the `target` folder
 
-此时你执行 `java -jar target/hello.jar` 便可启动程序。
+At this point you can start the program by executing `java -jar target/hello.jar`.
 
-## 部署到服务器
+## Deploy to server
 
-前面我们将项目已经打包Ok了，只需要在你的服务器上安装 `JDK` 或 `JRE` 的环境。
-然后将打好的包上传上去（这里上传的是整个文件夹，不是一个jar，因为我们有可能会修改某些配置）。
+Earlier we have packaged the project Ok, just install the `JDK` or `JRE` environment on your server.
+Then upload the package you have uploaded (the entire folder is uploaded here, not a jar, as we may modify some configurations).
 
-如果想要在外网访问你的Web程序，请确保你有外网的IP && 你的服务端口是开放的。
+If you want to access your web application on the extranet, make sure you have the IP && service port of the extranet is open.

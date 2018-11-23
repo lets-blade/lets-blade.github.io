@@ -1,15 +1,15 @@
 ---
 layout: doc
 language: en
-title: 定时任务
+title: Schedule Task
 ---
 
-在 Blade `2.0.8` 版本之后加入了 cron 表达式来完成定时执行任务的需求。
-你只需要在处理任务的方法上添加一个 `@Schedule` 注解，然后编写 cron 表达式即可。
+The cron expression was added after the Blade `2.0.8` version to complete the task of timing the task.
+You only need to add a `@Schedule` annotation to the method that handles the task, and then write the cron expression.
 
-Blade 的任务系统提供你创建、停止、获取任务列表的 API。
+Blade's mission system provides an API for creating, stopping, and getting task lists.
 
-## 创建一个任务
+## Create task
 
 ```java
 @Bean
@@ -17,15 +17,15 @@ public class SimpleTask {
 
    @Schedule(cron = "* * * * * ?")
     public void syncRelate() {
-        System.out.println("执行一次");
+        System.out.println("executed");
     }
 
 }
 ```
 
-这样就可以创建一个每秒钟执行一次的定时任务了。此时创建的定时任务名称是 `task-0`，
-当你没有指定一个任务名称的时候，系统会按照数字顺序从 `0` 开始为他们命名，如果你想动态的
-关闭他们，一定要在 `@Schedule` 注解上加入 `name` 来命名它，像这样。
+This will create a scheduled task that is executed every second. The name of the scheduled task created at this time is `task-0`, when you don't specify a task name, the system will name them starting from `0` in numerical order, if you want to be dynamic.
+
+To turn them off, be sure to add `name` to the `@Schedule` annotation to name it, like this.
 
 ```java
 @Bean
@@ -33,7 +33,7 @@ public class SimpleTask {
 
    @Schedule(name = "task1", cron = "* * * * * ?")
     public void syncRelate() {
-        System.out.println("执行一次");
+        System.out.println("execute once");
     }
 
 }
@@ -41,15 +41,15 @@ public class SimpleTask {
 
 ## TaskManager
 
-可以通过调用 `TaskManager` 的静态方法来管理任务，下面是 `TaskManager` 的API。
+The task can be managed by calling the static method of `TaskManager`. The following is the API of `TaskManager`.
 
-- `getTask(name)`：根据任务名获取一个任务。
-- `getTasks()`：获取系统所有任务
-- `stopTask(name)`：根据任务名停止一个正在运行的任务
+- `getTask(name)`: Get a task based on the task name.
+- `getTasks()`: Get all tasks of the system
+- `stopTask(name)`: Stop a running task based on the task name
 
-关闭任务的方法是在 `Task` 内部实现的，每一个任务都会有一个上下文，在前面的创建任务中你看到
-每个方法都是没有参数的，Blade 支持你传入一个 `TaskContext` 类型的参数来操作当前的任务
-（可能大多数情况用不到）。
+The way to close a task is implemented inside `Task`, each task will have a context, you see in the previous creation task
+Each method has no parameters, and Blade supports you to pass a parameter of type `TaskContext` to manipulate the current task.
+(may not be used in most cases).
 
 ```java
 private AtomicInteger run1 = new AtomicInteger();
@@ -65,36 +65,36 @@ public void run1(TaskContext context) {
 }
 ```
 
-像这样可以在某个条件触发的时候关闭一个任务。
+This way you can close a task when a condition is triggered.
 
-## 常用的 Cron 表达式
+## Common Cron expressions
 
-- `*/5 * * * * ?`: 每隔5秒执行一次
-- `0 */1 * * * ?`: 每隔1分钟执行一次
-- `0 0/5 * * * ?`: 每隔5分钟执行一次
-- `0 0 23 * * ?`: 每天23点执行一次
-- `0 0 1 * * ?`: 每天凌晨1点执行一次
-- `0 0 1 1 * ?`: 每月1号凌晨1点执行一次
-- `0 0 23 L * ?`: 每月最后一天23点执行一次
-- `0 0 1 ? * L`: 每周星期天凌晨1点实行一次
-- `0 26,29,33 * * * ?`: 在26分、29分、33分执行一次
-- `0 0 0,13,18,21 * * ?`: 每天的0点、13点、18点、21点都执行一次
-- `0 0 12 * * ?`: 每天中午12点触发
-- `0 15 10 ? * *`: 每天上午10:15触发
-- `0 15 10 * * ?`: 每天上午10:15触发
-- `0 15 10 * * ? *`: 每天上午10:15触发
-- `0 15 10 * * ? 2005`: 2005年的每天上午10:15触发
-- `0 * 14 * * ?`: 在每天下午2点到下午2:59期间的每1分钟触发
-- `0 0/5 14 * * ?`: 在每天下午2点到下午2:55期间的每5分钟触发
-- `0 0/5 14,18 * * ?`: 在每天下午2点到2:55期间和下午6点到6:55期间的每5分钟触发
-- `0 0-5 14 * * ?`: 在每天下午2点到下午2:05期间的每1分钟触发
-- `0 10,44 14 ? 3 WED`: 每年三月的星期三的下午2:10和2:44触发
-- `0 15 10 ? * MON-FRI`: 周一至周五的上午10:15触发
-- `0 15 10 15 * ?`: 每月15日上午10:15触发
-- `0 15 10 L * ?`: 每月最后一日的上午10:15触发
-- `0 15 10 ? * 6L`: 每月的最后一个星期五上午10:15触发
-- `0 15 10 ? * 6L 2002-2005`: 2002年至2005年的每月的最后一个星期五上午10:15触发
-- `0 15 10 ? * 6#3`: 每月的第三个星期五上午10:15触发 
-- `0 15 10 ? * 6#3`: 每月的第三个星期五上午10:15触发 
+- `*/5 * * * * ?`: Execute every 5 seconds
+- `0 */1 * * * ?`: Execute every 1 minute
+- `0 0/5 * * * ?`: Execute every 5 minutes
+- `0 0 23 * * ?`: Execute once every day at 23
+- `0 0 1 * * ?`: Execute once a day at 1am
+- `0 0 1 1 * ?`: Execute once a day at 1 am on the 1st of the month
+- `0 0 23 L * ?`: Execute once at 23 o'clock on the last day of each month
+- `0 0 1 ? * L`: Implemented once a week on Sunday at 1 am
+- `0 26,29,33 * * * ?`: Execute once at 26, 29, and 33
+- `0 0 0,13,18,21 * * ?`: Execute once every day at 0, 13, 18, and 21
+- `0 0 12 * * ?`: Trigger every day at 12 noon
+- `0 15 10 ? * *`: Trigger every day at 10:15 am
+- `0 15 10 * * ?`: Trigger every day at 10:15 am
+- `0 15 10 * * ? *`: Trigger every day at 10:15 am
+- `0 15 10 * * ? 2005`: Every day at 10:15 am in 2005
+- `0 * 14 * * ?`: Trigger every 1 minute between 2 pm and 2:59 pm
+- `0 0/5 14 * * ?`: Trigger every 5 minutes between 2 pm and 2:55 pm
+- `0 0/5 14,18 * * ?`: Trigger every 5 minutes between 2 pm and 2:55 pm and 6 pm to 6:55 pm
+- `0 0-5 14 * * ?`: Trigger every 1 minute between 2 pm and 2:05 pm
+- `0 10,44 14 ? 3 WED`: Triggered at 2:10 pm and 2:44 pm on Wednesday of March each year
+- `0 15 10 ? * MON-FRI`: Triggered at 10:15 am Monday to Friday
+- `0 15 10 15 * ?`: Trigger at 10:15 am on the 15th of each month
+- `0 15 10 L * ?`: Trigger at 10:15 am on the last day of each month
+- `0 15 10 ? * 6L`: Trigger at 10:15 am on the last Friday of each month
+- `0 15 10 ? * 6L 2002-2005`: Trigger at 10:15 am on the last Friday of each month from 2002 to 2005
+- `0 15 10 ? * 6#3`: Trigger at 10:15 am on the third Friday of each month
+- `0 15 10 ? * 6#3`: Trigger at 10:15 am on the third Friday of each month
 
-[在线Cron表达式生成器](http://cron.qqe2.com/)
+online [cron generator](https://crontab-generator.org/).

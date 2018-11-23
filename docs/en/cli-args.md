@@ -1,19 +1,19 @@
 ---
 layout: doc
 language: en
-title: 命令行参数
+title: Terminal parmeters
 ---
 
-为了方便起见，我们支持在运行 Blade 应用的时候修改一些配置，比如我在运行时指定端口：
+For your convenience, we support modifying some configurations when running a Blade app, such as specifying a port at runtime:
 
-```bash
-java -jar blade-app.jar -Dserver.port=9088
+```shell
+java -jar blade-app.jar --server.port=9088
 ```
 
-当然还支持一些其他的命令行参数，看看下面的表格：
+Of course, some other command line arguments are also supported. Take a look at the following table:
 
-| 命令行参数 | 描述   |  示例  |
+| Command line argument | Description   |  Example  |
 | -------- | -----  | ----  |
-| server.address | 服务地址，默认是本机 `0.0.0.0` 回环地址 | server.address=192.168.1.100 |
-| server.port | web服务端口，默认是 `9000` | server.port=9088 |
-| app.env | 启动配置文件环境，默认是 `application.properties` | app.env=prod |
+| server.address | web server address, default is `0.0.0.0` | `--server.address=192.168.1.100` |
+| server.port | web server port, default is `9000` | `--server.port=9088` |
+| app.env | start the configuration file environment, the default is `application.properties` | `--app.env=prod` |

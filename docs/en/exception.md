@@ -1,18 +1,20 @@
 ---
 layout: doc
 language: en
-title: 异常处理
+title: Exception
 ---
 
-Blade 内置了 `异常处理器`，在开发者模式下它会将异常输出在前端页面，并在控制台打印堆栈信息，生产环境只打印在控制台。
-有些时候不满足我们的需求，这时候就需要自定义异常处理了，比如针对某个自定义的异常进行特殊处理。
-我们用一个例子来解释如何操作。
+The Blade has an 'Exception Handler' built in. In Developer mode, it outputs the exception on the front page and prints the stack information on the console. The production environment is only printed on the console.
+Sometimes we don't meet our needs. At this time, we need to customize the exception handling, such as special handling for a custom exception.
+We use an example to explain how to operate.
 
-定义了一个名为 `TipException` 的运行时异常类，用于输出错误消息到前台。
-按照上面对异常的处理情况这个异常的堆栈信息会被输出在控制台，生产环境下前端只会收到 500 的错误码。
-我们希望针对这个异常做一些特殊处理，在 Blade 中提供了 `ExceptionHandler` 接口定义了一个处理异常的方法，
-为了方便内置了 [DefaultExceptionHandler]() 类做默认处理，我们不必单独写一个异常处理器，只需要继承 `DefaultExceptionHandler`
-稍作修改即可完成自己的特定需要，如果你真的愿意自己完全处理异常信息，也可以参考这个类的实现。
+A runtime exception class named `TipException` is defined to output an error message to the foreground.
+
+According to the exception handling above, the stack information of this exception will be output to the console. In the production environment, the front end will only receive 500 error codes.
+
+We want to do some special handling for this exception. The `ExceptionHandler` interface is defined in Blade to define a method for handling exceptions.
+In order to facilitate the built-in [DefaultExceptionHandler] () class to do the default processing, we do not have to write an exception handler alone, only need to inherit `DefaultExceptionHandler`
+You can complete your specific needs with a little modification. If you really want to handle the exception information completely, you can also refer to the implementation of this class.
 
 ```java
 public class TipException extends RuntimeException {
@@ -47,5 +49,4 @@ public class GolbalExceptionHandler extends DefaultExceptionHandler {
 }
 ```
 
-这段代码很简洁，我们定义了一个名为 `GolbalExceptionHandler` 的类来处理自定义异常，它继承自 `DefaultExceptionHandler`，
-并作为一个 `Bean` 被 Blade 托管，内部实现也只有几行代码，判断一下异常类型，做特殊处理即可，否则还是像之前一样处理。
+This code is very succinct, we define a class called `GolbalExceptionHandler` to handle custom exceptions, which inherit from `DefaultExceptionHandler`, And as a `Bean` is managed by the Blade, the internal implementation is only a few lines of code, to determine the type of exception, special treatment can be done, otherwise it will be treated as before.

@@ -1,11 +1,12 @@
 ---
 layout: doc
 language: en
-title: 自定义中间件
+title: Custom Middleware
 ---
 
-中间件是 `WebHook` 的一种变种模式，不同的是它早于 `WebHook` 执行，你可以做一些有用的前置拦截，比如 `token` 校验、日志记录等等。
-实现一个中间件可以参考一个例子：
+The middleware is a variant of `WebHook`, except that it is executed earlier than `WebHook`, you can do some useful pre-blocking, such as `token` checksum, logging, and so on.
+
+To implement a middleware, you can refer to an example:
 
 ```java
 public class BasicAuthMiddleware implements WebHook {
@@ -73,7 +74,7 @@ public class BasicAuthMiddleware implements WebHook {
 }
 ```
 
-**应用这个中间件**
+**Apply this middleware**
 
 ```java
 Blade.of().use(new BasicAuthMiddleware());

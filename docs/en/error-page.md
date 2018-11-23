@@ -1,22 +1,22 @@
 ---
 layout: doc
 language: en
-title: 错误页面
+title: Error page
 ---
 
-Blade 程序中默认的 `404`、`500` 处理是直接输出在界面的，如果你希望使用一个 `html` 网页渲染错误页可以进行自定义配置。
-在 `app.properties` 配置文件中设置 `mvc.view.404=my_404.html`，
-这里的 `my_404.html` 应当位于 `templates` 根目录，同时你可以获取到 `title`、`message`、`stackTrace` 内置变量（当发生 500 错误的时候才有 `stackTrace`）。
+The default `404`, `500` processing in the Blade program is output directly in the interface. If you want to use a `html` page rendering error page, you can customize it.
+Set `mvc.view.404=my_404.html` in the `app.properties` configuration file.
+The `my_404.html` here should be in the `templates` root directory, and you can get the `title`, `message`, `stackTrace` built-in variables (the `stackTrace` is only needed when a 500 error occurs).
 
-我们来举个例子，默认情况下出现 `404` 你在界面会看到这样的输出信息：
+Let's take an example. By default, `404` will appear in the interface:
 
 ```bash
 404 Not Found - /someurl
 
-Copyright © Blade-2.0.6-Alpha1
+Copyright © Blade-2.0.12-Alpha1
 ```
 
-我们可以定义一个错误页面名为 `my_404.html` 存储在 `templates` 目录下，它的内容是：
+We can define an error page named `my_404.html` stored in the `templates` directory, whose content is:
 
 ```html
 <!DOCTYPE html>
@@ -26,13 +26,13 @@ Copyright © Blade-2.0.6-Alpha1
     <title>${title}</title>
   </head>
   <body>
-    我的404页面：${message}
+    My 404 Page: ${message}
   </body>
 </html>
 ```
 
-记得在 `app.properties` 配置文件中加入 `mvc.view.404=my_404.html`，这时候再打开一个未知页面试试：
+Remember to add `mvc.view.404=my_404.html` to the `application.properties` configuration file. Try opening an unknown page again:
 
-```bash
-我的404页面：/someurl
+```shell
+My 404 Page: /someurl
 ```

@@ -1,15 +1,15 @@
 ---
 layout: doc
 language: en
-title: 日志输出
+title: Logging
 ---
 
-Blade使用了 `slf4j-api` 作为日志接口，为了方便起见，默认内置了日志实现，
-包含按日期进行文件归档等操作，一个小型应用无需配置日志组件。
+Blade uses `slf4j-api` as the log interface. For convenience, the log implementation is built in by default.
+It includes operations such as archiving files by date, and a small application does not need to configure logging components.
 
-maven的坐标名为 `blade-log`，源码在 [这里](https://github.com/bladejava/blade-log)
+The coordinate name of maven is `blade-log`, the source code is [here](https://github.com/bladejava/blade-log)
 
-默认的日志级别是 `INFO`，你可以修改它。使用日志和往常一样：
+The default log level is `INFO`, you can modify it. Use the log as usual:
 
 ```java
 public class LogExample {
@@ -22,46 +22,46 @@ public class LogExample {
 }
 ```
 
-## 配置
+## Logging configuration
 
-```bash
-# 配置日志级别
-# 日志级别选项 ("trace", "debug", "info", "warn", or "error").
-# 如果你没有配置默认是 "info".
+```shell
+# configuring the log level
+# log level options ("trace", "debug", "info", "warn", or "error").
+# if you don't configure the default is "info".
 #com.blade.logger.rootLevel=info
 
-# 配置某个包、类的日志级别
+# configure the log level of a package or class
 #com.blade.logger.xxxxx=
 #com.blade.logger.org.sql2o.Query=debug
 
-# 显示日期时间
-#com.blade.logger.showDate=false
+# display date time
+#com.blade.logger.showDate=true
 
-# 日期格式化
+# date format
 #com.blade.logger.datePattern=yyyy-MM-dd HH:mm:ss:SSS Z
 
-# 显示线程名
+# show thread name
 #com.blade.logger.showThread=true
 
-# 如果要将Logger实例名称包含在输出消息中，请设置为true。
-# 默认为true
+# Set to true if the Logger instance name is to be included in the output message.
+# default is true
 #com.blade.logger.showLogName=true
 
-# 如果要将名称的最后一个组件包含在输出消息中，请设置为true。
-# 默认为true
+# Set to true if you want to include the last component of the name in the output message.
+# default is true
 #com.blade.logger.shortName=true
 
-# 设置日志文件路径
+# Set the log file path
 # com.blade.logger.dir=./logs
 
-# 设置日志文件名，默认取当前 app.name
+# Set the log file name. By default, the current app.name is taken.
 # com.blade.logger.name=sample
 ```
 
-## 和其他日志实现冲突
+## Conflict with other logger implementations
 
-在使用其他的一些组件的时候，可能会和 `blade-log` 产生冲突，因为它们都实现了 `slf4j-api`，
-在 maven 中你可以排除任意一个，像这样：
+When using other components, it may conflict with `blade-log` because they both implement `slf4j-api`,
+You can exclude any one in maven like this:
 
 ```xml
 <dependency>
@@ -77,4 +77,4 @@ public class LogExample {
 </dependency>
 ```
 
-默认情况下 `blade-mvc` 已经内置了日志实现，需要替换一个实现也是这样的方式。
+By default, `blade-mvc` has a built-in log implementation, and it is also necessary to replace an implementation.
