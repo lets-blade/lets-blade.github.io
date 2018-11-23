@@ -1,32 +1,32 @@
 ---
 layout: doc
 language: en
-title: 安装 Blade
+title: Install Blade
 ---
 
-## 要求
+## Prerequisites
 
-- 安装 JDK1.8
-- 安装 Maven 或 Gradle
+- Install JDK1.8
+- Install Maven or Gradle
 
-## 使用 Maven
+## Use Maven
 
-加入依赖 
+Add dependence 
 
 ```xml
 <dependency>
     <groupId>com.bladejava</groupId>
     <artifactId>blade-mvc</artifactId>
-    <version>LEAST_VERSION</version>
+    <version>LATEST_VERSION</version>
 </dependency>
 ```
 
-## 使用 Gradle
+## Use Gradle
 
-加入依赖
+Add dependence
 
 ```bash
-compile 'com.bladejava:blade-mvc:LEAST_VERSION'
+compile 'com.bladejava:blade-mvc:LATEST_VERSION'
 ```
 
-`LEAST_VERSION` 是最新版本，请在 Github 的 [README](https://github.com/lets-blade/bladelets-blade.github.io/blob/master/CNAME) 查看。
+`LATEST_VERSION` is latest version, go to [README](https://github.com/lets-blade/blade) view.

@@ -14,22 +14,22 @@ Blade 中认为组件就是一种类型的 `Bean` 或者叫对象，框架内置
 
 ## 组件类型
 
-为了使用者更简单方面，在 Blade 中内置了这么几种组件类型，`BeanProcessor`、`WebHook`、控制器。
+为了使用者更简单方面，在 Blade 中内置了这么几种组件类型，`BladeLoader`、`WebHook`、控制器。
 那么我们来一起看看这几个分别都来干什么的？
 
-**BeanProcessor**
+**BladeLoader**
 
 在一个 Web 开发中我们经常会使用到项目启动的时候加载一些 **配置** 或者干一些其他的事情，
-在Blade中设计了一个接口 `BeanProcessor`，你只需要创建一个自己的类实现这个接口即可完成初始化加载的动作。
+在Blade中设计了一个接口 `BladeLoader`，你只需要创建一个自己的类实现这个接口即可完成初始化加载的动作。
 比如我要在项目启动的时候设置模板引擎：
 
 ```java
 @Order(1)
 @Bean
-public class TemplateConfig implements BeanProcessor {
+public class TemplateConfig implements BladeLoader {
     
     @Override
-    public void processor(Blade blade) {
+    public void load(Blade blade) {
         JetbrickTemplateEngine templateEngine = new JetbrickTemplateEngine();
         blade.templateEngine(templateEngine);
     }

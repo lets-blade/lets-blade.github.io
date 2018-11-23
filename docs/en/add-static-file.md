@@ -1,32 +1,32 @@
 ---
 layout: doc
 language: en
-title: 添加静态文件
+title: Add Static File
 ---
 
-动态的 `web` 应用也需要静态文件，一般是 `CSS` 和 `JavaScript` 文件。理想情况下你的 服务器已经配置好了为你的提供静态文件的服务。在开发过程中， Blade 也能做好这个工作。我们在 `resources` 目录下创建一个名为 `static` 的文件夹存储静态资源文件，静态文件位于 应用的 `/static` 中。
+Dynamic `web` applications also require static files, typically `CSS` and `JavaScript` files. Ideally your server is already configured to serve your static files. Blade can do the job well during the development process. We create a static resource file in the `resources` directory called `static`, which is located in the `/static` of the application.
 
-> Blade 默认设置了 `static`、`assets`、`webjars`、`upload` 文件夹皆为静态资源目录。
-> 你也可以自定义设置某个目录，这里我们就使用 `static` 目录作为存储。
+> Blade defaults to `static`, `assets`, `webjars`, `upload` folders as static resource directories.
+> You can also customize a directory, here we use the `static` directory as the storage.
 
-准备几张图片或者 `css`、`js` 文件放在该目录下，来看看我的目录结构
+Prepare a few pictures or put `css`, `js` files in this directory to see my directory structure.
 
 <img src="https://ooo.0o0.ooo/2017/06/23/594bf1203b47f.png" width="300" />
 
-我在 `static` 目录下存了一张图片，我们来启动服务访问 http://127.0.0.1:9000/static/1bd163bc88d4.png
+I saved an image in the `static` directory and we started the service access http://127.0.0.1:9000/static/1bd163bc88d4.png
 
 <img src="https://ooo.0o0.ooo/2017/06/23/594bf1982ba40.png" width="500" />
 
-是不是有点小激动，我们什么都不用配置，`Blade`已经帮我完成了静态资源的映射。
+A little excited, we don't have to configure anything, `Blade` has helped me complete the mapping of static resources.
 
-## 自定义资源目录
+## Custom resource directory
 
-有位兄弟说了，我想试试自定义一个目录，`static` 这个名字太 `low` 了 23333。自定义静态资源目录的姿势有2种：
+A brother said, I want to try to customize a directory, the name `static` is too low `23333. There are two types of postures for custom static resource directories:
 
-- 通过编码设置：`blade.addStatics("/zhuangbi")`
-- 通过配置文件：`mvc.statics=/zhuangbi`
+- Set by encoding: `blade.addStatics("/zhuangbi")`
+- Via configuration file: `mvc.statics=/zhuangbi`
 
-我们来试试：
+Let's try:
 
 ```java
 public static void main(String[] args) {
@@ -36,23 +36,23 @@ public static void main(String[] args) {
 
 <img src="https://ooo.0o0.ooo/2017/06/23/594bf3240b9fd.png" width="500" />
 
-实际上 `Blade` 内部提供了一个小功能，默认的关闭的，如果你希望看到静态资源目录下的列表可以开启这项技能，也是两种方式：
+In fact, `Blade` provides a small function inside, the default is off, if you want to see the list in the static resource directory can open this skill, there are two ways:
 
-- 通过编码设置：`blade.showFileList(true)`
-- 通过配置文件：`mvc.statics.list=true`
+- Set by encoding: `blade.showFileList(true)`
+- Via configuration file: `mvc.statics.list=true`
 
-开启之后的样子
+What it looks like after it is turned on
 
 <img src="https://ooo.0o0.ooo/2017/06/23/594bf3eaed28a.png" width="500" />
 
 
-## webjars是什么鬼？
+## What is webjars?
 
-使用过 `SpringBoot` 的同学可能用过这个东西，实际上我们引用静态资源的方式可以是一个 `jar` 包。
+Classmates who have used `SpringBoot` may have used this thing. In fact, the way we refer to static resources can be a `jar` package.
 
 <img src="https://ooo.0o0.ooo/2017/06/23/594bf47c5a532.jpg" width="200" />
 
-使用方法非常简单，你需要在 `maven` 的中加入一个依赖，比如:
+The method of use is very simple, you need to add a dependency in `maven`, such as:
 
 ```xml
 <dependency>
@@ -62,11 +62,11 @@ public static void main(String[] args) {
 </dependency>
 ```
 
-这时候启动服务访问 http://127.0.0.1:9000/webjars/bootstrap/3.3.7/css/bootstrap.css
+Start service access at this time  http://127.0.0.1:9000/webjars/bootstrap/3.3.7/css/bootstrap.css
 
 <img src="https://ooo.0o0.ooo/2017/06/23/594bf54d74703.png" width="500" />
 
-来，见证奇迹的时刻到了。如果你对 `webjars` 感兴趣，可以在 https://www.webjars.org/ 找到更多。
+Come, the time to witness the miracle is here. If you are interested in `webjars`, you can find more at [https://www.webjars.org/](https://www.webjars.org/).
 
-我们访问静态资源需要输入 `http://127.0.0.1:9000/static/t2.png` 即可，
-在模板中使用则是 `/static/index.css`。
+We need to enter `http://127.0.0.1:9000/static/t2.png` to access static resources.
+Used in the template is `/static/index.css`.

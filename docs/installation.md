@@ -17,7 +17,7 @@ title: 安装 Blade
 <dependency>
     <groupId>com.bladejava</groupId>
     <artifactId>blade-mvc</artifactId>
-    <version>LEAST_VERSION</version>
+    <version>LATEST_VERSION</version>
 </dependency>
 ```
 
@@ -26,7 +26,7 @@ title: 安装 Blade
 加入依赖
 
 ```bash
-compile 'com.bladejava:blade-mvc:LEAST_VERSION'
+compile 'com.bladejava:blade-mvc:LATEST_VERSION'
 ```
 
-`LEAST_VERSION` 是最新版本，请在 Github 的 [README](https://github.com/lets-blade/bladelets-blade.github.io/blob/master/CNAME) 查看。
+`LATEST_VERSION` 是最新版本，请在 Github 的 [README](https://github.com/lets-blade/blade) 查看。
