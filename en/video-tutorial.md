@@ -4,7 +4,9 @@ title: 视频教程
 language: en
 ---
 
+敬请期待！
 
+<!-- 
 ## Blade 入门教程
 
 Blade 入门教程是帮助开发者快速学习 Blade 的视频语音教程，每节课尽量控制在 10 分钟左右。
@@ -29,4 +31,4 @@ Blade 入门教程是帮助开发者快速学习 Blade 的视频语音教程，�
 |第 9 课|组件和事件|[腾讯视频](https://v.qq.com/x/page/q0550y12tgq.html) / [Youtube](https://www.youtube.com/watch?v=rke6nolDgi4&list=PLK2w-tGRdrj5TV2lxHFj8hcg4mbmRmnWX&index=9)|
 |第 10 课|数据库操作|[腾讯视频](https://v.qq.com/x/page/d0554v9vtu1.html) / [Youtube](https://www.youtube.com/watch?v=EH9WhjKThm0&list=PLK2w-tGRdrj5TV2lxHFj8hcg4mbmRmnWX&index=10)|
 
-🎬 [在哔哩哔哩观看](https://www.bilibili.com/video/av15572599/)
+🎬 [在哔哩哔哩观看](https://www.bilibili.com/video/av15572599/) -->
