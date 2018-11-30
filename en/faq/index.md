@@ -28,6 +28,12 @@ Then use the corresponding snapshot version, such as `2.0.9-SNAPSHOT`.
 > The snapshot version is generally used to fix an emergency bug or to prioritize new features.
 > Overwrite each time it is published.
 
+The snapshot version can be released indefinitely, which means that the user wants to ensure that the latest version may be forced to update, using
+
+```shell
+mvn clean compile -U
+```
+
 # How to modify the built-in JSON library?
 
 By default, Blade has a simple json library built in to handle most situations. If you want to customize or you are used to a json library, Blade supports replacement, and currently supports the following json libraries.
