@@ -99,7 +99,7 @@ import com.blade.Blade;
 
 public class Application {
     public static void main(String[] args) {
-        Blade.of().start(Application.class, args);
+        Blade.me().start(Application.class, args);
     }
 }
 ```
@@ -110,7 +110,7 @@ public class Application {
 在后面的章节中我们会讲到其他的方式，这里为了简单起见，编写一个 `Hello World` 吧
 
 ```java
-Blade.of().get("/", ctx -> ctx.text("Hello World!")).start(Application.class, args);
+ Blade.me().get("/",(request, response) -> response.text("Hello World")).start(Application.class,args);
 ```
 
 此时你启动应用程序，在终端可以看到如下输出：
