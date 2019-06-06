@@ -9,7 +9,7 @@ Blade has a built-in simple template engine for web page rendering and simple da
 We usually use some excellent, efficient, and full-featured template engines such as Velocity, Freemarker, JetbrickTemplate, and more.
 Blade supports the extension of any template engine, and there are multiple implementations. At [here](https://github.com/lets-blade/blade-template-engines), you are also welcome to contribute code.
 
-## Default tempalte
+## Default template
 
 The default template engine is very simple, less than the `400` line of code, and of course the functionality is limited. Let's try it. According to the convention, all template files are stored in the `templates` directory.
 
