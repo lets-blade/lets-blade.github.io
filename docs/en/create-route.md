@@ -30,7 +30,7 @@ public class IndexController {
     }
 
     @DeleteRoute("/delete/:uid")
-    public void updateUser(@PathParam Integer uid){
+    public void deleteUser(@PathParam Integer uid){
         System.out.println("delete user:" + uid);
     }
 
