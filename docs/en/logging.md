@@ -65,9 +65,9 @@ You can exclude any one in maven like this:
 
 ```xml
 <dependency>
-    <groupId>com.bladejava</groupId>
-    <artifactId>blade-mvc</artifactId>
-    <version>${blade.version}</version>
+    <groupId>com.hellokaton</groupId>
+    <artifactId>blade-core</artifactId>
+    <version>${blade-core.version}</version>
     <exclusions>
         <exclusion>
             <groupId>com.bladejava</groupId>

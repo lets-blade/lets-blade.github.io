@@ -44,9 +44,9 @@ Blade 繁多的配置选项在初始状况下都有一个明智的默认值，�
 当开发Blade程序时，你作为开发者的责任，是写出能够迎合用户请求（比如：http://localhost:9000 ）的代码，
 并将与请求相对应的资源显示出来。（首页页面）
 
-用户请求所执行的代码，被定义于**控制器类**的方法之中。这些方法被称为**路由**（你也可以理解为SpringMvc中的RequestMapping），
+用户请求所执行的代码，被定义于**控制器类**的方法之中。这些方法被称为**路由**（你也可以理解为 SpringMVC 中的 RequestMapping），
 而类则称作controller（控制器，一般会用 `@Path` 注解标识）。
-用户请求和代码之间的映射关系使用像 `@GetRoute` 这样的注解关联。
+用户请求和代码之间的映射关系使用像 `@GET` 这样的注解关联。
 浏览器显示的内容一般是通过 `templates`（模板）来输出的。
 
 在下面章节中你将学习 Blade 控制器、路由、模板中的内部工作流的细节部分。
@@ -57,7 +57,7 @@ Blade 繁多的配置选项在初始状况下都有一个明智的默认值，�
 @Path
 public class IndexController {
     
-    @GetRoute("/")
+    @GET("/")
     public String index(){
         return "index.html";
     }

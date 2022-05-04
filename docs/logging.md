@@ -65,9 +65,9 @@ public class LogExample {
 
 ```xml
 <dependency>
-    <groupId>com.bladejava</groupId>
-    <artifactId>blade-mvc</artifactId>
-    <version>${blade.version}</version>
+    <groupId>com.hellokaton</groupId>
+    <artifactId>blade-core</artifactId>
+    <version>${blade-core.version}</version>
     <exclusions>
         <exclusion>
             <groupId>com.bladejava</groupId>
@@ -77,4 +77,4 @@ public class LogExample {
 </dependency>
 ```
 
-默认情况下 `blade-mvc` 已经内置了日志实现，需要替换一个实现也是这样的方式。
+默认情况下 `blade-core` 已经内置了日志实现，需要替换一个实现也是这样的方式。

@@ -15,8 +15,8 @@ title: 安装 Blade
 
 ```xml
 <dependency>
-    <groupId>com.bladejava</groupId>
-    <artifactId>blade-mvc</artifactId>
+    <groupId>com.hellokaton</groupId>
+    <artifactId>blade-core</artifactId>
     <version>LATEST_VERSION</version>
 </dependency>
 ```
@@ -26,7 +26,7 @@ title: 安装 Blade
 加入依赖
 
 ```bash
-compile 'com.bladejava:blade-mvc:LATEST_VERSION'
+compile 'com.hellokaton:blade-core:LATEST_VERSION'
 ```
 
 `LATEST_VERSION` 是最新版本，请在 Github 的 [README](https://github.com/lets-blade/blade) 查看。

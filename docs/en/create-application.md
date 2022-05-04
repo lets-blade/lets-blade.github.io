@@ -26,15 +26,15 @@ Once created, we need to introduce the Blade dependency and configure the JDK co
     <version>0.0.1</version>
 
     <properties>
-        <blade-mvc.version>2.0.12-ALPHA</blade-mvc.version>
+        <blade-core.version>2.1.0.RELEASE</blade-core.version>
     </properties>
 
     <dependencies>
         <!-- mvc dependency -->
         <dependency>
-            <groupId>com.bladejava</groupId>
-            <artifactId>blade-mvc</artifactId>
-            <version>${blade-mvc.version}</version>
+            <groupId>com.hellokaton</groupId>
+            <artifactId>blade-core</artifactId>
+            <version>${blade-core.version}</version>
         </dependency>
     </dependencies>
 

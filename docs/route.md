@@ -93,7 +93,7 @@ public @interface Path {
 共有这么几种注解帮你完成：`GetRoute`、`PostRoute`、`PutRoute`、`DeleteRoute`、`Route`
 
 ```java
-@GetRoute("/home")
+@GET("/home")
 public String home(){
     return "index.html";
 }
@@ -117,17 +117,17 @@ public String home(){
 **1. 获取Form表单参数**
 
 ```java
-@GetRoute("/home")
-public String home(@Param String name){
+@GET("/home")
+public String home(@Form String name){
     System.out.println("name: " + name);
     return "index.html";
 }
 ```
 
-**2. 获取Restful参数**
+**2. 获取 Path 参数**
 
 ```java
-@GetRoute("/users/:uid")
+@GET("/users/:uid")
 public void users(@PathParam Integer uid){
     System.out.println("uid: " + uid);
 }
@@ -136,8 +136,8 @@ public void users(@PathParam Integer uid){
 **3. 获取上传文件参数**
 
 ```java
-@PostRoute("/upload")
-public void upload(@MultipartParam FileItem fileItem){
+@POST("/upload")
+public void upload(@Multipart FileItem fileItem){
     byte[] data = fileItem.getData();
     // Save the temporary file to the specified path
     Files.write(Paths.get(filePath), data);
@@ -147,8 +147,8 @@ public void upload(@MultipartParam FileItem fileItem){
 **4. 获取Header参数**
 
 ```java
-@GetRoute("/header")
-public void users(@HeaderParam String Referer){
+@GET("/header")
+public void users(@Header String Referer){
     System.out.println("Referer: " + Referer);
 }
 ```
@@ -156,7 +156,7 @@ public void users(@HeaderParam String Referer){
 **5. 获取Cookie参数**
 
 ```java
-@GetRoute("/cookie")
+@GET("/cookie")
 public void users(@CookieParam String uid){
     System.out.println("uid: " + uid);
 }
@@ -165,8 +165,8 @@ public void users(@CookieParam String uid){
 **6. 获取Body参数**
 
 ```java
-@GetRoute("/bodyParam")
-public void users(@BodyParam PayRequest payRequest){
+@GET("/bodyParam")
+public void users(@Body PayRequest payRequest){
     System.out.println("payRequest: " + JsonKit.toJson(payRequest));
 }
 ```
@@ -178,8 +178,8 @@ public void users(@BodyParam PayRequest payRequest){
 这样的格式即可。下面是2个例子：
 
 ```java
-@GetRoute("/savePerson")
-public void users(@Param Person person){
+@GET("/savePerson")
+public void users(@Form Person person){
     System.out.println("person: " + person);
 }
 ```
@@ -197,8 +197,8 @@ public void users(@Param Person person){
 
 
 ```java
-@GetRoute("/savePerson")
-public void users(@Param(name="person") Person person){
+@GET("/savePerson")
+public void users(@Form(name="person") Person person){
     System.out.println("person: " + person);
 }
 ```

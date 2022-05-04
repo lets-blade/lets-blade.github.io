@@ -27,15 +27,15 @@ title: 创建一个工程
     <version>0.0.1</version>
 
     <properties>
-        <blade-mvc.version>2.0.8-BETA1</blade-mvc.version>
+        <blade-mvc.version>2.1.0.RELEASE</blade-mvc.version>
     </properties>
 
     <dependencies>
         <!-- mvc dependency -->
         <dependency>
-            <groupId>com.bladejava</groupId>
-            <artifactId>blade-mvc</artifactId>
-            <version>${blade-mvc.version}</version>
+            <groupId>com.hellokaton</groupId>
+            <artifactId>blade-core</artifactId>
+            <version>${blade-core.version}</version>
         </dependency>
     </dependencies>
 
@@ -95,22 +95,22 @@ title: 创建一个工程
 ```java
 package com.example;
 
-import com.blade.Blade;
+import com.hellokaton.blade.Blade;
 
 public class Application {
     public static void main(String[] args) {
-        Blade.of().start(Application.class, args);
+        Blade.create().start(Application.class, args);
     }
 }
 ```
 
-> 创建一个启动类，位于 package 根目录下，使用 Blade.of() 方法创建 Blade 对象并且启动它。
+> 创建一个启动类，位于 package 根目录下，使用 `Blade.create()` 静态方法创建 Blade 对象并且启动它。
 
 当然，这个时候你启动它是没有意义的，因为我们还没有编写路由，编写路由最简单的方式就是使用 Blade 的内置方法，
 在后面的章节中我们会讲到其他的方式，这里为了简单起见，编写一个 `Hello World` 吧
 
 ```java
-Blade.of().get("/", ctx -> ctx.text("Hello World!")).start(Application.class, args);
+Blade.create().get("/", ctx -> ctx.text("Hello World!")).start(Application.class, args);
 ```
 
 此时你启动应用程序，在终端可以看到如下输出：
@@ -128,7 +128,7 @@ Blade.of().get("/", ctx -> ctx.text("Hello World!")).start(Application.class, ar
 							    |_) |   /_\ | \ |_
 							    |_) | , | | |_/ |
 							    ~   ~~~ ~ ~ ~   ~~~
-							  :: Blade :: (v2.0.9.ALPHA1)
+							  :: Blade :: (v2.1.0.RELEASE)
 
                                                                             ③
 2017-10-14 14:12:52:390 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route GET	/

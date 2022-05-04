@@ -29,14 +29,14 @@ curl \
 ```
 
 ```java
-@PostRoute("/save")
-public void formParams(@Param String username){
+@POST("/save")
+public void formParams(@Form String username){
 
 }
 ```
 
 ```java
-@PostRoute("/save")
+@POST("/save")
 public void formParams(Request request){
     String username = request.query("username", "默认值");
 }
@@ -63,14 +63,14 @@ public class User {
     // getter setter 省略
 }
 
-@PostRoute("/users")
-public void bodyParams(@BodyParam User user){
+@POST("/users")
+public void bodyParams(@Body User user){
     
 }
 ```
 
 ```java
-@PostRoute("/users")
+@POST("/users")
 public void bodyParams(Request request){
     String bodyString = request.bodyToString();
 }
@@ -95,7 +95,7 @@ Integer userId = request.pathInt("id");
 也可以使用注解的方式
 
 ```java
-@GetRoute("/user/:uid")
+@GET("/user/:uid")
 public void user(@PathParam Integer uid){
 
 }
@@ -112,7 +112,7 @@ public class User {
     // getter setter 省略
 }
 
-@PostRoute("/users")
+@POST("/users")
 public void bodyParams(User user){
     
 }
@@ -144,8 +144,8 @@ public void bodyParams(User user){
 ```
 
 ```java
-@PostRoute("/save")
-public void customBind(@Param("user") User user){
+@POST("/save")
+public void customBind(@Form("user") User user){
 
 }
 ```

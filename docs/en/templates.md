@@ -82,12 +82,12 @@ The above code will run when the Blade starts, and you can load some other stuff
 Write two routes:
 
 ```java
-@GetRoute("/hello")
+@GET("/hello")
 public String hello(){
     return "hello.html";
 }
 
-@GetRoute("/users")
+@GET("/users")
 public String users(Request request){
     request.attribute("users", users);
     return "users.html";

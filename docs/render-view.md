@@ -12,12 +12,12 @@ Blade 内部内置了一个非常简单的模板渲染引擎，如果你有一�
 你可以调用 `Response` 方法的 `render` 方法渲染或者返回一个 `String` 类型的视图路径。
 
 ```java
-@GetRoute("/index")
+@GET("/index")
 public void renderIndex(Response response){
     response.render("index.html");
 }
 
-@GetRoute("/index2")
+@GET("/index2")
 public String renderIndex(Response response){
     return "index.html";
 }

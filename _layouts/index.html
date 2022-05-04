@@ -44,11 +44,12 @@
             </div>
             <div class="mainContainer">
                 <div class="productShowcaseSection lightBackground">
-                    <div style="margin: 0 auto; text-align: center;">
-                        <img src="/static/images/chart@2x.png" width="680" style="border-radius: 5px; -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
-                            box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);" />
+                    <div style="margin: 0 auto; margin-top: -50px; text-align: center;">
+                        <img src="/static/images/code.svg" width="680" />
+                        <!-- <img src="/static/images/code.svg" width="680" style="border-radius: 5px; -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+                        box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);" /> -->
                     </div>
-                    <div style="max-width: 43%; text-align: center; margin: 0 auto; padding-top: 20px;">
+                    <div style="max-width: 43%; text-align: center; margin: 0 auto; padding-top: 0px;">
                         <h4 style="color: #f7f7f1;">
                             {{ site.data.i18n[page.language].blade-intro }}
                         </h4>
@@ -177,8 +178,8 @@
                                                 <div>
                                                     <span>
                                                         <pre><code class="hljs css xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.bladejava<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>blade-mvc<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.hellokaton<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>blade-core<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>${LEAST_VERSION}<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></code></pre>
                                                     </span>
@@ -187,7 +188,7 @@
                                             <div class="gradleOnly">
                                                 <div>
                                                     <span>
-                                                        <pre><code class="hljs css bash">compile <span class="hljs-string">'com.bladejava:blade-mvc:${LEAST_VERSION}'</span>
+                                                        <pre><code class="hljs css bash">compile <span class="hljs-string">'com.hellokaton:blade-core:${LEAST_VERSION}'</span>
     </code></pre>
                                                     </span>
                                                 </div>
@@ -199,11 +200,11 @@
                                                     <span>
                                                         <pre><code class="hljs css java"><span class="hljs-keyword">package</span> com.example;
     
-<span class="hljs-keyword">import</span> com.blade.Blade;
+<span class="hljs-keyword">import</span> com.hellokaton.blade.Blade;
     
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Application</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        Blade.of().start(Application.class, args);
+        Blade.create().start(Application.class, args);
     }
 }</code></pre>
                                                     </span>
@@ -214,11 +215,11 @@
                                                     <span>
                                                         <pre><code class="hljs css java"><span class="hljs-keyword">package</span> com.example;
     
-<span class="hljs-keyword">import</span> com.blade.Blade;
+<span class="hljs-keyword">import</span> com.hellokaton.blade.Blade;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Application</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        Blade.of().start(Application.class, args);
+        Blade.create().start(Application.class, args);
     }
 }</code></pre>
                                                     </span>

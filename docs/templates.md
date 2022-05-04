@@ -82,12 +82,12 @@ public class TemplateConfig implements BladeLoader {
 编写两个路由：
 
 ```java
-@GetRoute("/hello")
+@GET("/hello")
 public String hello(){
     return "hello.html";
 }
 
-@GetRoute("/users")
+@GET("/users")
 public String users(Request request){
     request.attribute("users", users);
     return "users.html";

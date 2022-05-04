@@ -91,7 +91,7 @@ There are two ways to create routes in the controller, directly creating method-
 There are several kinds of annotations for you to complete: `GetRoute`, `PostRoute`, `PutRoute`, `DeleteRoute`, `Route`
 
 ```java
-@GetRoute("/home")
+@GET("/home")
 public String home(){
     return "index.html";
 }
@@ -115,8 +115,8 @@ To speed development, Blade does some on the route, allowing you to get paramete
 **1. Get the Form parameters**
 
 ```java
-@GetRoute("/home")
-public String home(@Param String name){
+@GET("/home")
+public String home(@Form String name){
     System.out.println("name: " + name);
     return "index.html";
 }
@@ -125,7 +125,7 @@ public String home(@Param String name){
 **2. Get the Path parameters**
 
 ```java
-@GetRoute("/users/:uid")
+@GET("/users/:uid")
 public void users(@PathParam Integer uid){
     System.out.println("uid: " + uid);
 }
@@ -134,8 +134,8 @@ public void users(@PathParam Integer uid){
 **3. Get the Upload parameters**
 
 ```java
-@PostRoute("/upload")
-public void upload(@MultipartParam FileItem fileItem){
+@POST("/upload")
+public void upload(@Multipart FileItem fileItem){
     byte[] data = fileItem.getData();
     // Save the temporary file to the specified path
     Files.write(Paths.get(filePath), data);
@@ -145,8 +145,8 @@ public void upload(@MultipartParam FileItem fileItem){
 **4. Get Header parameters**
 
 ```java
-@GetRoute("/header")
-public void users(@HeaderParam String Referer){
+@GET("/header")
+public void users(@Header String Referer){
     System.out.println("Referer: " + Referer);
 }
 ```
@@ -154,7 +154,7 @@ public void users(@HeaderParam String Referer){
 **5. Get Cookie parameters**
 
 ```java
-@GetRoute("/cookie")
+@GET("/cookie")
 public void users(@CookieParam String uid){
     System.out.println("uid: " + uid);
 }
@@ -163,8 +163,8 @@ public void users(@CookieParam String uid){
 **6. Get Request Body**
 
 ```java
-@GetRoute("/bodyParam")
-public void users(@BodyParam PayRequest payRequest){
+@GET("/bodyParam")
+public void users(@Body PayRequest payRequest){
     System.out.println("payRequest: " + JsonKit.toJson(payRequest));
 }
 ```
@@ -176,8 +176,8 @@ You can also use the convention's convention to pass, and define a name for this
 This format is fine. Here are 2 examples:
 
 ```java
-@GetRoute("/savePerson")
-public void users(@Param Person person){
+@GET("/savePerson")
+public void users(@Form Person person){
     System.out.println("person: " + person);
 }
 ```
@@ -195,8 +195,8 @@ The form in this request is like this:
 
 
 ```java
-@GetRoute("/savePerson")
-public void users(@Param(name="person") Person person){
+@GET("/savePerson")
+public void users(@Form(name="person") Person person){
     System.out.println("person: " + person);
 }
 ```

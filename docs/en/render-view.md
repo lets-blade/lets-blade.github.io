@@ -12,12 +12,12 @@ There is a rule to follow when rendering a template:
 You can call the `render` method of the `Response` method to render or return a view path of type `String`.
 
 ```java
-@GetRoute("/index")
+@GET("/index")
 public void renderIndex(Response response){
     response.render("index.html");
 }
 
-@GetRoute("/index2")
+@GET("/index2")
 public String renderIndex(Response response){
     return "index.html";
 }

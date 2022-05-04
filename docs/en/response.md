@@ -94,7 +94,7 @@ The first is to remove a cookie, followed by a method of writing a cookie. Speci
 Sometimes we will want to redirect to another page after doing an operation. In HTTP, the 302 status code is actually dry. For example, after logging in, the background directly jumps to the page where the login is successful.
 
 ```java
-@PostRoute("login")
+@POST("login")
 public void doLogin(Response response) {
     response.redirect("/index");
 }
@@ -103,7 +103,7 @@ public void doLogin(Response response) {
 Can also be redirected to an external site
 
 ```java
-@GetRoute("github")
+@GET("github")
 public void showGithub(Response response) {
     response.redirect("https://github.com/biezhi");
 }

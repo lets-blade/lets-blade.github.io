@@ -13,7 +13,7 @@ cn:
   source-code: 源码
   what-is-blade: 什么是 Blade ?
   why-blade: 为什么是 Blade ?
-  blade-intro: Blade 基于 Java8 开发，为个人开发者打造的轻量级 MVC 框架， 你只需要创建普通的 Maven 工程即可完成一个简单的应用。
+  blade-intro: Blade 基于 Java8 开发，为开发者打造的轻量级 MVC 框架， 你只需要创建普通的 Maven 工程即可完成一个简单的应用。
   blade-performance: 在 Linux 8核CPU 1G内存，100个并发、100个连接下连续请求 60秒 吞吐可达每秒超 10w 请求
   edit-page: 编辑该页
   user-showcase: 用户案例
@@ -79,7 +79,7 @@ en:
   source-code: Source Code
   what-is-blade: What is Blade?
   why-blade: Why Blade?
-  blade-intro: Blade is based on Java8 development, a lightweight MVC framework for individual developers, you only need to create a normal Maven project to complete a simple application.
+  blade-intro: Blade is based on Java8 development, a lightweight MVC framework for developers, you only need to create a normal Maven project to complete a simple application.
   blade-performance: In Linux 8 core CPU 1G memory, 100 concurrent, 100 consecutive requests for 60 seconds throughput up to 10W per second request
   edit-page: Edit Page
   user-showcase: User Showcase

@@ -94,7 +94,7 @@ response.cookie("c1", "value1");
 有时候我们会希望做完某个操作后重定向到另一个页面，在HTTP中其实就是 302 状态码干的。比如登录后后台直接跳转到登录成功的页面。
 
 ```java
-@PostRoute("login")
+@POST("login")
 public void doLogin(Response response) {
     response.redirect("/index");
 }
@@ -103,7 +103,7 @@ public void doLogin(Response response) {
 也可以重定向到外部站点
 
 ```java
-@GetRoute("github")
+@GET("github")
 public void showGithub(Response response) {
     response.redirect("https://github.com/biezhi");
 }

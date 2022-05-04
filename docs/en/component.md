@@ -107,7 +107,7 @@ public class IndexController {
     @Inject
     private UserService userService;
     
-    @GetRoute("/sayhi")
+    @GET("/sayhi")
     public void sayHi(){
         userService.sayHi();
     }

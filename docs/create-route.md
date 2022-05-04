@@ -14,22 +14,22 @@ Blade 中注册路由有 2 种方式，一种是使用 `Blade` 对象硬编码�
 @Path
 public class IndexController {
 
-    @GetRoute("/")
+    @GET("/")
     public String index(){
         return "index.html";
     }
 
-    @PostRoute("/save")
-    public void saveUser(@Param String username){
+    @POST("/save")
+    public void saveUser(@Form String username){
         System.out.println("username:" + username);
     }
 
-    @PutRoute("/update")
-    public void updateUser(@Param String username){
+    @PUT("/update")
+    public void updateUser(@Form String username){
         System.out.println("username:" + username);
     }
 
-    @DeleteRoute("/delete/:uid")
+    @DELETE("/delete/:uid")
     public void deleteUser(@PathParam Integer uid){
         System.out.println("delete user:" + uid);
     }

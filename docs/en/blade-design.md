@@ -42,7 +42,7 @@ The resources corresponding to the request are displayed. (Home page)
 
 The code that the user requests to execute is defined in the method of the **Controller class**. These methods are called **route** (you can also understand the RequestMapping in SpringMvc),
 The class is called the controller (the controller will generally use the `@Path` annotation).
-The mapping between user requests and code uses annotation associations like `@GetRoute`.
+The mapping between user requests and code uses annotation associations like `@GET`.
 The content displayed by the browser is generally output through `templates`.
 
 In the following sections you will learn the details of the internal workflow in the Blade Controller, Routing, and Templates.
@@ -53,7 +53,7 @@ In the following sections you will learn the details of the internal workflow in
 @Path
 public class IndexController {
     
-    @GetRoute("/")
+    @GET("/")
     public String index(){
         return "index.html";
     }
