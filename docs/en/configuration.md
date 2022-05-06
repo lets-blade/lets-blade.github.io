@@ -20,7 +20,7 @@ app.version=0.0.1
 jdbc.url=jdbc:mysql://127.0.0.1:3306/app
 jdbc.username=root
 jdbc.password=123456
-com.blade.logger.dir=./logs
+logger.dir=./logs
 ```
 
 This is a simple, common configuration in which we specify the name, version, JDBC configuration, and location of the log files.
@@ -33,7 +33,7 @@ Then you only need to get the configuration when the route is executed or at sta
 **Get configuration at startup**
 
 ```java
-Blade.of()
+Blade.create()
      .on(EventType.SERVER_STARTED, e -> {
         String version = WebContext.blade().env("app.version", "0.0.1");
         // Then store the version variable in a constant field for long-term use
@@ -94,7 +94,7 @@ We will read the `version` stored in the template engine context object and use 
 | --------   | -----  | ----  |
 | server.address | web server address | 0.0.0.0 |
 | server.port | web server port | 9000 |
-| app.devMode | is it a developer mode | true |
+| app.dev-mode | is it a developer mode | true |
 | app.name | app name | blade |
 | app.thread-name | start thread name | _(:3」∠)_ |
 | app.banner-path | start banner path | NULL |
@@ -117,8 +117,8 @@ We will read the `version` stored in the template engine context object and use 
 
 | Configuration | Description | Default Value |
 | --------   | -----  | ----  |
-| http.gzip.enable | enable gzip compression | false |
-| http.cors.enable | enable cors compression | false |
+| http.gzip.enabled | enable gzip compression | false |
+| http.cors.enabled | enable cors compression | false |
 | http.session.key | session id in cookie | SESSION |
 | http.session.timeout | session timeout, unit/seconds | 1800 |
 
@@ -129,7 +129,7 @@ If your server has only one site, you can do this, otherwise you should use a pr
 
 | Configuration | Description | Default Value |
 | --------   | -----  | ----  |
-| server.ssl.enable | enable SSL | false |
+| server.ssl.enabled | enable SSL | false |
 | server.ssl.cert-path | X.509 certificate chain file path, e.g: `cert.pem` | NULL |
 | server.ssl.private-key-path | private key file path, e.g: `private.pem` | NULL |
 | server.ssl.private-key-pass | private key password(if so) | NULL |

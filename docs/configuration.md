@@ -20,7 +20,7 @@ app.version=0.0.1
 jdbc.url=jdbc:mysql://127.0.0.1:3306/app
 jdbc.username=root
 jdbc.password=123456
-com.blade.logger.dir=./logs
+logger.dir=./logs
 ```
 
 这是一份简单的，常见的配置，在这份配置文件中我们指定了程序的名称、版本，JDBC的配置，和日志文件的存储位置。
@@ -33,7 +33,7 @@ com.blade.logger.dir=./logs
 **启动时获取配置**
 
 ```java
-Blade.of()
+Blade.create()
      .on(EventType.SERVER_STARTED, e -> {
         String version = WebContext.blade().env("app.version", "0.0.1");
         // 然后将 version 变量存储到一个常量字段中以便长期使用
@@ -94,7 +94,7 @@ public class LoadConfig implements BladeLoader {
 | --------   | -----  | ----  |
 | server.address | web服务地址 | 0.0.0.0 |
 | server.port | web服务端口 | 9000 |
-| app.devMode | 是否是开发者模式 | true |
+| app.dev-mode | 是否是开发者模式 | true |
 | app.name | 应用名称 | blade |
 | app.thread-name | 启动线程名 | _(:3」∠)_ |
 | app.banner-path | 启动banner路径 | NULL |
@@ -117,8 +117,8 @@ public class LoadConfig implements BladeLoader {
 
 | 配置        | 描述   |  默认值  |
 | --------   | -----  | ----  |
-| http.gzip.enable | 是否开启gzip压缩 | false |
-| http.cors.enable | 是否开启cors | false |
+| http.gzip.enabled | 是否开启gzip压缩 | false |
+| http.cors.enabled | 是否开启cors | false |
 | http.session.key | session在cookie中的id | SESSION |
 | http.session.timeout | session超时时长，单位/秒 | 1800 |
 | http.auth.username | basic认证用户名，当开启Basic认证时需要 | 无 |
@@ -131,7 +131,7 @@ public class LoadConfig implements BladeLoader {
 
 | 配置        | 描述   |  默认值  |
 | --------   | -----  | ----  |
-| server.ssl.enable | 是否开启SSL | false |
+| server.ssl.enabled | 是否开启SSL | false |
 | server.ssl.cert-path | X.509 certificate chain 文件，如 cert.pem | NULL |
 | server.ssl.private-key-path | 私钥路径，如 private.pem | NULL |
 | server.ssl.private-key-pass | 私钥密码(如果有的话) | NULL |
