@@ -27,7 +27,7 @@ title: 创建一个工程
     <version>0.0.1</version>
 
     <properties>
-        <blade-mvc.version>2.1.0.RELEASE</blade-mvc.version>
+        <blade-mvc.version>2.1.1.RELEASE</blade-mvc.version>
     </properties>
 
     <dependencies>
@@ -128,7 +128,7 @@ Blade.create().get("/", ctx -> ctx.text("Hello World!")).start(Application.class
 							    |_) |   /_\ | \ |_
 							    |_) | , | | |_/ |
 							    ~   ~~~ ~ ~ ~   ~~~
-							  :: Blade :: (v2.1.0.RELEASE)
+							  :: Blade :: (v2.1.1.RELEASE)
 
                                                                             ③
 2017-10-14 14:12:52:390 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route GET	/

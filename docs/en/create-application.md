@@ -26,7 +26,7 @@ Once created, we need to introduce the Blade dependency and configure the JDK co
     <version>0.0.1</version>
 
     <properties>
-        <blade-core.version>2.1.0.RELEASE</blade-core.version>
+        <blade-core.version>2.1.1.RELEASE</blade-core.version>
     </properties>
 
     <dependencies>
@@ -128,7 +128,7 @@ At this point you launch the application, you can see the following output in th
 							    |_) |   /_\ | \ |_
 							    |_) | , | | |_/ |
 							    ~   ~~~ ~ ~ ~   ~~~
-							  :: Blade :: (v2.0.9.ALPHA1)
+							  :: Blade :: (v2.1.1.RELEASE)
 
                                                                             ③
 2017-10-14 14:12:52:390 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route GET	/
