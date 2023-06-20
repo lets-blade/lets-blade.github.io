@@ -27,7 +27,7 @@ title: 创建一个工程
     <version>0.0.1</version>
 
     <properties>
-        <blade-mvc.version>2.1.1.RELEASE</blade-mvc.version>
+        <blade-core.version>2.1.1.RELEASE</blade-core.version>
     </properties>
 
     <dependencies>
